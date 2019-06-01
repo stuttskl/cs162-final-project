@@ -22,9 +22,9 @@ string DangerSpace::getName()
 
 void DangerSpace::runEvent()
 {
-    int goodOrBad = getRand(1, 3);
-    cout << goodOrBad << endl;
-    switch (goodOrBad)
+    int whichBadEvent = getRand(1, 3);
+    cout << whichBadEvent << endl;
+    switch (whichBadEvent)
     {
         case 1:
             cout << "Suddenly a heavy downpour and brutal winds wash over you, and you hardly have any time to find "
