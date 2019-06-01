@@ -11,7 +11,7 @@ private:
     int steps = 0; // run until steps = 100??
     int numSpaces = 1;
     int healthPoints = 0;
-    int moralityPoints = 0;
+//    int moralityPoints = 0;
 
 public:
     Game();
@@ -24,8 +24,8 @@ public:
     int getHealthPoints();
     void setHealthPoints(int);
 
-    int getMoralityPoints();
-    void setMoralityPoints(int);
+//    int getMoralityPoints();
+//    void setMoralityPoints(int);
 
     int getRandomNum(int, int);
     void move(Direction);

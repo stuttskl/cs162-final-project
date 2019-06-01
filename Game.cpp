@@ -14,8 +14,8 @@ using std::string;
 
 Game::Game()
 {
-    int healthPoints = 0;
-    int moralityPoints = 0;
+    int healthPoints = 10;
+//    int moralityPoints = 0;
 
     // 12 spaces total
     Space *startingSpace = new MysterySpace;
@@ -140,7 +140,9 @@ void Game::startGame()
 //    cout << "Starting space type is: " << currentSpace->getName() << endl;
 //    nextMove();
 //    cout << "Next space is: " << currentSpace->getName() << endl;
-    currentSpace->runEvent();
+    cout << "Current health points are: " << getHealthPoints() << endl;
+    setHealthPoints(currentSpace->runEvent());
+    cout << "Current health points are: " << getHealthPoints() << endl;
 
 }
 
@@ -233,12 +235,12 @@ void Game::setHealthPoints(int hp)
     healthPoints += hp;
 }
 
-int Game::getMoralityPoints()
-{
-    return moralityPoints;
-}
-
-void Game::setMoralityPoints(int mp)
-{
-    moralityPoints += mp;
-}
+//int Game::getMoralityPoints()
+//{
+//    return moralityPoints;
+//}
+//
+//void Game::setMoralityPoints(int mp)
+//{
+//    moralityPoints += mp;
+//}

@@ -20,8 +20,11 @@ string DangerSpace::getName()
     return name;
 }
 
-void DangerSpace::runEvent()
+int DangerSpace::runEvent()
 {
+    cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
+    cout << "\t \t  DANGER SPACE" << endl;
+    cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     int whichBadEvent = getRand(1, 3);
     cout << whichBadEvent << endl;
     switch (whichBadEvent)

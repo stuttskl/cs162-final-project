@@ -15,7 +15,7 @@ public:
     DangerSpace();
     ~DangerSpace();
     std::string getName();
-    void runEvent();
+    int runEvent();
 };
 
 

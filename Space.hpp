@@ -17,7 +17,7 @@ public:
 //    Space(std::string); // default constructor
     virtual ~Space(); // virtual destructor
 //    virtual void displayDescription();
-    virtual void runEvent();
+    virtual int runEvent();
     Space* getUp();
     Space* getDown();
     Space* getLeft();

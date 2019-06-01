@@ -12,7 +12,7 @@ public:
     MysterySpace();
     ~MysterySpace();
     std::string getName();
-    void runEvent();
+    int runEvent();
 };
 
 

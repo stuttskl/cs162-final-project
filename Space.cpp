@@ -30,7 +30,7 @@ Space::~Space()
 // be sure to set up, down, left, right to null and delete
 }
 
-void Space::runEvent()
+int Space::runEvent()
 {
     cout << "You have landed on a plain ol' space. Nothing cool happens here." << endl;
 }

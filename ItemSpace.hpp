@@ -12,7 +12,7 @@ public:
     ItemSpace();
     ~ItemSpace();
     std::string getName();
-    void runEvent();
+    int runEvent();
 };
 
 

@@ -23,7 +23,7 @@ string ItemSpace::getName()
     return name;
 }
 
-void ItemSpace::runEvent()
+int ItemSpace::runEvent()
 {
     cout << "YOU HAVE ENTERED A Item Space. OoOoOoO~" << endl;
 }
