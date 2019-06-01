@@ -33,48 +33,48 @@ Game::Game()
     spaceLinker(currentSpace, space1, right);
     spaceLinker(currentSpace, space4, down);
 
-    spaceLinker(space1, currentSpace, left);
+//    spaceLinker(space1, currentSpace, left);
     spaceLinker(space1, space2, right);
     spaceLinker(space1, space5, down);
 
-    spaceLinker(space2, space1, left);
+//    spaceLinker(space2, space1, left);
     spaceLinker(space2, space3, right);
     spaceLinker(space2, space6, down);
 
-    spaceLinker(space3, space2, left);
+//    spaceLinker(space3, space2, left);
     spaceLinker(space3, space7, down);
 
-    spaceLinker(space4, currentSpace, up);
+//    spaceLinker(space4, currentSpace, up);
     spaceLinker(space4, space5, right);
     spaceLinker(space4, space8, down);
 
-    spaceLinker(space5, space1, up);
-    spaceLinker(space5, space4, left);
+//    spaceLinker(space5, space1, up);
+//    spaceLinker(space5, space4, left);
     spaceLinker(space5, space9, down);
     spaceLinker(space5, space6, right);
 
-    spaceLinker(space6, space2, up);
-    spaceLinker(space6, space5, left);
+//    spaceLinker(space6, space2, up);
+//    spaceLinker(space6, space5, left);
     spaceLinker(space6, space10, down);
     spaceLinker(space6, space7, right);
 
-    spaceLinker(space7, space3, up);
-    spaceLinker(space7, space6, left);
+//    spaceLinker(space7, space3, up);
+//    spaceLinker(space7, space6, left);
     spaceLinker(space7, space11, down);
 
-    spaceLinker(space8, space4, up);
+//    spaceLinker(space8, space4, up);
     spaceLinker(space8, space9, right);
 
-    spaceLinker(space9, space5, up);
-    spaceLinker(space9, space8, left);
+//    spaceLinker(space9, space5, up);
+//    spaceLinker(space9, space8, left);
     spaceLinker(space9, space10, right);
 
-    spaceLinker(space10, space6, up);
-    spaceLinker(space10, space9, left);
+//    spaceLinker(space10, space6, up);
+//    spaceLinker(space10, space9, left);
     spaceLinker(space10, space11, right);
 
-    spaceLinker(space11, space7, up);
-    spaceLinker(space11, space10, left);
+//    spaceLinker(space11, space7, up);
+//    spaceLinker(space11, space10, left);
 
     steps = 0;
 }
