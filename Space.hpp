@@ -28,6 +28,7 @@ public:
     void setRight(Space*);
 
     virtual int getRand(int, int);
+    virtual int rollWeightedDie();
 
 
 

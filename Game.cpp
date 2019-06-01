@@ -18,7 +18,7 @@ Game::Game()
 //    int moralityPoints = 0;
 
     // 12 spaces total
-    Space *startingSpace = new DangerSpace;
+    Space *startingSpace = new MysterySpace;
     currentSpace = startingSpace;
 //    Space *space1 = createNewSpaceType();
 //    Space *space2 = createNewSpaceType();

@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.cpp
-DangerSpace.hpp
-/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
-string
--
+/Users/katie/Dropbox/CS162/Final_Project/Space.cpp
 iostream
 -
-
-/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
+random
+-
 string
 -
 Space.hpp
