@@ -10,7 +10,7 @@ private:
     Space *currentSpace = nullptr;
     int steps = 0; // run until steps = 100??
     int numSpaces = 1;
-    int healthPoints = 0;
+    int healthPoints = 10;
 //    int moralityPoints = 0;
 
 public:

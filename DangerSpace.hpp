@@ -16,6 +16,9 @@ public:
     ~DangerSpace();
     std::string getName();
     int runEvent();
+    int squirrellAttack();
+//    int heavyRain();
+    int openTheHatch();
 };
 
 

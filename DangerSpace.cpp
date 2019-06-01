@@ -6,6 +6,7 @@
 using std::string;
 using std::cout;
 using std::endl;
+using std::cin;
 
 
 DangerSpace::DangerSpace()
@@ -30,19 +31,55 @@ int DangerSpace::runEvent()
     switch (whichBadEvent)
     {
         case 1:
-            cout << "Suddenly a heavy downpour and brutal winds wash over you, and you hardly have any time to find "
-                    "cover. As a result, you get a little sick. Health decreases by 2." << endl;
-            break;
+            return squirrellAttack();
         case 2:
-            cout << "Out of nowhere, you are attacked by an angry, rabid squirrel. You have no time to think, and "
-                    "are unfortunately injured. Health decreases by 4." << endl;
-            break;
+            return openTheHatch();
         case 3:
-            cout << "You suddenly realize your knapsack feels a lot lighter… three items lighter, to be specific. "
-                    "You realize you left your knapsack alone earlier, and another island dweller has stolen 3 "
-                    "of your items. You lose 3 items from your knapsack." << endl;
-            break;
+            cout << "case 3" << endl;
     }
+}
 
+int DangerSpace::squirrellAttack()
+{
+    cout << "Out of nowhere, you hear a high-pitched hissing noise. You quickly whip around and see"
+            "a rabid squirrel, looking pissed. After a brief staring contest, he lunges at you! Roll"
+            "the die to see your fate!" << endl;
+    cout << "Press any key and hit enter to roll the dice!" << endl;
+    getchar();
+    int attackResult = getRand(1, 6);
+    cout << "~*~*~*~*~*~ rolling ~*~*~*~*~*~" << endl;
+    cout << "The squirrel put up a good fight. Ultimately, you lost " << attackResult << " health points." << endl;
+    return attackResult;
+}
+//
+//int DangerSpace::heavyRain()
+//{
+//    cout << "Suddenly a heavy downpour and brutal winds wash over you, and you hardly have any time to find "
+//        "cover." << endl;
+//    // if have umbrella, ask to use
+//    // else, subtract 2 health points
+//}
 
+int DangerSpace::openTheHatch()
+{
+    int openHatch;
+    cout << "You stumble upon a mysterious looking in-ground hatch. The top is covered with leaves and brush, "
+            "but you notice there's nothing covering the handle, which is looking more tempting by the minute. Do you"
+            "wish to open the hatch and explore???" << endl;
+    cout << "1. Yes \n2. No." << endl;
+    cin >> openHatch;
+    if (openHatch == 1)
+    {
+        cout << "You adventurous soul! You open the heavy hatch to reveal a dark, well-like structure below. You peer "
+                "over in curiousity, but peer a bit too far. You fall in the hatch!!! Hurt, but not terminally so, you "
+                "pull yourself up out of the hatch. Nothing good was down there, and you got injured. This sucks. You "
+                "lose 4 health points." << endl;
+        return 4;
+    }
+    if (openHatch == 2)
+    {
+        cout << "You chose the safer path. Boring, but probably ultimately for the better. You keep walking by and "
+                "go about your day." << endl;
+        return 0;
+    }
 }
