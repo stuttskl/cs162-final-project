@@ -14,6 +14,9 @@ using std::string;
 
 Game::Game()
 {
+    int healthPoints = 0;
+    int moralityPoints = 0;
+
     Space *startingSpace = new Space;
     currentSpace = startingSpace;
     Space *space1 = createNewSpaceType();
@@ -27,8 +30,6 @@ Game::Game()
     Space *space9 = createNewSpaceType();
     Space *space10 = createNewSpaceType();
     Space *space11 = createNewSpaceType();
-
-    // remember to not do links both ways
 
     spaceLinker(currentSpace, space1, right);
     spaceLinker(currentSpace, space4, down);
@@ -219,4 +220,24 @@ int Game::getRandomNum(int min, int max)
     std::uniform_int_distribution<> roll(min, max);
 
     return roll(gen);
+}
+
+int Game::getHealthPoints()
+{
+    return healthPoints;
+}
+
+void Game::setHealthPoints(int hp)
+{
+    healthPoints += hp;
+}
+
+int Game::getMoralityPoints()
+{
+    return moralityPoints;
+}
+
+void Game::setMoralityPoints(int mp)
+{
+    moralityPoints += mp;
 }

@@ -10,7 +10,8 @@ private:
     Space *currentSpace = nullptr;
     int steps = 0; // run until steps = 100??
     int numSpaces = 1;
-
+    int healthPoints = 0;
+    int moralityPoints = 0;
 
 public:
     Game();
@@ -19,6 +20,12 @@ public:
 
     void nextMove();
     void spaceLinker(Space*, Space*, Direction);
+
+    int getHealthPoints();
+    void setHealthPoints(int);
+
+    int getMoralityPoints();
+    void setMoralityPoints(int);
 
     int getRandomNum(int, int);
     void move(Direction);
