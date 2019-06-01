@@ -17,6 +17,7 @@ Game::Game()
     int healthPoints = 0;
     int moralityPoints = 0;
 
+    // 12 spaces total
     Space *startingSpace = new Space;
     currentSpace = startingSpace;
     Space *space1 = createNewSpaceType();
@@ -135,12 +136,10 @@ Space* Game::createNewSpaceType()
 
 void Game::startGame()
 {
-
     cout << "Number of current spaces is: " << numSpaces << endl;
     cout << "Starting space type is: " << currentSpace->getName() << endl;
     nextMove();
     cout << "Next space is: " << currentSpace->getName() << endl;
-
 }
 
 void Game::nextMove()

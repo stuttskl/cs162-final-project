@@ -27,6 +27,8 @@ public:
     void setLeft(Space*);
     void setRight(Space*);
 
+    virtual int getRand(int, int);
+
 
 
     virtual std::string getName();

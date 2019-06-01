@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 #include <string>
 #include "Space.hpp"
 
@@ -77,4 +78,14 @@ void Space::setLeft(Space* s)
 void Space::setRight(Space* s)
 {
     this->right = s;
+}
+
+int Space::getRand(int min, int max)
+{
+    // copied from https://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
+    std::random_device seed;
+    std::mt19937 gen(seed());
+    std::uniform_int_distribution<> roll(min, max);
+
+    return roll(gen);
 }
