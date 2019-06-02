@@ -41,8 +41,8 @@ int DangerSpace::runEvent()
 
 int DangerSpace::squirrellAttack()
 {
-    cout << "Out of nowhere, you hear a high-pitched hissing noise. You quickly whip around and see"
-            "a rabid squirrel, looking pissed. After a brief staring contest, he lunges at you! Roll"
+    cout << "Out of nowhere, you hear a high-pitched hissing noise. You quickly whip around and see "
+            "a rabid squirrel, looking pissed. After a brief staring contest, he lunges at you! Roll "
             "the die to see your fate!" << endl;
     cout << "Press any key and hit enter to roll the dice!" << endl;
     getchar();
@@ -77,7 +77,7 @@ int DangerSpace::openTheHatch()
 {
     int openHatch;
     cout << "You stumble upon a mysterious looking in-ground hatch. The top is covered with leaves and brush, "
-            "but you notice there's nothing covering the handle, which is looking more tempting by the minute. Do you"
+            "but you notice there's nothing covering the handle, which is looking more tempting by the minute. Do you "
             "wish to open the hatch and explore???" << endl;
     cout << "1. Yes \n2. No." << endl;
     cin >> openHatch;

@@ -140,9 +140,27 @@ void Game::startGame()
 //    cout << "Starting space type is: " << currentSpace->getName() << endl;
 //    nextMove();
 //    cout << "Next space is: " << currentSpace->getName() << endl;
-    cout << "Current health points are: " << getHealthPoints() << endl;
-    setHealthPoints(currentSpace->runEvent());
-    cout << "Current health points are: " << getHealthPoints() << endl;
+
+    cout << "_____" << endl;
+    cout << " \\ K \\__      ____" << endl;
+    cout << "__\\   \\_______\\___\\____________" << endl;
+    cout << "< /_/   .....................  `-." << endl;
+    cout << "`-----------,----,--------------'" << endl;
+    cout << "          _/____/" << endl;
+    cout << endl;
+    cout << "You have just survived a plane crash, and have awoken in a forest amongst tall trees, wild plants and mysterious "
+            "hatches. You no longer have any of your belongings, except the clothes on your back. "
+            "You are not sure if others survived, but you see no sign of other human life around you. " << endl;
+    cout << "Your objective: find a way to get off of this island and get to safety. "
+            "There are three possible ways to make it off the island alive:\n"
+            "1. Gather enough wood to make a large bonfire. There are small planes that fly overhead, but nothing "
+            "except a huge bonfire would catch their attention.\n"
+            "2. Gather the correct items and build a raft, and escape to safety via the sea. \n"
+            "3. Gather the correct items and build a jetpack (easier than you’d think) to fly off to safety." << endl;
+
+//    cout << "Current health points are: " << getHealthPoints() << endl;
+//    setHealthPoints(currentSpace->runEvent());
+//    cout << "Current health points are: " << getHealthPoints() << endl;
 
 }
 

@@ -12,16 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86e26569-9abc-4ec0-8be0-891eca32ef53" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DangerSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DangerSpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DangerSpace.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/DangerSpace.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItemSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ItemSpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MysterySpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MysterySpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/MysterySpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/MysterySpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Final_Project" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Final_Project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/Game.cpp.o" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,13 +74,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="249" column="41" selection-start-line="249" selection-start-column="41" selection-end-line="249" selection-end-column="41" />
+            <state relative-caret-position="234">
+              <caret line="149" column="17" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
               <folding>
                 <element signature="e#1234#1803#0" />
                 <element signature="e#1806#2568#0" />
                 <element signature="e#4240#5092#0" />
                 <element signature="e#4178#4783#0" />
+                <element signature="e#4785#5056#0" />
               </folding>
             </state>
           </provider>
@@ -117,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DangerSpace.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="79" column="118" selection-start-line="79" selection-start-column="118" selection-end-line="79" selection-end-column="118" />
               <folding>
                 <element signature="e#1#27#0" expanded="true" />
               </folding>
@@ -167,8 +161,8 @@
         <option value="$PROJECT_DIR$/MysterySpace.cpp" />
         <option value="$PROJECT_DIR$/ItemSpace.cpp" />
         <option value="$PROJECT_DIR$/DangerSpace.hpp" />
-        <option value="$PROJECT_DIR$/DangerSpace.cpp" />
         <option value="$PROJECT_DIR$/Game.hpp" />
+        <option value="$PROJECT_DIR$/DangerSpace.cpp" />
         <option value="$PROJECT_DIR$/Game.cpp" />
       </list>
     </option>
@@ -237,12 +231,12 @@
       <workItem from="1559065296715" duration="12854000" />
       <workItem from="1559097922649" duration="7451000" />
       <workItem from="1559151372057" duration="8146000" />
-      <workItem from="1559337716754" duration="11309000" />
+      <workItem from="1559337716754" duration="12056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39760000" />
+    <option name="totallyTimeSpent" value="40507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1351" height="877" extended-state="0" />
@@ -412,16 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DangerSpace.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -429,15 +413,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DangerSpace.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="79" column="118" selection-start-line="79" selection-start-column="118" selection-end-line="79" selection-end-column="118" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="249" column="41" selection-start-line="249" selection-start-column="41" selection-end-line="249" selection-end-column="41" />
+        <state relative-caret-position="234">
+          <caret line="149" column="17" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
           <folding>
             <element signature="e#1234#1803#0" />
             <element signature="e#1806#2568#0" />
             <element signature="e#4240#5092#0" />
             <element signature="e#4178#4783#0" />
+            <element signature="e#4785#5056#0" />
           </folding>
         </state>
       </provider>
