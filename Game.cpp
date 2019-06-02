@@ -18,7 +18,7 @@ Game::Game()
 //    int moralityPoints = 0;
 
     // 12 spaces total
-    Space *startingSpace = new MysterySpace;
+    Space *startingSpace = new DangerSpace;
     currentSpace = startingSpace;
 //    Space *space1 = createNewSpaceType();
 //    Space *space2 = createNewSpaceType();
@@ -244,3 +244,8 @@ void Game::setHealthPoints(int hp)
 //{
 //    moralityPoints += mp;
 //}
+
+void Game::displayCurrentLocation()
+{
+    cout << "You are currently at a " << currentSpace->getName() << endl;
+}

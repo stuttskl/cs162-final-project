@@ -35,7 +35,7 @@ int DangerSpace::runEvent()
         case 2:
             return openTheHatch();
         case 3:
-            cout << "case 3" << endl;
+            return heavyRain();
     }
 }
 
@@ -51,14 +51,27 @@ int DangerSpace::squirrellAttack()
     cout << "The squirrel put up a good fight. Ultimately, you lost " << attackResult << " health points." << endl;
     return attackResult;
 }
-//
-//int DangerSpace::heavyRain()
-//{
-//    cout << "Suddenly a heavy downpour and brutal winds wash over you, and you hardly have any time to find "
-//        "cover." << endl;
-//    // if have umbrella, ask to use
-//    // else, subtract 2 health points
-//}
+
+int DangerSpace::heavyRain()
+{
+    cout << "Suddenly a heavy downpour and brutal winds wash over you. You've seen this before, and last time the "
+            "heavy rains subsided in a matter of minutes. You don't really want to disrupt your foraging progress to "
+            "find cover. Do you go find cover, or weather the storm?"<< endl;
+    cout << "1. Stay \n2. Go." << endl;
+    int stayOrGo;
+    cin >> stayOrGo;
+    if (stayOrGo == 1)
+    {
+        int stormResult = getRand(1, 4);
+        cout << "You stayed out in the storm. Fool! You loose " << stormResult << " health points." << endl;
+        return stormResult;
+    }
+    if (stayOrGo == 2)
+    {
+        cout << "Smart move! You found cover right away. Health points unaffected." << endl;
+        return 0;
+    }
+}
 
 int DangerSpace::openTheHatch()
 {

@@ -17,7 +17,7 @@ public:
     std::string getName();
     int runEvent();
     int squirrellAttack();
-//    int heavyRain();
+    int heavyRain();
     int openTheHatch();
 };
 

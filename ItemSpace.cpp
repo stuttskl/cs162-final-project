@@ -1,7 +1,3 @@
-//
-// Created by Katie Stutts on 2019-05-28.
-//
-
 #include "ItemSpace.hpp"
 #include <string>
 #include <iostream>

@@ -5,6 +5,7 @@
 using std::string;
 using std::cout;
 using std::endl;
+using std::cin;
 
 
 MysterySpace::MysterySpace()
@@ -24,23 +25,32 @@ int MysterySpace::runEvent()
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << "\t \t  MYSTERY SPACE" << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "If you're feeling rather lucky, you can opt to roll a weighted die. There is a greater chance you will"
-            "be blessed with a good event, however if you do experience a bad event, it will be BAD. Worse than if"
+    cout << "If you're feeling rather lucky, you can opt to roll a weighted die. There is a greater chance you will "
+            "be blessed with a good event, however if you do experience a bad event, it will be BAD. Worse than if "
             "you were to simply take the 50/50 chance... What will you do? Are you feeling risky?" << endl;
     cout << "1. Roll the balanced die." << endl;
     cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
 
-    int weightedRollResult;
-    weightedRollResult = rollWeightedDie();
-    if (weightedRollResult == 1)
+    int whichDie;
+    cin >> whichDie;
+    if (whichDie == 1)
     {
-        cout << "A good thing will happen." << endl;
+        // roll normal die
     }
-    if (weightedRollResult == 2)
+    if (whichDie == 2)
     {
-        cout << "A VERY bad thing will happen." << endl;
-    }
+        int weightedRollResult = rollWeightedDie();
 
+
+        if (weightedRollResult == 1)
+        {
+            cout << "A good thing will happen." << endl;
+        }
+        if (weightedRollResult == 2)
+        {
+            cout << "A VERY bad thing will happen." << endl;
+        }
+    }
 
 
     cout << "----------------------------------------" << endl;

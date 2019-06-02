@@ -30,6 +30,8 @@ public:
     int getRandomNum(int, int);
     void move(Direction);
 
+    void displayCurrentLocation();
+
 
 };
 
