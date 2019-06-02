@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Berries.cpp">
+			<Option target="Final_Project"/>
+		</Unit>
+		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp">
+			<Option target="Final_Project"/>
+		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.cpp">
 			<Option target="Final_Project"/>
 		</Unit>

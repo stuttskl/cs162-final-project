@@ -1,11 +1,14 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include <vector>
 #include "Space.hpp"
 #include "Game.hpp"
 #include "MysterySpace.hpp"
 #include "DangerSpace.hpp"
 #include "ItemSpace.hpp"
+#include "Item.hpp"
+#include "Berries.hpp"
 
 using std::cout;
 using std::cin;
@@ -141,6 +144,7 @@ void Game::startGame()
 //    nextMove();
 //    cout << "Next space is: " << currentSpace->getName() << endl;
 
+/*
     cout << "_____" << endl;
     cout << " \\ K \\__      ____" << endl;
     cout << "__\\   \\_______\\___\\____________" << endl;
@@ -157,10 +161,19 @@ void Game::startGame()
             "except a huge bonfire would catch their attention.\n"
             "2. Gather the correct items and build a raft, and escape to safety via the sea. \n"
             "3. Gather the correct items and build a jetpack (easier than you’d think) to fly off to safety." << endl;
-
+*/
 //    cout << "Current health points are: " << getHealthPoints() << endl;
 //    setHealthPoints(currentSpace->runEvent());
 //    cout << "Current health points are: " << getHealthPoints() << endl;
+
+    Item i1;
+    cout << i1.getName() << endl;
+    cout << i1.getDescription() << endl;
+
+    Berries b1;
+    cout << b1.getName() << endl;
+    cout << b1.getDescription() << endl;
+
 
 }
 

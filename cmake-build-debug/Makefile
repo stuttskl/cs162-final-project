@@ -123,6 +123,33 @@ Final_Project/fast:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/build
 .PHONY : Final_Project/fast
 
+Berries.o: Berries.cpp.o
+
+.PHONY : Berries.o
+
+# target to build an object file
+Berries.cpp.o:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Berries.cpp.o
+.PHONY : Berries.cpp.o
+
+Berries.i: Berries.cpp.i
+
+.PHONY : Berries.i
+
+# target to preprocess a source file
+Berries.cpp.i:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Berries.cpp.i
+.PHONY : Berries.cpp.i
+
+Berries.s: Berries.cpp.s
+
+.PHONY : Berries.s
+
+# target to generate assembly for a file
+Berries.cpp.s:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Berries.cpp.s
+.PHONY : Berries.cpp.s
+
 DangerSpace.o: DangerSpace.cpp.o
 
 .PHONY : DangerSpace.o
@@ -321,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Final_Project"
+	@echo "... Berries.o"
+	@echo "... Berries.i"
+	@echo "... Berries.s"
 	@echo "... DangerSpace.o"
 	@echo "... DangerSpace.i"
 	@echo "... DangerSpace.s"

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
+iostream
+-
+string
+-
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+
 /Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
 string
 -
@@ -29,10 +37,20 @@ DangerSpace.hpp
 /Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
 ItemSpace.hpp
 /Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+Berries.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
 
 /Users/katie/Dropbox/CS162/Final_Project/Game.hpp
 Space.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+string
+-
 
 /Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
 string

@@ -1,4 +1,8 @@
 #include "Space.hpp"
+#include "Item.hpp"
+#include <array>
+
+using std::array;
 
 #ifndef FINAL_PROJECT_GAME_HPP
 #define FINAL_PROJECT_GAME_HPP
@@ -9,6 +13,7 @@ class Game {
 private:
     Space *currentSpace = nullptr;
     int steps = 0; // run until steps = 100??
+    array<Item, 10> backpack;
     int numSpaces = 1;
     int healthPoints = 10;
 //    int moralityPoints = 0;

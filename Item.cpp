@@ -18,13 +18,6 @@ string Item::getDescription()
 {
     return description;
 }
-int Item::getHealthPoints()
-{
-    return healthPoints;
-}
-int Item::getMoralityPoints()
-{
-    return moralityPoints;
-}
+
 void Item::addToPack(Item*)
 {}
