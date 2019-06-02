@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Final_Project.dir/ItemSpace.cpp.o"
   "CMakeFiles/Final_Project.dir/Item.cpp.o"
   "CMakeFiles/Final_Project.dir/Berries.cpp.o"
+  "CMakeFiles/Final_Project.dir/Wood.cpp.o"
+  "CMakeFiles/Final_Project.dir/Knife.cpp.o"
   "Final_Project.pdb"
   "Final_Project"
 )

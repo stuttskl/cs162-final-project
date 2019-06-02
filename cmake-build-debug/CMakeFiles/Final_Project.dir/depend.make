@@ -17,6 +17,7 @@ CMakeFiles/Final_Project.dir/Game.cpp.o: ../Item.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../ItemSpace.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../MysterySpace.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Space.hpp
+CMakeFiles/Final_Project.dir/Game.cpp.o: ../Wood.hpp
 
 CMakeFiles/Final_Project.dir/Item.cpp.o: ../Item.cpp
 CMakeFiles/Final_Project.dir/Item.cpp.o: ../Item.hpp
@@ -31,6 +32,10 @@ CMakeFiles/Final_Project.dir/MysterySpace.cpp.o: ../Space.hpp
 
 CMakeFiles/Final_Project.dir/Space.cpp.o: ../Space.cpp
 CMakeFiles/Final_Project.dir/Space.cpp.o: ../Space.hpp
+
+CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Item.hpp
+CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Wood.cpp
+CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Wood.hpp
 
 CMakeFiles/Final_Project.dir/main.cpp.o: ../Game.hpp
 CMakeFiles/Final_Project.dir/main.cpp.o: ../Item.hpp

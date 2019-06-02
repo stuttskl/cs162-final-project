@@ -9,6 +9,7 @@
 #include "ItemSpace.hpp"
 #include "Item.hpp"
 #include "Berries.hpp"
+#include "Wood.hpp"
 
 using std::cout;
 using std::cin;
@@ -173,6 +174,11 @@ void Game::startGame()
     Berries b1;
     cout << b1.getName() << endl;
     cout << b1.getDescription() << endl;
+
+    Wood w1;
+    cout << w1.getName() << endl;
+    cout << w1.getDescription() << endl;
+
 
 
 }

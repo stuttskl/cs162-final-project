@@ -161,6 +161,32 @@ CMakeFiles/Final_Project.dir/Berries.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Berries.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Berries.cpp -o CMakeFiles/Final_Project.dir/Berries.cpp.s
 
+CMakeFiles/Final_Project.dir/Wood.cpp.o: CMakeFiles/Final_Project.dir/flags.make
+CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Wood.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Final_Project.dir/Wood.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/Wood.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/Wood.cpp
+
+CMakeFiles/Final_Project.dir/Wood.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project.dir/Wood.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/katie/Dropbox/CS162/Final_Project/Wood.cpp > CMakeFiles/Final_Project.dir/Wood.cpp.i
+
+CMakeFiles/Final_Project.dir/Wood.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Wood.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Wood.cpp -o CMakeFiles/Final_Project.dir/Wood.cpp.s
+
+CMakeFiles/Final_Project.dir/Knife.cpp.o: CMakeFiles/Final_Project.dir/flags.make
+CMakeFiles/Final_Project.dir/Knife.cpp.o: ../Knife.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Final_Project.dir/Knife.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/Knife.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp
+
+CMakeFiles/Final_Project.dir/Knife.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project.dir/Knife.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp > CMakeFiles/Final_Project.dir/Knife.cpp.i
+
+CMakeFiles/Final_Project.dir/Knife.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Knife.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp -o CMakeFiles/Final_Project.dir/Knife.cpp.s
+
 # Object files for target Final_Project
 Final_Project_OBJECTS = \
 "CMakeFiles/Final_Project.dir/main.cpp.o" \
@@ -170,7 +196,9 @@ Final_Project_OBJECTS = \
 "CMakeFiles/Final_Project.dir/DangerSpace.cpp.o" \
 "CMakeFiles/Final_Project.dir/ItemSpace.cpp.o" \
 "CMakeFiles/Final_Project.dir/Item.cpp.o" \
-"CMakeFiles/Final_Project.dir/Berries.cpp.o"
+"CMakeFiles/Final_Project.dir/Berries.cpp.o" \
+"CMakeFiles/Final_Project.dir/Wood.cpp.o" \
+"CMakeFiles/Final_Project.dir/Knife.cpp.o"
 
 # External object files for target Final_Project
 Final_Project_EXTERNAL_OBJECTS =
@@ -183,9 +211,11 @@ Final_Project: CMakeFiles/Final_Project.dir/DangerSpace.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/ItemSpace.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Item.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Berries.cpp.o
+Final_Project: CMakeFiles/Final_Project.dir/Wood.cpp.o
+Final_Project: CMakeFiles/Final_Project.dir/Knife.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/build.make
 Final_Project: CMakeFiles/Final_Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Final_Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Final_Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Final_Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

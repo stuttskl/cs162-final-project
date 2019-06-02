@@ -258,6 +258,33 @@ ItemSpace.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/ItemSpace.cpp.s
 .PHONY : ItemSpace.cpp.s
 
+Knife.o: Knife.cpp.o
+
+.PHONY : Knife.o
+
+# target to build an object file
+Knife.cpp.o:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Knife.cpp.o
+.PHONY : Knife.cpp.o
+
+Knife.i: Knife.cpp.i
+
+.PHONY : Knife.i
+
+# target to preprocess a source file
+Knife.cpp.i:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Knife.cpp.i
+.PHONY : Knife.cpp.i
+
+Knife.s: Knife.cpp.s
+
+.PHONY : Knife.s
+
+# target to generate assembly for a file
+Knife.cpp.s:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Knife.cpp.s
+.PHONY : Knife.cpp.s
+
 MysterySpace.o: MysterySpace.cpp.o
 
 .PHONY : MysterySpace.o
@@ -312,6 +339,33 @@ Space.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Space.cpp.s
 .PHONY : Space.cpp.s
 
+Wood.o: Wood.cpp.o
+
+.PHONY : Wood.o
+
+# target to build an object file
+Wood.cpp.o:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Wood.cpp.o
+.PHONY : Wood.cpp.o
+
+Wood.i: Wood.cpp.i
+
+.PHONY : Wood.i
+
+# target to preprocess a source file
+Wood.cpp.i:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Wood.cpp.i
+.PHONY : Wood.cpp.i
+
+Wood.s: Wood.cpp.s
+
+.PHONY : Wood.s
+
+# target to generate assembly for a file
+Wood.cpp.s:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Wood.cpp.s
+.PHONY : Wood.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -363,12 +417,18 @@ help:
 	@echo "... ItemSpace.o"
 	@echo "... ItemSpace.i"
 	@echo "... ItemSpace.s"
+	@echo "... Knife.o"
+	@echo "... Knife.i"
+	@echo "... Knife.s"
 	@echo "... MysterySpace.o"
 	@echo "... MysterySpace.i"
 	@echo "... MysterySpace.s"
 	@echo "... Space.o"
 	@echo "... Space.i"
 	@echo "... Space.s"
+	@echo "... Wood.o"
+	@echo "... Wood.i"
+	@echo "... Wood.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
