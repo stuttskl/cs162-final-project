@@ -45,13 +45,17 @@ Berries.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
 Wood.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
+Knife.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
+Sweater.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Sweater.hpp
 
 /Users/katie/Dropbox/CS162/Final_Project/Game.hpp
 Space.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 Item.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
-array
+vector
 -
 
 /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
@@ -64,6 +68,10 @@ string
 Space.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 
+/Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+
 /Users/katie/Dropbox/CS162/Final_Project/MysterySpace.hpp
 Space.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
@@ -74,13 +82,9 @@ string
 string
 -
 
-/Users/katie/Dropbox/CS162/Final_Project/Wood.cpp
-iostream
--
-string
--
-Wood.hpp
-/Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Sweater.hpp
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
 /Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
 Item.hpp

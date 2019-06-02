@@ -10,6 +10,8 @@
 #include "Item.hpp"
 #include "Berries.hpp"
 #include "Wood.hpp"
+#include "Knife.hpp"
+#include "Sweater.hpp"
 
 using std::cout;
 using std::cin;
@@ -24,6 +26,8 @@ Game::Game()
     // 12 spaces total
     Space *startingSpace = new DangerSpace;
     currentSpace = startingSpace;
+    vector<Item> backpack;
+    backpack.reserve(10);
 //    Space *space1 = createNewSpaceType();
 //    Space *space2 = createNewSpaceType();
 //    Space *space3 = createNewSpaceType();
@@ -168,16 +172,32 @@ void Game::startGame()
 //    cout << "Current health points are: " << getHealthPoints() << endl;
 
     Item i1;
-    cout << i1.getName() << endl;
-    cout << i1.getDescription() << endl;
+//    cout << i1.getName() << endl;
+//    cout << i1.getDescription() << endl;
 
     Berries b1;
-    cout << b1.getName() << endl;
-    cout << b1.getDescription() << endl;
+//    cout << b1.getName() << endl;
+//    cout << b1.getDescription() << endl;
 
     Wood w1;
-    cout << w1.getName() << endl;
-    cout << w1.getDescription() << endl;
+//    cout << w1.getName() << endl;
+//    cout << w1.getDescription() << endl;
+
+    Knife k1;
+//    cout << k1.getName() << endl;
+//    cout << k1.getDescription() << endl;
+
+    Sweater s1;
+//    cout << s1.getName() << endl;
+//    cout << s1.getDescription() << endl;
+
+    backpack.push_back(i1);
+    backpack.push_back(b1);
+    backpack.push_back(w1);
+    backpack.push_back(k1);
+    backpack.push_back(s1);
+    displayBackpack();
+
 
 
 
@@ -285,4 +305,24 @@ void Game::setHealthPoints(int hp)
 void Game::displayCurrentLocation()
 {
     cout << "You are currently at a " << currentSpace->getName() << endl;
+}
+
+void Game::displayBackpack()
+{
+    for (vector<Item>::iterator i = backpack.begin(); i != backpack.end(); ++i)
+    {
+        cout << i->getName() << ' ';
+    }
+}
+
+void Game::addToBackpack()
+{
+    cout << "Would you like to add this item to your backpack?" << endl;
+    cout << "1. Yes \n2. No" << endl;
+    int addItem;
+    cin >> addItem;
+    if (addItem == 1)
+    {
+//        backpack.push_back();
+    }
 }

@@ -339,6 +339,33 @@ Space.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Space.cpp.s
 .PHONY : Space.cpp.s
 
+Sweater.o: Sweater.cpp.o
+
+.PHONY : Sweater.o
+
+# target to build an object file
+Sweater.cpp.o:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Sweater.cpp.o
+.PHONY : Sweater.cpp.o
+
+Sweater.i: Sweater.cpp.i
+
+.PHONY : Sweater.i
+
+# target to preprocess a source file
+Sweater.cpp.i:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Sweater.cpp.i
+.PHONY : Sweater.cpp.i
+
+Sweater.s: Sweater.cpp.s
+
+.PHONY : Sweater.s
+
+# target to generate assembly for a file
+Sweater.cpp.s:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Sweater.cpp.s
+.PHONY : Sweater.cpp.s
+
 Wood.o: Wood.cpp.o
 
 .PHONY : Wood.o
@@ -426,6 +453,9 @@ help:
 	@echo "... Space.o"
 	@echo "... Space.i"
 	@echo "... Space.s"
+	@echo "... Sweater.o"
+	@echo "... Sweater.i"
+	@echo "... Sweater.s"
 	@echo "... Wood.o"
 	@echo "... Wood.i"
 	@echo "... Wood.s"

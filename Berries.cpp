@@ -8,7 +8,7 @@ using std::string;
 
 Berries::Berries()
 {
-    name = "Wild island berries.";
+    name = "Wild island berries";
     description = "These island berries are vibrant in color, and sweet in taste. You need but a handful to feel full"
                   " and energized.";
 }
