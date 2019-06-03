@@ -155,13 +155,33 @@ Space* Game::createNewSpaceType()
 
 void Game::gameMenu()
 {
+    int choice;
     cout << "1. Print current location." << endl;
     cout << "2. Print current Health Points." << endl;
     cout << "3. Print contents of backpack." << endl;
+    if (choice == 1)
+    {
+        displayCurrentLocation();
+    }
+    if (choice == 2)
+    {
+        cout << "Your current Health Points are " << getHealthPoints() << endl;
+    }
+    if (choice == 3)
+    {
+        if (backpack.empty())
+        {
+            cout << "Your backpack is currently empty." << endl;
+        } else {
+            displayBackpack();
+        }
+    }
 }
 
 void Game::startGame()
 {
+    gameMenu();
+
     cout << "Number of current spaces is: " << numSpaces << endl;
     cout << "Starting space type is: " << currentSpace->getName() << endl;
     while (steps <= 10)
