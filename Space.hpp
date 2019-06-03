@@ -1,4 +1,9 @@
-
+/*********************************************************************
+** Program name: Final Project
+** Author: Katie Stutts
+** Date:June 2nd, 2019
+** Description:
+*********************************************************************/
 #ifndef FINAL_PROJECT_SPACE_HPP
 #define FINAL_PROJECT_SPACE_HPP
 

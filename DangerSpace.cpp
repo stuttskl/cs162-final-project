@@ -1,4 +1,9 @@
-
+/*********************************************************************
+** Program name: Final Project
+** Author: Katie Stutts
+** Date:June 2nd, 2019
+** Description:
+*********************************************************************/
 #include "DangerSpace.hpp"
 #include <string>
 #include <iostream>

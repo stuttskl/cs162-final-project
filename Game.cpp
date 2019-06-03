@@ -1,3 +1,10 @@
+/*********************************************************************
+** Program name: Final Project
+** Author: Katie Stutts
+** Date:June 2nd, 2019
+** Description:
+*********************************************************************/
+
 #include <iostream>
 #include <string>
 #include <random>
@@ -18,70 +25,74 @@ using std::cin;
 using std::endl;
 using std::string;
 
+/******************************************************
+* Game object constructor. By default, set's the number
+ * of rounds to 1.
+******************************************************/
 Game::Game()
 {
     int healthPoints = 10;
 //    int moralityPoints = 0;
 
     // 12 spaces total
-    Space *startingSpace = new DangerSpace;
+    Space *startingSpace = new ItemSpace;
     currentSpace = startingSpace;
     vector<Item> backpack;
     backpack.reserve(10);
-//    Space *space1 = createNewSpaceType();
-//    Space *space2 = createNewSpaceType();
-//    Space *space3 = createNewSpaceType();
-//    Space *space4 = createNewSpaceType();
-//    Space *space5 = createNewSpaceType();
-//    Space *space6 = createNewSpaceType();
-//    Space *space7 = createNewSpaceType();
-//    Space *space8 = createNewSpaceType();
-//    Space *space9 = createNewSpaceType();
-//    Space *space10 = createNewSpaceType();
-//    Space *space11 = createNewSpaceType();
+    Space *space1 = createNewSpaceType();
+    Space *space2 = createNewSpaceType();
+    Space *space3 = createNewSpaceType();
+    Space *space4 = createNewSpaceType();
+    Space *space5 = createNewSpaceType();
+    Space *space6 = createNewSpaceType();
+    Space *space7 = createNewSpaceType();
+    Space *space8 = createNewSpaceType();
+    Space *space9 = createNewSpaceType();
+    Space *space10 = createNewSpaceType();
+    Space *space11 = createNewSpaceType();
 
-//    spaceLinker(currentSpace, space1, right);
-//    spaceLinker(currentSpace, space4, down);
+    spaceLinker(currentSpace, space1, right);
+    spaceLinker(currentSpace, space4, down);
 
 //    spaceLinker(space1, currentSpace, left); don't need
-//    spaceLinker(space1, space2, right);
-//    spaceLinker(space1, space5, down);
+    spaceLinker(space1, space2, right);
+    spaceLinker(space1, space5, down);
 
 //    spaceLinker(space2, space1, left); don't need
-//    spaceLinker(space2, space3, right);
-//    spaceLinker(space2, space6, down);
+    spaceLinker(space2, space3, right);
+    spaceLinker(space2, space6, down);
 
 //    spaceLinker(space3, space2, left); don't need
-//    spaceLinker(space3, space7, down);
+    spaceLinker(space3, space7, down);
 
 //    spaceLinker(space4, currentSpace, up); don't need
-//    spaceLinker(space4, space5, right);
-//    spaceLinker(space4, space8, down);
+    spaceLinker(space4, space5, right);
+    spaceLinker(space4, space8, down);
 
 //    spaceLinker(space5, space1, up); don't need
 //    spaceLinker(space5, space4, left); don't need
-//    spaceLinker(space5, space9, down);
-//    spaceLinker(space5, space6, right);
+    spaceLinker(space5, space9, down);
+    spaceLinker(space5, space6, right);
 
 //    spaceLinker(space6, space2, up); don't need
 //    spaceLinker(space6, space5, left); don't need
-//    spaceLinker(space6, space10, down);
-//    spaceLinker(space6, space7, right);
+    spaceLinker(space6, space10, down);
+    spaceLinker(space6, space7, right);
 
 //    spaceLinker(space7, space3, up); don't need
 //    spaceLinker(space7, space6, left); don't need
-//    spaceLinker(space7, space11, down);
+    spaceLinker(space7, space11, down);
 
 //    spaceLinker(space8, space4, up); don't need
-//    spaceLinker(space8, space9, right);
+    spaceLinker(space8, space9, right);
 
 //    spaceLinker(space9, space5, up); don't need
 //    spaceLinker(space9, space8, left); don't need
-//    spaceLinker(space9, space10, right);
+    spaceLinker(space9, space10, right);
 
 //    spaceLinker(space10, space6, up); don't need
 //    spaceLinker(space10, space9, left); don't need
-//    spaceLinker(space10, space11, right);
+    spaceLinker(space10, space11, right);
 
 //    spaceLinker(space11, space7, up); don't need
 //    spaceLinker(space11, space10, left); don't need
@@ -142,12 +153,24 @@ Space* Game::createNewSpaceType()
     }
 }
 
+void Game::gameMenu()
+{
+    cout << "1. Print current location." << endl;
+    cout << "2. Print current Health Points." << endl;
+    cout << "3. Print contents of backpack." << endl;
+}
+
 void Game::startGame()
 {
-//    cout << "Number of current spaces is: " << numSpaces << endl;
-//    cout << "Starting space type is: " << currentSpace->getName() << endl;
+    cout << "Number of current spaces is: " << numSpaces << endl;
+    cout << "Starting space type is: " << currentSpace->getName() << endl;
+    while (steps <= 10)
+    {
+        gameRound();
+    }
+
+//    currentSpace->runEvent();
 //    nextMove();
-//    cout << "Next space is: " << currentSpace->getName() << endl;
 
 /*
     cout << "_____" << endl;
@@ -171,36 +194,58 @@ void Game::startGame()
 //    setHealthPoints(currentSpace->runEvent());
 //    cout << "Current health points are: " << getHealthPoints() << endl;
 
-    Item i1;
+//    Item i1;
 //    cout << i1.getName() << endl;
 //    cout << i1.getDescription() << endl;
 
-    Berries b1;
+//    Berries b1;
 //    cout << b1.getName() << endl;
 //    cout << b1.getDescription() << endl;
 
-    Wood w1;
+//    Wood w1;
 //    cout << w1.getName() << endl;
 //    cout << w1.getDescription() << endl;
 
-    Knife k1;
+//    Knife k1;
 //    cout << k1.getName() << endl;
 //    cout << k1.getDescription() << endl;
 
-    Sweater s1;
+//    Sweater s1;
 //    cout << s1.getName() << endl;
 //    cout << s1.getDescription() << endl;
 
-    backpack.push_back(i1);
-    backpack.push_back(b1);
-    backpack.push_back(w1);
-    backpack.push_back(k1);
-    backpack.push_back(s1);
-    displayBackpack();
 
 
+}
 
+void Game::gameRound()
+{
+    cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
+    cout << "\t \t    ROUND " << steps+1 << endl;
+    cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
+    nextMove();
+    cout << "Next space is: " << currentSpace->getName() << endl;
+    currentSpace->runEvent();
+    bool shouldKeepPlaying = true;
+    if (!stillAlive())
+    {
+        shouldKeepPlaying = false;
+    }
+}
 
+bool Game::stillAlive()
+{
+    if (getHealthPoints() <= 0)
+    {
+        cout << "Health points are below or equal to 0." << endl;
+        return false;
+    } else {
+        return true;
+    }
+}
+
+Item* Game::createNewItem()
+{
 }
 
 void Game::nextMove()
@@ -315,7 +360,7 @@ void Game::displayBackpack()
     }
 }
 
-void Game::addToBackpack()
+void Game::addToBackpack(Item *itemIn)
 {
     cout << "Would you like to add this item to your backpack?" << endl;
     cout << "1. Yes \n2. No" << endl;
@@ -323,6 +368,11 @@ void Game::addToBackpack()
     cin >> addItem;
     if (addItem == 1)
     {
-//        backpack.push_back();
+        backpack.push_back(*itemIn);
+        displayBackpack();
+    }
+    if (addItem == 2)
+    {
+        cout << "This item will not be added to your backpack." << endl;
     }
 }

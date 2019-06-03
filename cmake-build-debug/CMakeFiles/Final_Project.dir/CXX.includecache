@@ -67,6 +67,8 @@ string
 -
 Space.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
 /Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
 Item.hpp
@@ -89,14 +91,4 @@ Item.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
 Item.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
-
-/Users/katie/Dropbox/CS162/Final_Project/main.cpp
-iostream
--
-string
--
-Game.hpp
-/Users/katie/Dropbox/CS162/Final_Project/Game.hpp
-Space.hpp
-/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 

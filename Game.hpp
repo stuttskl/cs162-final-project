@@ -1,3 +1,9 @@
+/*********************************************************************
+** Program name: Final Project
+** Author: Katie Stutts
+** Date:June 2nd, 2019
+** Description:
+*********************************************************************/
 #include "Space.hpp"
 #include "Item.hpp"
 #include <vector>
@@ -23,11 +29,17 @@ public:
     void startGame();
     Space* createNewSpaceType();
 
+    void gameMenu();
+
+    void gameRound();
+
     void nextMove();
     void spaceLinker(Space*, Space*, Direction);
 
     int getHealthPoints();
     void setHealthPoints(int);
+
+    bool stillAlive();
 
 //    int getMoralityPoints();
 //    void setMoralityPoints(int);
@@ -38,7 +50,9 @@ public:
     void displayCurrentLocation();
 
     void displayBackpack();
-    void addToBackpack();
+    void addToBackpack(Item*);
+
+    Item* createNewItem();
 
 };
 

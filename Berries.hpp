@@ -1,7 +1,9 @@
-//
-// Created by Katie Stutts on 2019-06-01.
-//
-
+/*********************************************************************
+** Program name: Final Project
+** Author: Katie Stutts
+** Date:June 2nd, 2019
+** Description:
+*********************************************************************/
 #ifndef FINAL_PROJECT_BERRIES_HPP
 #define FINAL_PROJECT_BERRIES_HPP
 
