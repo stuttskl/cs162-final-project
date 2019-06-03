@@ -22,7 +22,6 @@ private:
     vector<Item> backpack;
     int numSpaces = 1;
     int healthPoints = 10;
-//    int moralityPoints = 0;
 
 public:
     Game();
@@ -40,9 +39,6 @@ public:
     void setHealthPoints(int);
 
     bool stillAlive();
-
-//    int getMoralityPoints();
-//    void setMoralityPoints(int);
 
     int getRandomNum(int, int);
     void move(Direction);

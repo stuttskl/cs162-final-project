@@ -357,16 +357,6 @@ void Game::setHealthPoints(int hp)
     healthPoints -= hp;
 }
 
-//int Game::getMoralityPoints()
-//{
-//    return moralityPoints;
-//}
-//
-//void Game::setMoralityPoints(int mp)
-//{
-//    moralityPoints += mp;
-//}
-
 void Game::displayCurrentLocation()
 {
     cout << "You are currently at a " << currentSpace->getName() << endl;
