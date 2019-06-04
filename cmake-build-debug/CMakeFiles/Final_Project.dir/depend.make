@@ -8,6 +8,7 @@ CMakeFiles/Final_Project.dir/Berries.cpp.o: ../Item.hpp
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../DangerSpace.cpp
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../DangerSpace.hpp
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../Space.hpp
+CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../inputValid.hpp
 
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Berries.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../DangerSpace.hpp
@@ -20,6 +21,7 @@ CMakeFiles/Final_Project.dir/Game.cpp.o: ../MysterySpace.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Space.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Sweater.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Wood.hpp
+CMakeFiles/Final_Project.dir/Game.cpp.o: ../inputValid.hpp
 
 CMakeFiles/Final_Project.dir/Item.cpp.o: ../Item.cpp
 CMakeFiles/Final_Project.dir/Item.cpp.o: ../Item.hpp
@@ -52,6 +54,9 @@ CMakeFiles/Final_Project.dir/Sweater.cpp.o: ../Sweater.hpp
 CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Item.hpp
 CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Wood.cpp
 CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Wood.hpp
+
+CMakeFiles/Final_Project.dir/inputValid.cpp.o: ../inputValid.cpp
+CMakeFiles/Final_Project.dir/inputValid.cpp.o: ../inputValid.hpp
 
 CMakeFiles/Final_Project.dir/main.cpp.o: ../Game.hpp
 CMakeFiles/Final_Project.dir/main.cpp.o: ../Item.hpp

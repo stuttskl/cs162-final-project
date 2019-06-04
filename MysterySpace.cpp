@@ -5,6 +5,7 @@
 ** Description:
 *********************************************************************/
 #include "MysterySpace.hpp"
+#include "inputValid.hpp"
 #include <string>
 #include <iostream>
 
@@ -37,8 +38,14 @@ int MysterySpace::runEvent()
     cout << "1. Roll the balanced die." << endl;
     cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
 
-    int whichDie;
-    cin >> whichDie;
+    int whichDie = returnInt();
+    while (whichDie <= 0 || whichDie > 2)
+    {
+        cout << "Please enter an integer representing your choice." << endl;
+        cout << "1. Roll the balanced die." << endl;
+        cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
+        whichDie = returnInt();
+    }
     if (whichDie == 1)
     {
         // roll normal die

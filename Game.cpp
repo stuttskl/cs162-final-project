@@ -9,6 +9,7 @@
 #include <string>
 #include <random>
 #include <vector>
+#include "inputValid.hpp"
 #include "Space.hpp"
 #include "Game.hpp"
 #include "MysterySpace.hpp"
@@ -26,8 +27,7 @@ using std::endl;
 using std::string;
 
 /******************************************************
-* Game object constructor. By default, set's the number
- * of rounds to 1.
+* Game object constructor.
 ******************************************************/
 Game::Game()
 {
@@ -155,7 +155,7 @@ Space* Game::createNewSpaceType()
 
 void Game::gameMenu()
 {
-    int choice;
+    int choice = isInRange(choice, 1, 3);
     cout << "1. Print current location." << endl;
     cout << "2. Print current Health Points." << endl;
     cout << "3. Print contents of backpack." << endl;
@@ -270,11 +270,15 @@ Item* Game::createNewItem()
 
 void Game::nextMove()
 {
-    int nextMove = 0;
+    int nextMove = returnInt();
     cout << "Where would you like to move next?" << endl;
     cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
-    cin >> nextMove;
-
+    while (nextMove <= 0 || nextMove > 4)
+    {
+        cout << "Please enter an integer representing your choice." << endl;
+        cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
+        nextMove = returnInt();
+    }
     switch (nextMove)
     {
         case 1:
@@ -393,8 +397,7 @@ void Game::addToBackpack(Item *itemIn)
 {
     cout << "Would you like to add this item to your backpack?" << endl;
     cout << "1. Yes \n2. No" << endl;
-    int addItem;
-    cin >> addItem;
+    int addItem = isInRange(addItem, 1, 2);
     if (addItem == 1)
     {
         backpack.push_back(*itemIn);

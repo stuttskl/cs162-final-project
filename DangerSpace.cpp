@@ -5,6 +5,7 @@
 ** Description:
 *********************************************************************/
 #include "DangerSpace.hpp"
+#include "inputValid.hpp"
 #include <string>
 #include <iostream>
 
@@ -32,16 +33,15 @@ int DangerSpace::runEvent()
     cout << "\t \t  DANGER SPACE" << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     int whichBadEvent = getRand(1, 3);
-//    cout << whichBadEvent << endl;
-//    switch (whichBadEvent)
-//    {
-//        case 1:
-//            return squirrellAttack();
-//        case 2:
+    switch (whichBadEvent)
+    {
+        case 1:
+            return squirrellAttack();
+        case 2:
             return openTheHatch();
-//        case 3:
-//            return heavyRain();
-//    }
+        case 3:
+            return heavyRain();
+    }
 }
 
 int DangerSpace::squirrellAttack()
@@ -86,8 +86,12 @@ int DangerSpace::heavyRain()
             "heavy rains subsided in a matter of minutes. You don't really want to disrupt your foraging progress to "
             "find cover. Do you go find cover, or weather the storm?"<< endl;
     cout << "1. Stay \n2. Go." << endl;
-    int stayOrGo;
-    cin >> stayOrGo;
+    int stayOrGo = returnInt();
+    while (stayOrGo <= 0 || stayOrGo > 2)
+    {
+        cout << "Please enter an integer representing your choice. 1 - Yes. 2 - No." << endl;
+        stayOrGo = returnInt();
+    }
     if (stayOrGo == 1)
     {
         int stormResult = getRand(1, 4);
@@ -113,13 +117,17 @@ int DangerSpace::openTheHatch()
     cout << endl;
 
 
-    int openHatch;
     cout << "You stumble upon a mysterious looking in-ground hatch." << endl;
     cout << "The top is covered with leaves and brush, but you notice there's nothing covering the handle " << endl;
     cout << "which is looking more tempting by the minute." << endl;
     cout << "Do you wish to open the hatch and explore???" << endl;
     cout << "1. Yes \n2. No." << endl;
-    cin >> openHatch;
+    int openHatch = returnInt();
+    while (openHatch <= 0 || openHatch > 2)
+    {
+        cout << "Please enter an integer representing your choice. 1 - Yes. 2 - No." << endl;
+        openHatch = returnInt();
+    }
     if (openHatch == 1)
     {
         cout << " /\\ " << endl;
