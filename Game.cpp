@@ -35,7 +35,7 @@ Game::Game()
 //    int moralityPoints = 0;
 
     // 12 spaces total
-    Space *startingSpace = new ItemSpace;
+    Space *startingSpace = new DangerSpace;
     currentSpace = startingSpace;
     vector<Item> backpack;
     backpack.reserve(10);
@@ -180,16 +180,16 @@ void Game::gameMenu()
 
 void Game::startGame()
 {
-    gameMenu();
+    //gameMenu();
 
     cout << "Number of current spaces is: " << numSpaces << endl;
     cout << "Starting space type is: " << currentSpace->getName() << endl;
-    while (steps <= 10)
-    {
-        gameRound();
-    }
+//    while (steps <= 10)
+//    {
+//        gameRound();
+//    }
 
-//    currentSpace->runEvent();
+    currentSpace->runEvent();
 //    nextMove();
 
 /*
@@ -360,10 +360,29 @@ void Game::setHealthPoints(int hp)
 void Game::displayCurrentLocation()
 {
     cout << "You are currently at a " << currentSpace->getName() << endl;
+    if (currentSpace->getUp())
+    {
+        cout << "The space above you is " << currentSpace->getUp()->getName() << endl;
+
+    }
+    if (currentSpace->getDown())
+    {
+        cout << "The space below you is " << currentSpace->getDown()->getName() << endl;
+    }
+    if (currentSpace->getLeft())
+    {
+        cout << "The space to your left is " << currentSpace->getLeft()->getName() << endl;
+    }
+    if (currentSpace->getRight())
+    {
+        cout << "The space to your right is " << currentSpace->getRight()->getName() << endl;
+    }
 }
 
 void Game::displayBackpack()
 {
+    // empty check done before
+
     for (vector<Item>::iterator i = backpack.begin(); i != backpack.end(); ++i)
     {
         cout << i->getName() << ' ';
