@@ -27,7 +27,7 @@ using std::endl;
 using std::string;
 
 /******************************************************
-* Game object constructor.
+*
 ******************************************************/
 Game::Game()
 {
@@ -35,7 +35,7 @@ Game::Game()
 //    int moralityPoints = 0;
 
     // 12 spaces total
-    Space *startingSpace = new DangerSpace;
+    Space *startingSpace = new MysterySpace;
     currentSpace = startingSpace;
     vector<Item> backpack;
     backpack.reserve(10);
@@ -155,10 +155,15 @@ Space* Game::createNewSpaceType()
 
 void Game::gameMenu()
 {
-    int choice = isInRange(choice, 1, 3);
     cout << "1. Print current location." << endl;
     cout << "2. Print current Health Points." << endl;
     cout << "3. Print contents of backpack." << endl;
+    int choice = returnInt();
+    while (choice <= 0 || choice > 3)
+    {
+        cout << "Please enter an integer representing your choice." << endl;
+        choice = returnInt();
+    }
     if (choice == 1)
     {
         displayCurrentLocation();
@@ -178,6 +183,9 @@ void Game::gameMenu()
     }
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::startGame()
 {
     //gameMenu();
@@ -238,6 +246,9 @@ void Game::startGame()
 
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::gameRound()
 {
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
@@ -253,6 +264,9 @@ void Game::gameRound()
     }
 }
 
+/******************************************************
+*
+******************************************************/
 bool Game::stillAlive()
 {
     if (getHealthPoints() <= 0)
@@ -264,10 +278,16 @@ bool Game::stillAlive()
     }
 }
 
+/******************************************************
+*
+******************************************************/
 Item* Game::createNewItem()
 {
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::nextMove()
 {
     int nextMove = returnInt();
@@ -316,6 +336,9 @@ void Game::nextMove()
     }
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::move(Direction d)
 {
     switch(d)
@@ -341,6 +364,9 @@ void Game::move(Direction d)
     steps++;
 }
 
+/******************************************************
+*
+******************************************************/
 int Game::getRandomNum(int min, int max)
 {
     // copied from https://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
@@ -351,16 +377,25 @@ int Game::getRandomNum(int min, int max)
     return roll(gen);
 }
 
+/******************************************************
+*
+******************************************************/
 int Game::getHealthPoints()
 {
     return healthPoints;
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::setHealthPoints(int hp)
 {
     healthPoints -= hp;
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::displayCurrentLocation()
 {
     cout << "You are currently at a " << currentSpace->getName() << endl;
@@ -383,6 +418,9 @@ void Game::displayCurrentLocation()
     }
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::displayBackpack()
 {
     // empty check done before
@@ -393,11 +431,21 @@ void Game::displayBackpack()
     }
 }
 
+/******************************************************
+*
+******************************************************/
 void Game::addToBackpack(Item *itemIn)
 {
     cout << "Would you like to add this item to your backpack?" << endl;
     cout << "1. Yes \n2. No" << endl;
-    int addItem = isInRange(addItem, 1, 2);
+    int addItem = returnInt();
+    while (addItem <= 0 || addItem > 2)
+    {
+        cout << "Please enter an integer representing your selection." << endl;
+        cout << "1. Yes \n2. No" << endl;
+        addItem = returnInt();
+    }
+
     if (addItem == 1)
     {
         backpack.push_back(*itemIn);

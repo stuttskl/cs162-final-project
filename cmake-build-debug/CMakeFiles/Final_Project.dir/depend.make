@@ -43,6 +43,7 @@ CMakeFiles/Final_Project.dir/Knife.cpp.o: ../Knife.hpp
 CMakeFiles/Final_Project.dir/MysterySpace.cpp.o: ../MysterySpace.cpp
 CMakeFiles/Final_Project.dir/MysterySpace.cpp.o: ../MysterySpace.hpp
 CMakeFiles/Final_Project.dir/MysterySpace.cpp.o: ../Space.hpp
+CMakeFiles/Final_Project.dir/MysterySpace.cpp.o: ../inputValid.hpp
 
 CMakeFiles/Final_Project.dir/Space.cpp.o: ../Space.cpp
 CMakeFiles/Final_Project.dir/Space.cpp.o: ../Space.hpp

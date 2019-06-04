@@ -12,6 +12,9 @@ using std::cin;
 using std::endl;
 using std::string;
 
+/******************************************************
+*
+******************************************************/
 Sweater::Sweater()
 {
     name = "Sweater";
@@ -20,4 +23,7 @@ Sweater::Sweater()
                   "you take will be cut in half! Plus, it gets cold at night.";
 }
 
+/******************************************************
+*
+******************************************************/
 Sweater::~Sweater() {}

@@ -18,43 +18,57 @@ using std::string;
 using std::cout;
 using std::endl;
 
-
+/******************************************************
+*
+******************************************************/
 ItemSpace::ItemSpace()
 {
     name = "Item Space";
 }
 
+/******************************************************
+*
+******************************************************/
 ItemSpace::~ItemSpace() {}
 
+/******************************************************
+*
+******************************************************/
 string ItemSpace::getName()
 {
     return name;
 }
 
+/******************************************************
+*
+******************************************************/
 int ItemSpace::runEvent()
 {
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << "\t \t  ITEM   SPACE" << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
-//    int whichItem;
-//    whichItem = getRand(1, 5);
-//    switch (whichItem)
-//    {
-//        case 1:
-//            createNewItem(1);
-//        case 2:
-//            createNewItem(2);
-//        case 3:
-//            createNewItem(3);
-//        case 4:
-//            createNewItem(4);
-//        case 5:
-//            createNewItem(5);
-//    }
+    int whichItem;
+    whichItem = getRand(1, 5);
+    switch (whichItem)
+    {
+        case 1:
+            createNewItem(1);
+        case 2:
+            createNewItem(2);
+        case 3:
+            createNewItem(3);
+        case 4:
+            createNewItem(4);
+        case 5:
+            createNewItem(5);
+    }
 
 }
 
+/******************************************************
+*
+******************************************************/
 Item* ItemSpace::createNewItem(int itemType)
 {
 
