@@ -174,29 +174,9 @@ void Game::startGame()
 
     cout << "Number of current spaces is: " << numSpaces << endl;
     cout << "Starting space type is: " << currentSpace->getName() << endl;
-//    while (steps <= 10)
-//    {
-//        gameRound();
-//    }
-
-    currentSpace->runEvent();
-    switch (currentSpace->runEvent())
+    while (steps <= 10)
     {
-        case 10:
-            addToBackpack(createNewItem(10));
-            break;
-        case 11:
-            addToBackpack(createNewItem(11));
-            break;
-        case 12:
-            addToBackpack(createNewItem(12));
-            break;
-        case 13:
-            addToBackpack(createNewItem(13));
-            break;
-        case 14:
-            addToBackpack(createNewItem(14));
-            break;
+        gameRound();
     }
 
 
@@ -244,7 +224,31 @@ void Game::gameRound()
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     nextMove();
     cout << "Next space is: " << currentSpace->getName() << endl;
-    currentSpace->runEvent();
+
+    if (currentSpace->getName() == "Item Space")
+    {
+        switch (currentSpace->runEvent())
+        {
+            case 10:
+                addToBackpack(createNewItem(10));
+                break;
+            case 11:
+                addToBackpack(createNewItem(11));
+                break;
+            case 12:
+                addToBackpack(createNewItem(12));
+                break;
+            case 13:
+                addToBackpack(createNewItem(13));
+                break;
+            case 14:
+                addToBackpack(createNewItem(14));
+                break;
+        }
+    } else {
+        currentSpace->runEvent();
+    }
+
     bool shouldKeepPlaying = true;
     if (!stillAlive())
     {

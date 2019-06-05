@@ -13,9 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86e26569-9abc-4ec0-8be0-891eca32ef53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItemSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ItemSpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItemSpace.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ItemSpace.hpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +27,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="181" column="16" selection-start-line="181" selection-end-line="182" />
+            <state relative-caret-position="76">
+              <caret line="456" column="22" selection-start-line="456" selection-start-column="22" selection-end-line="456" selection-end-column="22" />
               <folding>
-                <element signature="e#237#256#0" expanded="true" />
-                <element signature="e#6150#6667#0" />
                 <element signature="e#6669#6782#0" />
-                <element signature="e#6669#6976#0" />
-                <element signature="e#7125#8568#0" />
+                <element signature="e#6978#7123#0" />
                 <element signature="e#10235#10489#0" />
                 <element signature="e#10235#11144#0" />
                 <element signature="e#11146#11339#0" />
@@ -59,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ItemSpace.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
+            <state relative-caret-position="1181">
               <caret line="68" column="21" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="21" />
               <folding>
                 <element signature="e#236#260#0" expanded="true" />
@@ -241,23 +235,22 @@
       <workItem from="1559337716754" duration="20838000" />
       <workItem from="1559527691140" duration="410000" />
       <workItem from="1559587265274" duration="10780000" />
-      <workItem from="1559684738286" duration="4050000" />
+      <workItem from="1559684738286" duration="5583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64529000" />
+    <option name="totallyTimeSpent" value="66062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1169" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16947648" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25987262" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7579618" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -484,7 +477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ItemSpace.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
+        <state relative-caret-position="1181">
           <caret line="68" column="21" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="21" />
           <folding>
             <element signature="e#236#260#0" expanded="true" />
@@ -494,14 +487,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="181" column="16" selection-start-line="181" selection-end-line="182" />
+        <state relative-caret-position="76">
+          <caret line="456" column="22" selection-start-line="456" selection-start-column="22" selection-end-line="456" selection-end-column="22" />
           <folding>
-            <element signature="e#237#256#0" expanded="true" />
-            <element signature="e#6150#6667#0" />
             <element signature="e#6669#6782#0" />
-            <element signature="e#6669#6976#0" />
-            <element signature="e#7125#8568#0" />
+            <element signature="e#6978#7123#0" />
             <element signature="e#10235#10489#0" />
             <element signature="e#10235#11144#0" />
             <element signature="e#11146#11339#0" />
