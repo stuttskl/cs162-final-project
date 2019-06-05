@@ -35,7 +35,7 @@ Game::Game()
     int healthPoints = 10;
 
     // 12 spaces total
-    Space *startingSpace = new ItemSpace;
+    Space *startingSpace = new Space;
     currentSpace = startingSpace;
     vector<Item> backpack;
     backpack.reserve(10);
@@ -172,15 +172,14 @@ void Game::startGame()
 {
     //gameMenu();
 
-    cout << "Number of current spaces is: " << numSpaces << endl;
-    cout << "Starting space type is: " << currentSpace->getName() << endl;
+//    cout << "Number of current spaces is: " << numSpaces << endl;
+//    cout << "Starting space type is: " << currentSpace->getName() << endl;
     while (steps <= 10)
     {
         gameRound();
     }
 
 
-//    nextMove();
 
 /*
     cout << "_____" << endl;
@@ -303,9 +302,9 @@ Item* Game::createNewItem(int itemType)
 ******************************************************/
 void Game::nextMove()
 {
-    int nextMove = returnInt();
     cout << "Where would you like to move next?" << endl;
     cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
+    int nextMove = returnInt();
     while (nextMove <= 0 || nextMove > 4)
     {
         cout << "Please enter an integer representing your choice." << endl;
