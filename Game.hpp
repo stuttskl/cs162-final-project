@@ -48,7 +48,7 @@ public:
     void displayBackpack();
     void addToBackpack(Item*);
 
-    Item* createNewItem();
+    Item* createNewItem(int);
 
 };
 

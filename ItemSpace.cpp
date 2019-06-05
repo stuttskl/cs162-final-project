@@ -49,53 +49,52 @@ int ItemSpace::runEvent()
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
     int whichItem;
-    whichItem = getRand(1, 5);
-    createNewItem(1);
+    whichItem = getRand(10, 14);
+//    createNewItem(1);
 
+    switch (whichItem)
+    {
+        case 10:
+            return 10;
+        case 11:
+            return 11;
+        case 12:
+            return 12;
+        case 13:
+            return 13;
+        case 14:
+            return 14;
+    }
 
-    Item *i2 = new Wood;
-
-//    switch (whichItem)
-//    {
-//        case 1:
-//            createNewItem(1);
-//        case 2:
-//            createNewItem(2);
-//        case 3:
-//            createNewItem(3);
-//        case 4:
-//            createNewItem(4);
-//        case 5:
-//            createNewItem(5);
-//    }
+//    cout << "Inside itemspace class" << endl;
 
 }
 
 /******************************************************
 *
 ******************************************************/
-Item* ItemSpace::createNewItem(int itemType)
-{
-
-    newItem = new Wood;
-    return newItem;
-
-
-//    switch (itemType)
-//    {
-//        case 1:
-//            newItem = new Wood;
-//            return newItem;
-//        case 2:
-//            newItem = new Knife;
-//            return newItem;
-//        case 3:
-//            newItem = new Sweater;
-//            return newItem;
-//        case 4:
-//            newItem = new Berries;
-//            return newItem;
-//        case 5:
-//            return nullptr;
-//    }
-}
+//Item* ItemSpace::createNewItem(int itemType)
+//{
+//
+//    newItem = new Wood;
+//    return newItem;
+//
+//
+////    switch (itemType)
+////    {
+////        case 1:
+////            newItem = new Wood;
+////            return newItem;
+////        case 2:
+////            newItem = new Knife;
+////            return newItem;
+////        case 3:
+////            newItem = new Sweater;
+////            return newItem;
+////        case 4:
+////            newItem = new Berries;
+////            return newItem;
+////        case 5:
+////            return nullptr;
+////    }
+//}

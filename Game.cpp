@@ -12,6 +12,7 @@
 #include "inputValid.hpp"
 #include "Space.hpp"
 #include "Game.hpp"
+#include "Item.hpp"
 #include "MysterySpace.hpp"
 #include "DangerSpace.hpp"
 #include "ItemSpace.hpp"
@@ -179,6 +180,26 @@ void Game::startGame()
 //    }
 
     currentSpace->runEvent();
+    switch (currentSpace->runEvent())
+    {
+        case 10:
+            addToBackpack(createNewItem(10));
+            break;
+        case 11:
+            addToBackpack(createNewItem(11));
+            break;
+        case 12:
+            addToBackpack(createNewItem(12));
+            break;
+        case 13:
+            addToBackpack(createNewItem(13));
+            break;
+        case 14:
+            addToBackpack(createNewItem(14));
+            break;
+    }
+
+
 //    nextMove();
 
 /*
@@ -248,8 +269,29 @@ bool Game::stillAlive()
 /******************************************************
 *
 ******************************************************/
-Item* Game::createNewItem()
+Item* Game::createNewItem(int itemType)
 {
+    Item *newItem = nullptr;
+
+    switch (itemType)
+    {
+        case 10:
+            newItem = new Wood;
+            return newItem;
+        case 11:
+            newItem = new Knife;
+            return newItem;
+        case 12:
+            newItem = new Sweater;
+            return newItem;
+        case 13:
+            newItem = new Berries;
+            return newItem;
+        case 14:
+            newItem = new Item;
+            return newItem;
+    }
+
 }
 
 /******************************************************

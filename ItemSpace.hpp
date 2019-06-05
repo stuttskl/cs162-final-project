@@ -15,7 +15,7 @@ public:
     ~ItemSpace();
     std::string getName();
     int runEvent();
-    Item* createNewItem(int);
+//    Item* createNewItem(int);
 
 };
 
