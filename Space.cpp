@@ -25,14 +25,6 @@ Space::Space()
     right = nullptr;
 }
 
-//Space::Space(string name)
-//{
-//    this->name = name;
-//    up = nullptr;
-//    down = nullptr;
-//    left = nullptr;
-//    right = nullptr;
-//}
 /******************************************************
 *
 ******************************************************/

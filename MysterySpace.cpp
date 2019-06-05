@@ -15,7 +15,7 @@ using std::endl;
 using std::cin;
 
 /******************************************************
-*
+* Constructor for MysterySpace. Sets default name.
 ******************************************************/
 MysterySpace::MysterySpace()
 {
@@ -23,12 +23,12 @@ MysterySpace::MysterySpace()
 }
 
 /******************************************************
-*
+* Destructor for MysterySpace.
 ******************************************************/
 MysterySpace::~MysterySpace() {}
 
 /******************************************************
-*
+* Returns name of space type.
 ******************************************************/
 string MysterySpace::getName()
 {

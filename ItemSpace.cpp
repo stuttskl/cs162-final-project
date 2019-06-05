@@ -50,19 +50,24 @@ int ItemSpace::runEvent()
 
     int whichItem;
     whichItem = getRand(1, 5);
-    switch (whichItem)
-    {
-        case 1:
-            createNewItem(1);
-        case 2:
-            createNewItem(2);
-        case 3:
-            createNewItem(3);
-        case 4:
-            createNewItem(4);
-        case 5:
-            createNewItem(5);
-    }
+    createNewItem(1);
+
+
+    Item *i2 = new Wood;
+
+//    switch (whichItem)
+//    {
+//        case 1:
+//            createNewItem(1);
+//        case 2:
+//            createNewItem(2);
+//        case 3:
+//            createNewItem(3);
+//        case 4:
+//            createNewItem(4);
+//        case 5:
+//            createNewItem(5);
+//    }
 
 }
 
@@ -74,6 +79,8 @@ Item* ItemSpace::createNewItem(int itemType)
 
     newItem = new Wood;
     return newItem;
+
+
 //    switch (itemType)
 //    {
 //        case 1:

@@ -32,10 +32,9 @@ using std::string;
 Game::Game()
 {
     int healthPoints = 10;
-//    int moralityPoints = 0;
 
     // 12 spaces total
-    Space *startingSpace = new MysterySpace;
+    Space *startingSpace = new ItemSpace;
     currentSpace = startingSpace;
     vector<Item> backpack;
     backpack.reserve(10);
@@ -54,48 +53,30 @@ Game::Game()
     spaceLinker(currentSpace, space1, right);
     spaceLinker(currentSpace, space4, down);
 
-//    spaceLinker(space1, currentSpace, left); don't need
     spaceLinker(space1, space2, right);
     spaceLinker(space1, space5, down);
 
-//    spaceLinker(space2, space1, left); don't need
     spaceLinker(space2, space3, right);
     spaceLinker(space2, space6, down);
 
-//    spaceLinker(space3, space2, left); don't need
     spaceLinker(space3, space7, down);
 
-//    spaceLinker(space4, currentSpace, up); don't need
     spaceLinker(space4, space5, right);
     spaceLinker(space4, space8, down);
 
-//    spaceLinker(space5, space1, up); don't need
-//    spaceLinker(space5, space4, left); don't need
     spaceLinker(space5, space9, down);
     spaceLinker(space5, space6, right);
 
-//    spaceLinker(space6, space2, up); don't need
-//    spaceLinker(space6, space5, left); don't need
     spaceLinker(space6, space10, down);
     spaceLinker(space6, space7, right);
 
-//    spaceLinker(space7, space3, up); don't need
-//    spaceLinker(space7, space6, left); don't need
     spaceLinker(space7, space11, down);
 
-//    spaceLinker(space8, space4, up); don't need
     spaceLinker(space8, space9, right);
 
-//    spaceLinker(space9, space5, up); don't need
-//    spaceLinker(space9, space8, left); don't need
     spaceLinker(space9, space10, right);
 
-//    spaceLinker(space10, space6, up); don't need
-//    spaceLinker(space10, space9, left); don't need
     spaceLinker(space10, space11, right);
-
-//    spaceLinker(space11, space7, up); don't need
-//    spaceLinker(space11, space10, left); don't need
 
     steps = 0;
 }
@@ -221,27 +202,13 @@ void Game::startGame()
 //    cout << "Current health points are: " << getHealthPoints() << endl;
 //    setHealthPoints(currentSpace->runEvent());
 //    cout << "Current health points are: " << getHealthPoints() << endl;
+//    Item *i1 = new Item;
+//    Wood *w1 = new Wood;
 
-//    Item i1;
-//    cout << i1.getName() << endl;
-//    cout << i1.getDescription() << endl;
-
-//    Berries b1;
-//    cout << b1.getName() << endl;
-//    cout << b1.getDescription() << endl;
-
-//    Wood w1;
-//    cout << w1.getName() << endl;
-//    cout << w1.getDescription() << endl;
-
-//    Knife k1;
-//    cout << k1.getName() << endl;
-//    cout << k1.getDescription() << endl;
-
-//    Sweater s1;
-//    cout << s1.getName() << endl;
-//    cout << s1.getDescription() << endl;
-
+//    addToBackpack(i1);
+//    addToBackpack(w1);
+//    displayBackpack();
+    cout << "Backpack size is: " << backpack.size() << endl;
 
 
 }
@@ -337,7 +304,8 @@ void Game::nextMove()
 }
 
 /******************************************************
-*
+* takes in an enum representing a direction, and depending
+ * on the direction, grabs the current space's
 ******************************************************/
 void Game::move(Direction d)
 {
@@ -365,7 +333,8 @@ void Game::move(Direction d)
 }
 
 /******************************************************
-*
+* takes in a min and max, and returns a random number
+ * with that range.
 ******************************************************/
 int Game::getRandomNum(int min, int max)
 {
@@ -378,7 +347,7 @@ int Game::getRandomNum(int min, int max)
 }
 
 /******************************************************
-*
+* returns current health points.
 ******************************************************/
 int Game::getHealthPoints()
 {
@@ -394,7 +363,9 @@ void Game::setHealthPoints(int hp)
 }
 
 /******************************************************
-*
+* First checks if there is a valid space, and if so,
+ * displays current location, and the up, down, left
+ * and right spaces (if applicable).
 ******************************************************/
 void Game::displayCurrentLocation()
 {
@@ -402,7 +373,6 @@ void Game::displayCurrentLocation()
     if (currentSpace->getUp())
     {
         cout << "The space above you is " << currentSpace->getUp()->getName() << endl;
-
     }
     if (currentSpace->getDown())
     {
@@ -419,7 +389,8 @@ void Game::displayCurrentLocation()
 }
 
 /******************************************************
-*
+* Iterates through all items in the backpack and prints
+ * the name of each item.
 ******************************************************/
 void Game::displayBackpack()
 {
@@ -432,7 +403,8 @@ void Game::displayBackpack()
 }
 
 /******************************************************
-*
+* Prompts the user if they'd like to add a new item
+ * to their backpack.
 ******************************************************/
 void Game::addToBackpack(Item *itemIn)
 {

@@ -28,7 +28,7 @@ DangerSpace::DangerSpace()
 DangerSpace::~DangerSpace() {}
 
 /******************************************************
-*
+* Returns name of space type.
 ******************************************************/
 string DangerSpace::getName()
 {
@@ -53,6 +53,7 @@ int DangerSpace::runEvent()
         case 3:
             return heavyRain();
     }
+
 }
 
 /******************************************************

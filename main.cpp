@@ -15,7 +15,8 @@ using std::endl;
 using std::string;
 
 /******************************************************
-*
+* Creates new instance of a Game, and invokes startGame()
+ * to run the start of the game.
 ******************************************************/
 int main() {
 
