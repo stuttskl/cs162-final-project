@@ -170,18 +170,10 @@ void Game::gameMenu()
 ******************************************************/
 void Game::startGame()
 {
-    //gameMenu();
 
 //    cout << "Number of current spaces is: " << numSpaces << endl;
 //    cout << "Starting space type is: " << currentSpace->getName() << endl;
-    while (steps <= 10)
-    {
-        gameRound();
-    }
 
-
-
-/*
     cout << "_____" << endl;
     cout << " \\ K \\__      ____" << endl;
     cout << "__\\   \\_______\\___\\____________" << endl;
@@ -189,27 +181,30 @@ void Game::startGame()
     cout << "`-----------,----,--------------'" << endl;
     cout << "          _/____/" << endl;
     cout << endl;
-    cout << "You have just survived a plane crash, and have awoken in a forest amongst tall trees, wild plants and mysterious "
-            "hatches. You no longer have any of your belongings, except the clothes on your back. "
-            "You are not sure if others survived, but you see no sign of other human life around you. " << endl;
-    cout << "Your objective: find a way to get off of this island and get to safety. "
+    cout << "You have just survived a plane crash, and have awoken in a forest amongst\n"
+            "tall trees, wild plants and mysterious hatches. You no longer have any of your\n"
+            "belongings, except the clothes on your back. You are not sure if others survived,\n"
+            "but you see no sign of other human life around you.\n"
+            "Your objective: find a way to get off of this island and get to safety.\n\n"
             "There are three possible ways to make it off the island alive:\n"
             "1. Gather enough wood to make a large bonfire. There are small planes that fly overhead, but nothing "
             "except a huge bonfire would catch their attention.\n"
             "2. Gather the correct items and build a raft, and escape to safety via the sea. \n"
             "3. Gather the correct items and build a jetpack (easier than you’d think) to fly off to safety." << endl;
-*/
+
+    cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
+    
+    while (steps <= 10)
+    {
+        gameMenu();
+        gameRound();
+    }
+
 //    cout << "Current health points are: " << getHealthPoints() << endl;
 //    setHealthPoints(currentSpace->runEvent());
 //    cout << "Current health points are: " << getHealthPoints() << endl;
-//    Item *i1 = new Item;
-//    Wood *w1 = new Wood;
 
-//    addToBackpack(i1);
-//    addToBackpack(w1);
-//    displayBackpack();
-    cout << "Backpack size is: " << backpack.size() << endl;
-
+//    cout << "Backpack size is: " << backpack.size() << endl;
 
 }
 
@@ -222,7 +217,7 @@ void Game::gameRound()
     cout << "\t \t    ROUND " << steps+1 << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     nextMove();
-    cout << "Next space is: " << currentSpace->getName() << endl;
+//    cout << "Next space is: " << currentSpace->getName() << endl;
 
     if (currentSpace->getName() == "Item Space")
     {
@@ -358,19 +353,19 @@ void Game::move(Direction d)
     {
         case up:
             currentSpace = currentSpace->getUp();
-            cout << "Moving up!" << endl;
+//            cout << "Moving up!" << endl;
             break;
         case down:
             currentSpace = currentSpace->getDown();
-            cout << "Moving down!" << endl;
+//            cout << "Moving down!" << endl;
             break;
         case left:
             currentSpace = currentSpace->getLeft();
-            cout << "Moving left!" << endl;
+//            cout << "Moving left!" << endl;
             break;
         case right:
             currentSpace = currentSpace->getRight();
-            cout << "Moving right!" << endl;
+//            cout << "Moving right!" << endl;
             break;
     }
 
@@ -440,11 +435,13 @@ void Game::displayCurrentLocation()
 void Game::displayBackpack()
 {
     // empty check done before
+    cout << "The contents of your backpack are: " << endl;
 
     for (vector<Item>::iterator i = backpack.begin(); i != backpack.end(); ++i)
     {
         cout << i->getName() << ' ';
     }
+    cout << endl;
 }
 
 /******************************************************
