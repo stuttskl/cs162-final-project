@@ -140,8 +140,9 @@ void Game::gameMenu()
     cout << "1. Print current location." << endl;
     cout << "2. Print current Health Points." << endl;
     cout << "3. Print contents of backpack." << endl;
+    cout << "4. Do nothing." << endl;
     int choice = returnInt();
-    while (choice <= 0 || choice > 3)
+    while (choice <= 0 || choice > 4)
     {
         cout << "Please enter an integer representing your choice." << endl;
         choice = returnInt();
@@ -162,6 +163,10 @@ void Game::gameMenu()
         } else {
             displayBackpack();
         }
+    }
+    if (choice == 4)
+    {
+
     }
 }
 
@@ -193,11 +198,11 @@ void Game::startGame()
             "3. Gather the correct items and build a jetpack (easier than you’d think) to fly off to safety." << endl;
 
     cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
-    
+
     while (steps <= 10)
     {
-        gameMenu();
         gameRound();
+        gameMenu();
     }
 
 //    cout << "Current health points are: " << getHealthPoints() << endl;
@@ -255,6 +260,7 @@ void Game::gameRound()
 ******************************************************/
 bool Game::stillAlive()
 {
+    cout << "Inside stillAlive()" << endl;
     if (getHealthPoints() <= 0)
     {
         cout << "Health points are below or equal to 0." << endl;

@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Berries.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
 iostream
 -
 string
 -
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/DangerSpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
 string
 -
 Space.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Game.cpp
+/Users/katie/Dropbox/CS162/Final_Project/Game.cpp
 iostream
 -
 string
@@ -30,73 +30,73 @@ random
 vector
 -
 inputValid.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/inputValid.hpp
+/Users/katie/Dropbox/CS162/Final_Project/inputValid.hpp
 Space.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 Game.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Game.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Game.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 MysterySpace.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/MysterySpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/MysterySpace.hpp
 DangerSpace.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/DangerSpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
 ItemSpace.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/ItemSpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 Berries.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Berries.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
 Wood.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Wood.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
 Knife.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Knife.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
 Sweater.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Sweater.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Sweater.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Game.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Game.hpp
 Space.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 vector
 -
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 string
 -
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/ItemSpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
 string
 -
 Space.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Knife.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/MysterySpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/MysterySpace.hpp
 Space.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 string
 -
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 string
 -
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Sweater.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Sweater.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Wood.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
 Item.hpp
-/Users/katie.stutts/Dropbox/cs162/Final_Project/Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
-/Users/katie.stutts/Dropbox/cs162/Final_Project/inputValid.hpp
+/Users/katie/Dropbox/CS162/Final_Project/inputValid.hpp
 string
 -
 
