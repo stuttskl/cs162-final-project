@@ -315,10 +315,6 @@ Item* Game::createNewItem(int itemType)
             newItem = new Knife;
             return newItem;
         case 12:
-            cout << "You got a new Sweater item!" << endl;
-            newItem = new Sweater;
-            return newItem;
-        case 13:
             cout << "You found some Berries!" << endl;
             newItem = new Berries;
             return newItem;

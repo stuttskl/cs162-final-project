@@ -49,7 +49,7 @@ int ItemSpace::runEvent()
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
     int whichItem;
-    whichItem = getRand(10, 13);
+    whichItem = getRand(10, 12);
 //    createNewItem(1);
 
     switch (whichItem)
@@ -60,8 +60,6 @@ int ItemSpace::runEvent()
             return 11;
         case 12:
             return 12;
-        case 13:
-            return 13;
     }
 
 //    cout << "Inside itemspace class" << endl;
