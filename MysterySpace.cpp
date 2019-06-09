@@ -60,7 +60,10 @@ int MysterySpace::runEvent()
             "be blessed with a good event, however if you do experience a bad event, \n"
             "it will be BAD. Worse than if "
             "you were to simply take the 50/50 chance... What will you do? Are you feeling \n"
-            " risky?" << endl;
+            "risky?" << endl;
+    cout << endl;
+    cout << "---------------------------" << endl;
+    cout << endl;
     cout << "1. Roll the balanced die." << endl;
     cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
 

@@ -166,6 +166,10 @@ void Game::gameMenu()
     cout << "3. Print contents of backpack." << endl;
     cout << "4. Do nothing." << endl;
 
+    cout << endl;
+    cout << "---------------------------" << endl;
+    cout << endl;
+
     int choice = returnInt();
 
     while (choice <= 0 || choice > 4)
@@ -213,6 +217,8 @@ void Game::startGame()
     cout << "`-----------,----,--------------'" << endl;
     cout << "          _/____/" << endl;
     cout << endl;
+
+
     cout << "You have just survived a plane crash, and have awoken in a forest amongst\n"
             "tall trees, wild plants and mysterious hatches. You no longer have any of your\n"
             "belongings, except the clothes on your back. You are not sure if others survived,\n"
@@ -224,10 +230,11 @@ void Game::startGame()
 
     cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
 
+    cout << "Starting health points are: " << this->getHealthPoints() << endl;
+
     while (steps < 10)
     {
         gameRound();
-        gameMenu();
     }
 
 //    cout << "Current health points are: " << getHealthPoints() << endl;
@@ -243,16 +250,16 @@ void Game::startGame()
 ******************************************************/
 void Game::gameRound()
 {
-    bool shouldKeepPlaying = true;
-    if (!stillAlive())
+
+    if (!isStillAlive())
     {
-        shouldKeepPlaying = false;
+        cout << "GAME OVERRRRR" << endl;
     }
 
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << "\t \t    ROUND " << steps+1 << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    nextMove();
+    getNextMove();
 //    cout << "Next space is: " << currentSpace->getName() << endl;
 
     if (currentSpace->getName() == "Item Space")
@@ -277,15 +284,19 @@ void Game::gameRound()
         }
     } else {
 //        this->setHealthPoints(currentSpace->runEvent());
-        cout << "Result of event is: " << endl;
-        currentSpace->runEvent();
+        int hpChange = currentSpace->runEvent();
+        cout << "hpChange is: " << hpChange << endl;
+        if (!(hpChange <= -4 || hpChange > 10))
+        {
+            setHealthPoints(hpChange);
+        }
     }
 }
 
 /******************************************************
 *
 ******************************************************/
-bool Game::stillAlive()
+bool Game::isStillAlive()
 {
 //    cout << "Inside stillAlive()" << endl;
     if (this->getHealthPoints() <= 0)
@@ -326,8 +337,12 @@ Item* Game::createNewItem(int itemType)
 /******************************************************
 *
 ******************************************************/
-void Game::nextMove()
+void Game::getNextMove()
 {
+    cout << endl;
+    cout << "---------------------------" << endl;
+    cout << endl;
+
     cout << "Where would you like to move next?" << endl;
     cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
     int nextMove = returnInt();
@@ -338,104 +353,81 @@ void Game::nextMove()
         nextMove = returnInt();
     }
 
-    if (nextMove == 1)
+
+    switch (nextMove)
+    {
+        case 1:
+            if (canMove(nextMove)) // if true
+            {
+                move(up);
+                gameMenu();
+
+            }
+            break;
+        case 2:
+            if (canMove(nextMove)) // if true
+            {
+                move(down);
+                gameMenu();
+
+            }
+            break;
+        case 3:
+            if (canMove(nextMove)) // if true
+            {
+                move(left);
+                gameMenu();
+
+            }
+            break;
+        case 4:
+            if (canMove(nextMove)) // if true
+            {
+                move(right);
+                gameMenu();
+            }
+            break;
+    }
+
+}
+
+bool Game::canMove(int direction)
+{
+    if (direction == 1)
     {
         if (currentSpace->getUp() != nullptr) {
-            move(up);
+            return true;
         } else {
-            cout << "Theres nothing above you" << endl;
+            cout << "no." << endl;
+            return false;
         }
-    } else if (nextMove == 2)
+    } else if (direction == 2)
     {
         if (currentSpace->getDown() != nullptr)
         {
-            move(down);
+            return true;
         } else {
-            cout << "Theres nothing below you" << endl;
+            return false;
         }
-    } else if (nextMove == 3)
+    } else if (direction == 3)
     {
         if (currentSpace->getLeft() != nullptr)
         {
-            move(left);
+            return true;
         } else {
-            cout << "Theres nothing to your left" << endl;
+            return false;
         }
-    } else if (nextMove == 4)
+    } else if (direction == 4)
     {
         if (currentSpace->getRight() != nullptr)
         {
-            move(right);
+            return true;
         } else {
-            cout << "Theres nothing to your right" << endl;
+            return false;
         }
     }
-
-
-
-//        move(up);
-//    } else if (currentSpace->getDown()  == nullptr)
-//    {
-//        move(down);
-//    } else if (currentSpace->getLeft()  == nullptr)
-//    {
-//        move (left);
-//    } else if (currentSpace->getRight()  == nullptr)
-//    {
-//        move(right);
-//    } else {
-//        cout << "Sorry. Invalid move, please try again." << endl;
-//    }
-
-
-
-
-
-//    switch (nextMove)
-//    {
-//        case 1:
-//            if (currentSpace->getUp() == nullptr)
-//            {
-//                cout << "Sorry! Cannot move up!" << endl;
-//                cout << "rounds are : " << steps << endl;
-//                break;
-//            } else {
-//                move(up);
-//            }
-////            break;
-//        case 2:
-//            if (currentSpace->getDown() == nullptr)
-//            {
-//                cout << "Sorry! Cannot move down!" << endl;
-//                cout << "rounds are : " << steps << endl;
-//
-//                break;
-//            } else {
-//                move(down);
-//            }
-////            break;
-//        case 3:
-//            if (currentSpace->getLeft() == nullptr)
-//            {
-//                cout << "Sorry! Cannot move left!" << endl;
-//                cout << "rounds are : " << steps << endl;
-//                break;
-//            } else {
-//                move(left);
-//            }
-////            break;
-//        case 4:
-//            if (currentSpace->getRight() == nullptr)
-//            {
-//                cout << "Sorry! Cannot move right!" << endl;
-//                cout << "rounds are : " << steps << endl;
-//                break;
-//            } else {
-//                move(right);
-//            }
-////            break;
-//    }
 }
+
 
 /******************************************************
 * takes in an enum representing a direction, and depending
@@ -493,6 +485,8 @@ int Game::getHealthPoints()
 ******************************************************/
 void Game::setHealthPoints(int hp)
 {
+    cout << "passed in figure is: " << hp << endl;
+    cout << "current health points are: " << healthPoints << endl;
     healthPoints -= hp;
 }
 
@@ -553,7 +547,7 @@ void Game::displayBackpack()
 void Game::addToBackpack(Item *itemIn)
 {
 
-    if (backpack.size() <= 4)
+    if (backpack.size() <= 4) // max capacity of 5 items
     {
         cout << "Would you like to add this item to your backpack?" << endl;
         cout << "1. Yes \n2. No" << endl;
@@ -569,6 +563,7 @@ void Game::addToBackpack(Item *itemIn)
         {
             backpack.push_back(*itemIn);
             displayBackpack();
+            cout << endl;
         }
         if (addItem == 2)
         {

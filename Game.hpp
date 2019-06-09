@@ -32,13 +32,16 @@ public:
 
     void gameRound();
 
-    void nextMove();
+    void getNextMove();
     void spaceLinker(Space*, Space*, Direction);
+
+    bool canMove(int);
+
 
     int getHealthPoints();
     void setHealthPoints(int);
 
-    bool stillAlive();
+    bool isStillAlive();
 
     int getRandomNum(int, int);
     void move(Direction);
