@@ -53,7 +53,6 @@ int DangerSpace::runEvent()
         case 3:
             return heavyRain();
     }
-
 }
 
 /******************************************************
@@ -76,10 +75,11 @@ int DangerSpace::squirrellAttack()
     cout << "You quickly whip around and see a rabid squirrel, looking pissed." << endl;
     cout << "After a brief staring contest, he lunges at you!" << endl;
     cout << "Roll the die to see your fate!" << endl;
-    cout << "Press any key and hit enter to roll the dice!" << endl;
+    cout << "Hit enter to roll the dice!" << endl;
     getchar();
     int attackResult = getRand(1, 6);
     cout << "~*~*~*~*~*~ rolling ~*~*~*~*~*~" << endl;
+    cout << endl;
     cout << "The squirrel put up a good fight (and so did you). Ultimately, you lost " << attackResult << " health points." << endl;
     return attackResult;
 }
@@ -92,18 +92,21 @@ int DangerSpace::heavyRain()
 
     cout << "   __   _ " << endl;
     cout << " _(  )_( )_" << endl;
-    cout << "(_     _   )" << endl;
-    cout << "/ (___) (_)" << endl;
+    cout << "(_         )" << endl;
+    cout << "/ (______)" << endl;
     cout << "/ / / / / / " << endl;
     cout << " / / / / / /  " << endl;
 
     cout << endl;
     cout << endl;
 
-    cout << "Suddenly a heavy downpour and brutal winds wash over you. You've seen this before, and last time the "
-            "heavy rains subsided in a matter of minutes. You don't really want to disrupt your foraging progress to "
+    cout << "Suddenly a heavy downpour and brutal winds wash over you. \n"
+            "You've seen this before, and last time the \n"
+            "heavy rains subsided in a matter of minutes. You don't really \n"
+            "want to disrupt your foraging progress to \n"
             "find cover. Do you go find cover, or weather the storm?"<< endl;
     cout << "1. Stay \n2. Go." << endl;
+
     int stayOrGo = returnInt();
     while (stayOrGo <= 0 || stayOrGo > 2)
     {
@@ -164,7 +167,7 @@ int DangerSpace::openTheHatch()
         cout << "Hurt, but not terribly so, you pull yourself up out of the hatch." << endl;
         cout << "Nothing good was down there, and you got injured. This sucks." << endl;
         cout <<  "You lose 4 health points." << endl;
-        return 4;
+        return -4;
     }
     if (openHatch == 2)
     {

@@ -28,17 +28,20 @@ using std::endl;
 using std::string;
 
 /******************************************************
-*
+* Constructor for the Game class. Creates a new instance
+ * of the Game, sets the health points to 10, and creates
+ * a "backpack" using an STL vector and reserves 5 slots.
+ * Creates 12 pointers to Space nodes, and all but the
+ * starting space are created randomly.
 ******************************************************/
 Game::Game()
 {
     int healthPoints = 10;
+    vector<Item> backpack;
+    backpack.reserve(5);
 
     // 12 spaces total
     Space *startingSpace = new Space;
-    currentSpace = startingSpace;
-    vector<Item> backpack;
-    backpack.reserve(10);
     Space *space1 = createNewSpaceType();
     Space *space2 = createNewSpaceType();
     Space *space3 = createNewSpaceType();
@@ -50,6 +53,8 @@ Game::Game()
     Space *space9 = createNewSpaceType();
     Space *space10 = createNewSpaceType();
     Space *space11 = createNewSpaceType();
+
+    currentSpace = startingSpace;
 
     spaceLinker(currentSpace, space1, right);
     spaceLinker(currentSpace, space4, down);
@@ -82,6 +87,12 @@ Game::Game()
     steps = 0;
 }
 
+/******************************************************
+* Used to "link" two Space nodes together. Takes in
+ * 2 pointers to space nodes and an enum representing the
+ * direction, and links the two spaces in the given
+ * direction.
+******************************************************/
 void Game::spaceLinker(Space *s1, Space *s2, Direction d)
 {
     switch (d)
@@ -105,6 +116,14 @@ void Game::spaceLinker(Space *s1, Space *s2, Direction d)
     }
 }
 
+/******************************************************
+* Generates a random number and creates new space types.
+ * There is a 30% chance the new space will be an Item
+ * Space, a 30% chance it will be a Danger Space, 30%
+ * chance it will be a Mystery Space, and 10% chance it
+ * will be a regular space. Returns newly created space,
+ * and increases the number of spaces in the game.
+******************************************************/
 Space* Game::createNewSpaceType()
 {
     int newSpaceType = getRandomNum(1, 10);
@@ -135,12 +154,19 @@ Space* Game::createNewSpaceType()
     }
 }
 
+/******************************************************
+* Simple game menu that provides 4 options to the user.
+ * Uses input validation to obtain user selection. Allows
+ * user to print their current location, current health points,
+ * backpack, or do nothing.
+******************************************************/
 void Game::gameMenu()
 {
     cout << "1. Print current location." << endl;
     cout << "2. Print current Health Points." << endl;
     cout << "3. Print contents of backpack." << endl;
     cout << "4. Do nothing." << endl;
+
     int choice = returnInt();
     while (choice <= 0 || choice > 4)
     {
@@ -171,7 +197,8 @@ void Game::gameMenu()
 }
 
 /******************************************************
-*
+* prints out welcome message, game context, rules, and
+ * objective.
 ******************************************************/
 void Game::startGame()
 {
@@ -189,17 +216,15 @@ void Game::startGame()
     cout << "You have just survived a plane crash, and have awoken in a forest amongst\n"
             "tall trees, wild plants and mysterious hatches. You no longer have any of your\n"
             "belongings, except the clothes on your back. You are not sure if others survived,\n"
-            "but you see no sign of other human life around you.\n"
+            "but you see no sign of other human life around you.\n\n"
             "Your objective: find a way to get off of this island and get to safety.\n\n"
-            "There are three possible ways to make it off the island alive:\n"
-            "1. Gather enough wood to make a large bonfire. There are small planes that fly overhead, but nothing "
-            "except a huge bonfire would catch their attention.\n"
-            "2. Gather the correct items and build a raft, and escape to safety via the sea. \n"
-            "3. Gather the correct items and build a jetpack (easier than you’d think) to fly off to safety." << endl;
+            "You must survive at least 10 nights, or gather enough wood to make a large bonfire.\n"
+            "There are small planes that fly overhead, but nothing \n"
+            "except a huge bonfire would catch their attention.\n";
 
     cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
 
-    while (steps <= 10)
+    while (steps < 10)
     {
         gameRound();
         gameMenu();
@@ -218,6 +243,12 @@ void Game::startGame()
 ******************************************************/
 void Game::gameRound()
 {
+    bool shouldKeepPlaying = true;
+    if (!stillAlive())
+    {
+        shouldKeepPlaying = false;
+    }
+
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << "\t \t    ROUND " << steps+1 << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
@@ -245,13 +276,7 @@ void Game::gameRound()
                 break;
         }
     } else {
-        currentSpace->runEvent();
-    }
-
-    bool shouldKeepPlaying = true;
-    if (!stillAlive())
-    {
-        shouldKeepPlaying = false;
+        this->setHealthPoints(currentSpace->runEvent());
     }
 }
 
@@ -260,10 +285,12 @@ void Game::gameRound()
 ******************************************************/
 bool Game::stillAlive()
 {
-    cout << "Inside stillAlive()" << endl;
-    if (getHealthPoints() <= 0)
+//    cout << "Inside stillAlive()" << endl;
+    if (this->getHealthPoints() <= 0)
     {
+        cout << "Your current health points are: " << this->getHealthPoints() << endl;
         cout << "Health points are below or equal to 0." << endl;
+        cout << "The game should end now." << endl;
         return false;
     } else {
         return true;
@@ -280,22 +307,22 @@ Item* Game::createNewItem(int itemType)
     switch (itemType)
     {
         case 10:
+            cout << "You got a new Wood item!" << endl;
             newItem = new Wood;
             return newItem;
         case 11:
+            cout << "You got a new Knife item!" << endl;
             newItem = new Knife;
             return newItem;
         case 12:
+            cout << "You got a new Sweater item!" << endl;
             newItem = new Sweater;
             return newItem;
         case 13:
+            cout << "You found some Berries!" << endl;
             newItem = new Berries;
             return newItem;
-        case 14:
-            newItem = new Item;
-            return newItem;
     }
-
 }
 
 /******************************************************
@@ -318,6 +345,7 @@ void Game::nextMove()
             if (currentSpace->getUp() == nullptr)
             {
                 cout << "Sorry! Cannot move up!" << endl;
+                cout << "rounds are : " << steps << endl;
                 break;
             }
             move(up);
@@ -326,6 +354,8 @@ void Game::nextMove()
             if (currentSpace->getDown() == nullptr)
             {
                 cout << "Sorry! Cannot move down!" << endl;
+                cout << "rounds are : " << steps << endl;
+
                 break;
             }
             move(down);
@@ -334,6 +364,7 @@ void Game::nextMove()
             if (currentSpace->getLeft() == nullptr)
             {
                 cout << "Sorry! Cannot move left!" << endl;
+                cout << "rounds are : " << steps << endl;
                 break;
             }
             move(left);
@@ -342,6 +373,7 @@ void Game::nextMove()
             if (currentSpace->getRight() == nullptr)
             {
                 cout << "Sorry! Cannot move right!" << endl;
+                cout << "rounds are : " << steps << endl;
                 break;
             }
             move(right);

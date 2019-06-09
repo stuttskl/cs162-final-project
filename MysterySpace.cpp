@@ -55,9 +55,12 @@ int MysterySpace::runEvent()
 
 
 
-    cout << "If you're feeling rather lucky, you can opt to roll a weighted die. There is a greater chance you will "
-            "be blessed with a good event, however if you do experience a bad event, it will be BAD. Worse than if "
-            "you were to simply take the 50/50 chance... What will you do? Are you feeling risky?" << endl;
+    cout << "If you're feeling rather lucky, you can opt to roll a weighted die. \n"
+            "There is a greater chance you will "
+            "be blessed with a good event, however if you do experience a bad event, \n"
+            "it will be BAD. Worse than if "
+            "you were to simply take the 50/50 chance... What will you do? Are you feeling \n"
+            " risky?" << endl;
     cout << "1. Roll the balanced die." << endl;
     cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
 
@@ -95,12 +98,12 @@ int MysterySpace::runEvent()
             case 5:
                 cout << "Despite the overbearing struggle for survival, you realize that you are on a beautiful island, "
                         "and the weather is remarkably beautiful today. You take just a moment, to close your eyes,"
-                        "breathe deeply and feel gratitude that you are alive. Morale increases by 2." << endl;
+                        "breathe deeply and feel gratitude that you are alive. Health increases by 2." << endl;
                 return 2;
             case 6:
                 cout << "You have been walking for what seems like hours, and you stumble upon a beautiful meadow with the "
                         "most gorgeous and fragrant flowers you've seen. This puts you in a good mood, and to make things "
-                        "even better, you discover delicious fruits. Health increases by 2, Morale increases by 3." << endl;
+                        "even better, you discover delicious fruits. Health increases by 2." << endl;
                 return 2;
         }
 
