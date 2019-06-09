@@ -167,7 +167,7 @@ int DangerSpace::openTheHatch()
         cout << "Hurt, but not terribly so, you pull yourself up out of the hatch." << endl;
         cout << "Nothing good was down there, and you got injured. This sucks." << endl;
         cout <<  "You lose 4 health points." << endl;
-        return -4;
+        return 4;
     }
     if (openHatch == 2)
     {

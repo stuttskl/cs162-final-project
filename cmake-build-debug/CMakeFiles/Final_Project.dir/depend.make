@@ -19,7 +19,6 @@ CMakeFiles/Final_Project.dir/Game.cpp.o: ../ItemSpace.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Knife.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../MysterySpace.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Space.hpp
-CMakeFiles/Final_Project.dir/Game.cpp.o: ../Sweater.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Wood.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../inputValid.hpp
 

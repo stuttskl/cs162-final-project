@@ -20,7 +20,6 @@
 #include "Berries.hpp"
 #include "Wood.hpp"
 #include "Knife.hpp"
-#include "Sweater.hpp"
 
 using std::cout;
 using std::cin;
@@ -168,6 +167,7 @@ void Game::gameMenu()
     cout << "4. Do nothing." << endl;
 
     int choice = returnInt();
+
     while (choice <= 0 || choice > 4)
     {
         cout << "Please enter an integer representing your choice." << endl;
@@ -179,7 +179,7 @@ void Game::gameMenu()
     }
     if (choice == 2)
     {
-        cout << "Your current Health Points are " << getHealthPoints() << endl;
+        cout << "Your current Health Points are " << this->getHealthPoints() << endl;
     }
     if (choice == 3)
     {
@@ -276,7 +276,9 @@ void Game::gameRound()
                 break;
         }
     } else {
-        this->setHealthPoints(currentSpace->runEvent());
+//        this->setHealthPoints(currentSpace->runEvent());
+        cout << "Result of event is: " << endl;
+        currentSpace->runEvent();
     }
 }
 
@@ -335,46 +337,72 @@ void Game::nextMove()
         cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
         nextMove = returnInt();
     }
-    switch (nextMove)
-    {
-        case 1:
-            if (currentSpace->getUp() == nullptr)
-            {
-                cout << "Sorry! Cannot move up!" << endl;
-                cout << "rounds are : " << steps << endl;
-                break;
-            }
-            move(up);
-            break;
-        case 2:
-            if (currentSpace->getDown() == nullptr)
-            {
-                cout << "Sorry! Cannot move down!" << endl;
-                cout << "rounds are : " << steps << endl;
 
-                break;
-            }
-            move(down);
-            break;
-        case 3:
-            if (currentSpace->getLeft() == nullptr)
-            {
-                cout << "Sorry! Cannot move left!" << endl;
-                cout << "rounds are : " << steps << endl;
-                break;
-            }
-            move(left);
-            break;
-        case 4:
-            if (currentSpace->getRight() == nullptr)
-            {
-                cout << "Sorry! Cannot move right!" << endl;
-                cout << "rounds are : " << steps << endl;
-                break;
-            }
-            move(right);
-            break;
+    if (currentSpace->getUp() == nullptr) {
+        cout << "Theres nothing above you" << endl;
     }
+//        move(up);
+//    } else if (currentSpace->getDown()  == nullptr)
+//    {
+//        move(down);
+//    } else if (currentSpace->getLeft()  == nullptr)
+//    {
+//        move (left);
+//    } else if (currentSpace->getRight()  == nullptr)
+//    {
+//        move(right);
+//    } else {
+//        cout << "Sorry. Invalid move, please try again." << endl;
+//    }
+
+
+
+
+
+//    switch (nextMove)
+//    {
+//        case 1:
+//            if (currentSpace->getUp() == nullptr)
+//            {
+//                cout << "Sorry! Cannot move up!" << endl;
+//                cout << "rounds are : " << steps << endl;
+//                break;
+//            } else {
+//                move(up);
+//            }
+////            break;
+//        case 2:
+//            if (currentSpace->getDown() == nullptr)
+//            {
+//                cout << "Sorry! Cannot move down!" << endl;
+//                cout << "rounds are : " << steps << endl;
+//
+//                break;
+//            } else {
+//                move(down);
+//            }
+////            break;
+//        case 3:
+//            if (currentSpace->getLeft() == nullptr)
+//            {
+//                cout << "Sorry! Cannot move left!" << endl;
+//                cout << "rounds are : " << steps << endl;
+//                break;
+//            } else {
+//                move(left);
+//            }
+////            break;
+//        case 4:
+//            if (currentSpace->getRight() == nullptr)
+//            {
+//                cout << "Sorry! Cannot move right!" << endl;
+//                cout << "rounds are : " << steps << endl;
+//                break;
+//            } else {
+//                move(right);
+//            }
+////            break;
+//    }
 }
 
 /******************************************************
@@ -443,22 +471,30 @@ void Game::setHealthPoints(int hp)
 ******************************************************/
 void Game::displayCurrentLocation()
 {
-    cout << "You are currently at a " << currentSpace->getName() << endl;
+    cout << "You are currently at a " << currentSpace->getName() << " space" << endl;
     if (currentSpace->getUp())
     {
-        cout << "The space above you is " << currentSpace->getUp()->getName() << endl;
+        cout << "The space above you is a " << currentSpace->getUp()->getName() << " space" << endl;
+    } else {
+        cout << "There is nothing above you!" << endl;
     }
     if (currentSpace->getDown())
     {
-        cout << "The space below you is " << currentSpace->getDown()->getName() << endl;
+        cout << "The space below you is a " << currentSpace->getDown()->getName() << " space" << endl;
+    } else {
+        cout << "There is nothing below you!" << endl;
     }
     if (currentSpace->getLeft())
     {
-        cout << "The space to your left is " << currentSpace->getLeft()->getName() << endl;
+        cout << "The space to your left is a " << currentSpace->getLeft()->getName() << " space" << endl;
+    } else {
+        cout << "There is nothing to the left of you!" << endl;
     }
     if (currentSpace->getRight())
     {
-        cout << "The space to your right is " << currentSpace->getRight()->getName() << endl;
+        cout << "The space to your right is a " << currentSpace->getRight()->getName() << " space" << endl;
+    } else {
+        cout << "There is nothing to the right of you!" << endl;
     }
 }
 
@@ -484,23 +520,32 @@ void Game::displayBackpack()
 ******************************************************/
 void Game::addToBackpack(Item *itemIn)
 {
-    cout << "Would you like to add this item to your backpack?" << endl;
-    cout << "1. Yes \n2. No" << endl;
-    int addItem = returnInt();
-    while (addItem <= 0 || addItem > 2)
+
+    if (backpack.size() <= 4)
     {
-        cout << "Please enter an integer representing your selection." << endl;
+        cout << "Would you like to add this item to your backpack?" << endl;
         cout << "1. Yes \n2. No" << endl;
-        addItem = returnInt();
+        int addItem = returnInt();
+        while (addItem <= 0 || addItem > 2)
+        {
+            cout << "Please enter an integer representing your selection." << endl;
+            cout << "1. Yes \n2. No" << endl;
+            addItem = returnInt();
+        }
+
+        if (addItem == 1)
+        {
+            backpack.push_back(*itemIn);
+            displayBackpack();
+        }
+        if (addItem == 2)
+        {
+            cout << "This item will not be added to your backpack." << endl;
+        }
+    } else {
+        cout << "Sorry! Your backpack is at full capacity (5 items). Please discard \n"
+                "an item before adding a new one." << endl;
     }
 
-    if (addItem == 1)
-    {
-        backpack.push_back(*itemIn);
-        displayBackpack();
-    }
-    if (addItem == 2)
-    {
-        cout << "This item will not be added to your backpack." << endl;
-    }
+
 }

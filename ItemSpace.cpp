@@ -65,32 +65,3 @@ int ItemSpace::runEvent()
 //    cout << "Inside itemspace class" << endl;
 
 }
-
-/******************************************************
-*
-******************************************************/
-//Item* ItemSpace::createNewItem(int itemType)
-//{
-//
-//    newItem = new Wood;
-//    return newItem;
-//
-//
-////    switch (itemType)
-////    {
-////        case 1:
-////            newItem = new Wood;
-////            return newItem;
-////        case 2:
-////            newItem = new Knife;
-////            return newItem;
-////        case 3:
-////            newItem = new Sweater;
-////            return newItem;
-////        case 4:
-////            newItem = new Berries;
-////            return newItem;
-////        case 5:
-////            return nullptr;
-////    }
-//}

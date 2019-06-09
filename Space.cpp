@@ -38,7 +38,7 @@ Space::~Space()
 ******************************************************/
 int Space::runEvent()
 {
-    cout << "You have landed on a plain ol' space. Nothing cool happens here." << endl;
+//    cout << "You have landed on a plain ol' space. Nothing cool happens here." << endl;
 }
 
 /******************************************************
