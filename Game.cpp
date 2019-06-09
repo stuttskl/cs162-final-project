@@ -338,9 +338,41 @@ void Game::nextMove()
         nextMove = returnInt();
     }
 
-    if (currentSpace->getUp() == nullptr) {
-        cout << "Theres nothing above you" << endl;
+    if (nextMove == 1)
+    {
+        if (currentSpace->getUp() != nullptr) {
+            move(up);
+        } else {
+            cout << "Theres nothing above you" << endl;
+        }
+    } else if (nextMove == 2)
+    {
+        if (currentSpace->getDown() != nullptr)
+        {
+            move(down);
+        } else {
+            cout << "Theres nothing below you" << endl;
+        }
+    } else if (nextMove == 3)
+    {
+        if (currentSpace->getLeft() != nullptr)
+        {
+            move(left);
+        } else {
+            cout << "Theres nothing to your left" << endl;
+        }
+    } else if (nextMove == 4)
+    {
+        if (currentSpace->getRight() != nullptr)
+        {
+            move(right);
+        } else {
+            cout << "Theres nothing to your right" << endl;
+        }
     }
+
+
+
 //        move(up);
 //    } else if (currentSpace->getDown()  == nullptr)
 //    {
@@ -543,9 +575,23 @@ void Game::addToBackpack(Item *itemIn)
             cout << "This item will not be added to your backpack." << endl;
         }
     } else {
-        cout << "Sorry! Your backpack is at full capacity (5 items). Please discard \n"
-                "an item before adding a new one." << endl;
+        cout << "Sorry! Your backpack is at full capacity (5 items).\n "
+                "Would you like to remove the first item in your backpack to free up space? \n1. Yes \n 2. No" << endl;
+
+        int choice = returnInt();
+        while (choice <= 0 || choice > 2)
+        {
+            cout << "Please enter an integer representing your selection." << endl;
+            cout << "1. Yes \n2. No" << endl;
+            choice = returnInt();
+        }
+        if (choice == 1)
+        {
+            backpack.erase(backpack.begin());
+        }
+        if (choice == 2)
+        {
+            cout << "Nothing will be removed from your backpack. You'll have to forgo this item." << endl;
+        }
     }
-
-
 }

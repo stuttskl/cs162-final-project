@@ -12,14 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86e26569-9abc-4ec0-8be0-891eca32ef53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/Knife.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/Sweater.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Final_Project.dir/inputValid.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DangerSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DangerSpace.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItemSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ItemSpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MysterySpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MysterySpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Space.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Space.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,16 +24,15 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2319">
-              <caret line="342" column="5" selection-start-line="342" selection-start-column="5" selection-end-line="342" selection-end-column="5" />
+            <state relative-caret-position="375">
+              <caret line="595" column="5" selection-start-line="595" selection-start-column="5" selection-end-line="595" selection-end-column="5" />
               <folding>
                 <element signature="e#2411#2524#0" />
                 <element signature="e#2144#2613#0" />
                 <element signature="e#2882#2995#0" />
-                <element signature="e#2615#3461#0" />
                 <element signature="e#3730#3843#0" />
                 <element signature="e#10149#10980#0" />
                 <element signature="e#10982#11439#0" />
@@ -137,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Space.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
+            <state relative-caret-position="97">
               <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding>
                 <element signature="e#236#255#0" expanded="true" />
@@ -183,14 +175,14 @@
         <option value="$PROJECT_DIR$/ItemSpace.cpp" />
         <option value="$PROJECT_DIR$/DangerSpace.cpp" />
         <option value="$PROJECT_DIR$/MysterySpace.cpp" />
-        <option value="$PROJECT_DIR$/Game.cpp" />
         <option value="$PROJECT_DIR$/Space.cpp" />
+        <option value="$PROJECT_DIR$/Game.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1123" />
+    <option name="width" value="1181" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -258,23 +250,23 @@
       <workItem from="1559613496039" duration="4402000" />
       <workItem from="1559840685896" duration="351000" />
       <workItem from="1559946060578" duration="4633000" />
-      <workItem from="1560053401322" duration="2826000" />
+      <workItem from="1560053401322" duration="3849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67358000" />
+    <option name="totallyTimeSpent" value="68381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1181" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13018598" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1597893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22440945" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2664042" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -510,15 +502,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Space.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#236#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2319">
-          <caret line="342" column="5" selection-start-line="342" selection-start-column="5" selection-end-line="342" selection-end-column="5" />
+        <state relative-caret-position="375">
+          <caret line="595" column="5" selection-start-line="595" selection-start-column="5" selection-end-line="595" selection-end-column="5" />
           <folding>
             <element signature="e#2411#2524#0" />
             <element signature="e#2144#2613#0" />
             <element signature="e#2882#2995#0" />
-            <element signature="e#2615#3461#0" />
             <element signature="e#3730#3843#0" />
             <element signature="e#10149#10980#0" />
             <element signature="e#10982#11439#0" />
@@ -526,16 +527,6 @@
             <element signature="e#11644#11820#0" />
             <element signature="e#11822#12731#0" />
             <element signature="e#12733#13197#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Space.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="e#236#255#0" expanded="true" />
           </folding>
         </state>
       </provider>
