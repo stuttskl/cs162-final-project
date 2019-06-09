@@ -9,6 +9,7 @@
 #include <string>
 #include <random>
 #include <vector>
+#include <cstdlib>
 #include "inputValid.hpp"
 #include "Space.hpp"
 #include "Game.hpp"
@@ -20,6 +21,7 @@
 #include "Berries.hpp"
 #include "Wood.hpp"
 #include "Knife.hpp"
+#include "CoconutPhone.hpp"
 
 using std::cout;
 using std::cin;
@@ -213,26 +215,29 @@ void Game::startGame()
     cout << "_____" << endl;
     cout << " \\ K \\__      ____" << endl;
     cout << "__\\   \\_______\\___\\____________" << endl;
-    cout << "< /_/   .....................  `-." << endl;
+    cout << "< /_/   .....................  `-." << "   ~ SURVIVING COCONUT ISLAND ~    " << endl;
     cout << "`-----------,----,--------------'" << endl;
     cout << "          _/____/" << endl;
     cout << endl;
 
 
     cout << "You have just survived a plane crash, and have awoken in a forest amongst\n"
-            "tall trees, wild plants and mysterious hatches. You no longer have any of your\n"
+            "tall trees, wild plants, mysterious hatches and tons of coconuts. You no longer have any of your\n"
             "belongings, except the clothes on your back. You are not sure if others survived,\n"
             "but you see no sign of other human life around you.\n\n"
             "Your objective: find a way to get off of this island and get to safety.\n\n"
-            "You must survive at least 10 nights, or gather enough wood to make a large bonfire.\n"
-            "There are small planes that fly overhead, but nothing \n"
-            "except a huge bonfire would catch their attention.\n";
-
-    cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
+            "You have 10 nights on ths island to find the fabeled and elusive Coconut Phone.\n"
+            "Then, and only then, are you able to escape the Coconut Island. \n"
+            "Will you survive Coconut Island ... ?\n\n";
 
     cout << "Starting health points are: " << this->getHealthPoints() << endl;
+    cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
 
-    while (steps < 10)
+
+    printMap();
+
+
+    while (steps < 20)
     {
         gameRound();
     }
@@ -253,7 +258,8 @@ void Game::gameRound()
 
     if (!isStillAlive())
     {
-        cout << "GAME OVERRRRR" << endl;
+        cout << "Game over!" << endl;
+        exit(0);
     }
 
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
@@ -266,20 +272,17 @@ void Game::gameRound()
     {
         switch (currentSpace->runEvent())
         {
-            case 10:
-                addToBackpack(createNewItem(10));
+            case 1:
+                addToBackpack(createNewItem(1));
                 break;
-            case 11:
-                addToBackpack(createNewItem(11));
+            case 2:
+                addToBackpack(createNewItem(2));
                 break;
-            case 12:
-                addToBackpack(createNewItem(12));
+            case 3:
+                addToBackpack(createNewItem(3));
                 break;
-            case 13:
-                addToBackpack(createNewItem(13));
-                break;
-            case 14:
-                addToBackpack(createNewItem(14));
+            case 4:
+                addToBackpack(createNewItem(4));
                 break;
         }
     } else {
@@ -289,8 +292,11 @@ void Game::gameRound()
         if (!(hpChange <= -4 || hpChange > 10))
         {
             setHealthPoints(hpChange);
+            cout << "Updated HP are: " << this->getHealthPoints() << endl;
         }
     }
+    gameMenu();
+
 }
 
 /******************************************************
@@ -298,12 +304,9 @@ void Game::gameRound()
 ******************************************************/
 bool Game::isStillAlive()
 {
-//    cout << "Inside stillAlive()" << endl;
     if (this->getHealthPoints() <= 0)
     {
         cout << "Your current health points are: " << this->getHealthPoints() << endl;
-        cout << "Health points are below or equal to 0." << endl;
-        cout << "The game should end now." << endl;
         return false;
     } else {
         return true;
@@ -319,17 +322,21 @@ Item* Game::createNewItem(int itemType)
 
     switch (itemType)
     {
-        case 10:
+        case 1:
             cout << "You got a new Wood item!" << endl;
             newItem = new Wood;
             return newItem;
-        case 11:
+        case 2:
             cout << "You got a new Knife item!" << endl;
             newItem = new Knife;
             return newItem;
-        case 12:
+        case 3:
             cout << "You found some Berries!" << endl;
             newItem = new Berries;
+            return newItem;
+        case 4:
+            cout << "You found the Coconut Phone!!!!" << endl;
+            newItem = new CoconutPhone;
             return newItem;
     }
 }
@@ -339,10 +346,6 @@ Item* Game::createNewItem(int itemType)
 ******************************************************/
 void Game::getNextMove()
 {
-    cout << endl;
-    cout << "---------------------------" << endl;
-    cout << endl;
-
     cout << "Where would you like to move next?" << endl;
     cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
     int nextMove = returnInt();
@@ -353,49 +356,40 @@ void Game::getNextMove()
         nextMove = returnInt();
     }
 
-
     switch (nextMove)
     {
         case 1:
             if (canMove(nextMove)) // if true
             {
                 move(up);
-                gameMenu();
-
             }
             break;
         case 2:
             if (canMove(nextMove)) // if true
             {
                 move(down);
-                gameMenu();
-
             }
             break;
         case 3:
             if (canMove(nextMove)) // if true
             {
                 move(left);
-                gameMenu();
-
             }
             break;
         case 4:
             if (canMove(nextMove)) // if true
             {
                 move(right);
-                gameMenu();
             }
             break;
     }
-
 }
 
 bool Game::canMove(int direction)
 {
     if (direction == 1)
     {
-        if (currentSpace->getUp() != nullptr) {
+        if (currentSpace->getUp()) {
             return true;
         } else {
             cout << "no." << endl;
@@ -403,29 +397,52 @@ bool Game::canMove(int direction)
         }
     } else if (direction == 2)
     {
-        if (currentSpace->getDown() != nullptr)
+        if (currentSpace->getDown())
         {
             return true;
         } else {
+            cout << "no." << endl;
+
             return false;
         }
     } else if (direction == 3)
     {
-        if (currentSpace->getLeft() != nullptr)
+        if (currentSpace->getLeft())
         {
             return true;
         } else {
+            cout << "no." << endl;
+
             return false;
         }
     } else if (direction == 4)
     {
-        if (currentSpace->getRight() != nullptr)
+        if (currentSpace->getRight())
         {
             return true;
         } else {
+            cout << "no." << endl;
+
             return false;
         }
     }
+}
+
+void Game::printMap()
+{
+    cout << "- - - - - - - - - - - - - - - - " << endl;
+    cout << "|                              |\n";
+    cout << "|   #      *      *       *    |\n";
+    cout << "|                              |\n";
+    cout << "|   *      *      *       *    |\n";
+    cout << "|                              |\n";
+    cout << "|   *      *      *       *    |\n";
+    cout << "|                              |\n";
+    cout << "|   *      *      *       *    |\n";
+    cout << "|                              |\n";
+    cout << "- - - - - - - - - - - - - - - - " << endl;
+
+
 }
 
 
@@ -486,8 +503,8 @@ int Game::getHealthPoints()
 void Game::setHealthPoints(int hp)
 {
     cout << "passed in figure is: " << hp << endl;
-    cout << "current health points are: " << healthPoints << endl;
-    healthPoints -= hp;
+    cout << "current health points are: " << this->healthPoints << endl;
+    this->healthPoints -= hp;
 }
 
 /******************************************************

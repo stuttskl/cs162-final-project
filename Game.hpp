@@ -37,7 +37,7 @@ public:
 
     bool canMove(int);
 
-
+    void printMap();
     int getHealthPoints();
     void setHealthPoints(int);
 

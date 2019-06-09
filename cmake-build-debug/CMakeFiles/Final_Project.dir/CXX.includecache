@@ -14,6 +14,14 @@ string
 Item.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 
+/Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp
+iostream
+-
+string
+-
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+
 /Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
 string
 -
@@ -28,6 +36,8 @@ string
 random
 -
 vector
+-
+cstdlib
 -
 inputValid.hpp
 /Users/katie/Dropbox/CS162/Final_Project/inputValid.hpp
@@ -51,6 +61,8 @@ Wood.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
 Knife.hpp
 /Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
+CoconutPhone.hpp
+/Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp
 
 /Users/katie/Dropbox/CS162/Final_Project/Game.hpp
 Space.hpp

@@ -86,6 +86,12 @@
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp">
 			<Option target="Final_Project"/>
 		</Unit>
+		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.cpp">
+			<Option target="Final_Project"/>
+		</Unit>
+		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp">
+			<Option target="Final_Project"/>
+		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/DangerSpace.cpp">
 			<Option target="Final_Project"/>
 		</Unit>
@@ -126,12 +132,6 @@
 			<Option target="Final_Project"/>
 		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Space.hpp">
-			<Option target="Final_Project"/>
-		</Unit>
-		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Sweater.cpp">
-			<Option target="Final_Project"/>
-		</Unit>
-		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Sweater.hpp">
 			<Option target="Final_Project"/>
 		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Wood.cpp">

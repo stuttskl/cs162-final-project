@@ -187,22 +187,9 @@ CMakeFiles/Final_Project.dir/Knife.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Knife.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp -o CMakeFiles/Final_Project.dir/Knife.cpp.s
 
-CMakeFiles/Final_Project.dir/Sweater.cpp.o: CMakeFiles/Final_Project.dir/flags.make
-CMakeFiles/Final_Project.dir/Sweater.cpp.o: ../Sweater.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Final_Project.dir/Sweater.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/Sweater.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/Sweater.cpp
-
-CMakeFiles/Final_Project.dir/Sweater.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project.dir/Sweater.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/katie/Dropbox/CS162/Final_Project/Sweater.cpp > CMakeFiles/Final_Project.dir/Sweater.cpp.i
-
-CMakeFiles/Final_Project.dir/Sweater.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Sweater.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Sweater.cpp -o CMakeFiles/Final_Project.dir/Sweater.cpp.s
-
 CMakeFiles/Final_Project.dir/inputValid.cpp.o: CMakeFiles/Final_Project.dir/flags.make
 CMakeFiles/Final_Project.dir/inputValid.cpp.o: ../inputValid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Final_Project.dir/inputValid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Final_Project.dir/inputValid.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/inputValid.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/inputValid.cpp
 
 CMakeFiles/Final_Project.dir/inputValid.cpp.i: cmake_force
@@ -212,6 +199,19 @@ CMakeFiles/Final_Project.dir/inputValid.cpp.i: cmake_force
 CMakeFiles/Final_Project.dir/inputValid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/inputValid.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/inputValid.cpp -o CMakeFiles/Final_Project.dir/inputValid.cpp.s
+
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o: CMakeFiles/Final_Project.dir/flags.make
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o: ../CoconutPhone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.cpp
+
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project.dir/CoconutPhone.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.cpp > CMakeFiles/Final_Project.dir/CoconutPhone.cpp.i
+
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/CoconutPhone.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.cpp -o CMakeFiles/Final_Project.dir/CoconutPhone.cpp.s
 
 # Object files for target Final_Project
 Final_Project_OBJECTS = \
@@ -225,8 +225,8 @@ Final_Project_OBJECTS = \
 "CMakeFiles/Final_Project.dir/Berries.cpp.o" \
 "CMakeFiles/Final_Project.dir/Wood.cpp.o" \
 "CMakeFiles/Final_Project.dir/Knife.cpp.o" \
-"CMakeFiles/Final_Project.dir/Sweater.cpp.o" \
-"CMakeFiles/Final_Project.dir/inputValid.cpp.o"
+"CMakeFiles/Final_Project.dir/inputValid.cpp.o" \
+"CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o"
 
 # External object files for target Final_Project
 Final_Project_EXTERNAL_OBJECTS =
@@ -241,8 +241,8 @@ Final_Project: CMakeFiles/Final_Project.dir/Item.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Berries.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Wood.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Knife.cpp.o
-Final_Project: CMakeFiles/Final_Project.dir/Sweater.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/inputValid.cpp.o
+Final_Project: CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/build.make
 Final_Project: CMakeFiles/Final_Project.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Final_Project"

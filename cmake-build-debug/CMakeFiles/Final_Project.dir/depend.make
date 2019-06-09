@@ -5,12 +5,17 @@ CMakeFiles/Final_Project.dir/Berries.cpp.o: ../Berries.cpp
 CMakeFiles/Final_Project.dir/Berries.cpp.o: ../Berries.hpp
 CMakeFiles/Final_Project.dir/Berries.cpp.o: ../Item.hpp
 
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o: ../CoconutPhone.cpp
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o: ../CoconutPhone.hpp
+CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o: ../Item.hpp
+
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../DangerSpace.cpp
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../DangerSpace.hpp
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../Space.hpp
 CMakeFiles/Final_Project.dir/DangerSpace.cpp.o: ../inputValid.hpp
 
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Berries.hpp
+CMakeFiles/Final_Project.dir/Game.cpp.o: ../CoconutPhone.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../DangerSpace.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/Final_Project.dir/Game.cpp.o: ../Game.hpp
@@ -26,13 +31,13 @@ CMakeFiles/Final_Project.dir/Item.cpp.o: ../Item.cpp
 CMakeFiles/Final_Project.dir/Item.cpp.o: ../Item.hpp
 
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Berries.hpp
+CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../CoconutPhone.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Game.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Item.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../ItemSpace.cpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../ItemSpace.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Knife.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Space.hpp
-CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Sweater.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o: ../Wood.hpp
 
 CMakeFiles/Final_Project.dir/Knife.cpp.o: ../Item.hpp
@@ -46,10 +51,6 @@ CMakeFiles/Final_Project.dir/MysterySpace.cpp.o: ../inputValid.hpp
 
 CMakeFiles/Final_Project.dir/Space.cpp.o: ../Space.cpp
 CMakeFiles/Final_Project.dir/Space.cpp.o: ../Space.hpp
-
-CMakeFiles/Final_Project.dir/Sweater.cpp.o: ../Item.hpp
-CMakeFiles/Final_Project.dir/Sweater.cpp.o: ../Sweater.cpp
-CMakeFiles/Final_Project.dir/Sweater.cpp.o: ../Sweater.hpp
 
 CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Item.hpp
 CMakeFiles/Final_Project.dir/Wood.cpp.o: ../Wood.cpp

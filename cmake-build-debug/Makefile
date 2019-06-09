@@ -150,6 +150,33 @@ Berries.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Berries.cpp.s
 .PHONY : Berries.cpp.s
 
+CoconutPhone.o: CoconutPhone.cpp.o
+
+.PHONY : CoconutPhone.o
+
+# target to build an object file
+CoconutPhone.cpp.o:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o
+.PHONY : CoconutPhone.cpp.o
+
+CoconutPhone.i: CoconutPhone.cpp.i
+
+.PHONY : CoconutPhone.i
+
+# target to preprocess a source file
+CoconutPhone.cpp.i:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/CoconutPhone.cpp.i
+.PHONY : CoconutPhone.cpp.i
+
+CoconutPhone.s: CoconutPhone.cpp.s
+
+.PHONY : CoconutPhone.s
+
+# target to generate assembly for a file
+CoconutPhone.cpp.s:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/CoconutPhone.cpp.s
+.PHONY : CoconutPhone.cpp.s
+
 DangerSpace.o: DangerSpace.cpp.o
 
 .PHONY : DangerSpace.o
@@ -339,33 +366,6 @@ Space.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Space.cpp.s
 .PHONY : Space.cpp.s
 
-Sweater.o: Sweater.cpp.o
-
-.PHONY : Sweater.o
-
-# target to build an object file
-Sweater.cpp.o:
-	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Sweater.cpp.o
-.PHONY : Sweater.cpp.o
-
-Sweater.i: Sweater.cpp.i
-
-.PHONY : Sweater.i
-
-# target to preprocess a source file
-Sweater.cpp.i:
-	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Sweater.cpp.i
-.PHONY : Sweater.cpp.i
-
-Sweater.s: Sweater.cpp.s
-
-.PHONY : Sweater.s
-
-# target to generate assembly for a file
-Sweater.cpp.s:
-	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Sweater.cpp.s
-.PHONY : Sweater.cpp.s
-
 Wood.o: Wood.cpp.o
 
 .PHONY : Wood.o
@@ -459,6 +459,9 @@ help:
 	@echo "... Berries.o"
 	@echo "... Berries.i"
 	@echo "... Berries.s"
+	@echo "... CoconutPhone.o"
+	@echo "... CoconutPhone.i"
+	@echo "... CoconutPhone.s"
 	@echo "... DangerSpace.o"
 	@echo "... DangerSpace.i"
 	@echo "... DangerSpace.s"
@@ -480,9 +483,6 @@ help:
 	@echo "... Space.o"
 	@echo "... Space.i"
 	@echo "... Space.s"
-	@echo "... Sweater.o"
-	@echo "... Sweater.i"
-	@echo "... Sweater.s"
 	@echo "... Wood.o"
 	@echo "... Wood.i"
 	@echo "... Wood.s"

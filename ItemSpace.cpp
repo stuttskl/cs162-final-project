@@ -7,7 +7,7 @@
 #include "ItemSpace.hpp"
 #include "Item.hpp"
 #include "Berries.hpp"
-#include "Sweater.hpp"
+#include "CoconutPhone.hpp"
 #include "Knife.hpp"
 #include "Wood.hpp"
 #include "Game.hpp"
@@ -49,17 +49,20 @@ int ItemSpace::runEvent()
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
     int whichItem;
-    whichItem = getRand(10, 12);
+    whichItem = generateCoconutPhone();
+    cout << "which item is: " << whichItem << endl;
 //    createNewItem(1);
 
     switch (whichItem)
     {
-        case 10:
-            return 10;
-        case 11:
-            return 11;
-        case 12:
-            return 12;
+        case 1:
+            return 1;
+        case 2:
+            return 2;
+        case 3:
+            return 3;
+        case 4:
+            return 4;
     }
 
 //    cout << "Inside itemspace class" << endl;

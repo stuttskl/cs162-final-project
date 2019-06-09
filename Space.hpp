@@ -34,6 +34,7 @@ public:
 
     virtual int getRand(int, int);
     virtual int rollWeightedDie();
+    virtual int generateCoconutPhone();
 
 
 

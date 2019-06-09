@@ -91,7 +91,7 @@ int MysterySpace::runEvent()
                 return 4;
             case 3:
                 cout << "You’ve just stumbled upon a small dead animal. You feel sad that the animal did not survive, "
-                        "but grateful for the nutrition it provides. Health increases by 4." << endl;
+                        "but grateful for the nutrition it provides. Health increases by 3." << endl;
                 return -3;
             case 4:
                 cout << "Despite the overbearing struggle for survival, you realize that you are on a beautiful island, "

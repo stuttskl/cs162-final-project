@@ -148,3 +148,36 @@ int Space::rollWeightedDie()
         return 2; // 30% chance a VERY bad event will happen
     }
 }
+
+
+/******************************************************
+*
+******************************************************/
+int Space::generateCoconutPhone()
+{
+    // copied from https://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
+    std::random_device seed;
+    std::mt19937 gen(seed());
+    std::uniform_real_distribution<> val(0, 1);
+
+    // floors the result of the weighted die roll so that it is rounded to the tenths place
+    double biasedRoll = floorf(val(gen) * 10) / 10;
+    cout << "Biased roll is: " << biasedRoll << endl;
+
+    if (biasedRoll <= .3)
+    {
+        return 1;
+    }
+    if (biasedRoll <= .6)
+    {
+        return 2;
+    }
+    if (biasedRoll <= .9)
+    {
+        return 3;
+    }
+    if (biasedRoll >= .91)
+    {
+        return 4;
+    }
+}

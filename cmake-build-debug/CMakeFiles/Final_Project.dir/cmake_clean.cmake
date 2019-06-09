@@ -9,8 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Final_Project.dir/Berries.cpp.o"
   "CMakeFiles/Final_Project.dir/Wood.cpp.o"
   "CMakeFiles/Final_Project.dir/Knife.cpp.o"
-  "CMakeFiles/Final_Project.dir/Sweater.cpp.o"
   "CMakeFiles/Final_Project.dir/inputValid.cpp.o"
+  "CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o"
   "Final_Project.pdb"
   "Final_Project"
 )
