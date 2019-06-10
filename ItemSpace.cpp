@@ -19,7 +19,7 @@ using std::cout;
 using std::endl;
 
 /******************************************************
-*
+* ItemSpace default constructor.
 ******************************************************/
 ItemSpace::ItemSpace()
 {
@@ -27,12 +27,12 @@ ItemSpace::ItemSpace()
 }
 
 /******************************************************
-*
+* Destructor for ItemSpace.
 ******************************************************/
 ItemSpace::~ItemSpace() {}
 
 /******************************************************
-*
+* Returns name.
 ******************************************************/
 string ItemSpace::getName()
 {
@@ -40,7 +40,8 @@ string ItemSpace::getName()
 }
 
 /******************************************************
-*
+* runs event for the Item Space. The goal for the user
+ * is to obtain the coconut phone.
 ******************************************************/
 int ItemSpace::runEvent()
 {

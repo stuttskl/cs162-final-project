@@ -36,14 +36,18 @@ string MysterySpace::getName()
 }
 
 /******************************************************
-*
+* runs event for the Mystery Space. Allows player to
+ * decide if they'd like to roll a fair die, or an
+ * unbalanced die. The outcome of the die roll will
+ * determine what type of event (good or bad) they
+ * encounter.
 ******************************************************/
 int MysterySpace::runEvent()
 {
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << "\t \t  MYSTERY SPACE" << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-
+    cout << endl;
 
     cout << "   .-------.    ______" << endl;
     cout << "  /   o   /|   /\\     \\" << endl;
@@ -52,7 +56,7 @@ int MysterySpace::runEvent()
     cout << " |   o   |o/ \\o   /o    /" << endl;
     cout << " |     o |/   \\ o/  o  /" << endl;
     cout << " '-------'     \\/____o/" << endl;
-
+    cout << endl;
 
 
     cout << "If you're feeling rather lucky, you can opt to roll a weighted die. \n"
@@ -79,6 +83,9 @@ int MysterySpace::runEvent()
     {
         // roll normal die
         int goodOrBad = getRand(1, 4);
+
+        // player opts to roll normal die
+        // 2 good and 2 bad scenarios
         switch (goodOrBad)
         {
             case 1:
@@ -101,6 +108,7 @@ int MysterySpace::runEvent()
         }
 
     }
+    // player opts to roll the unbalanced die
     if (whichDie == 2)
     {
         int weightedRollResult = rollWeightedDie();

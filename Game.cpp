@@ -30,14 +30,14 @@ using std::string;
 
 /******************************************************
 * Constructor for the Game class. Creates a new instance
- * of the Game, sets the health points to 10, and creates
+ * of the Game, sets the health points to 20, and creates
  * a "backpack" using an STL vector and reserves 5 slots.
  * Creates 12 pointers to Space nodes, and all but the
  * starting space are created randomly.
 ******************************************************/
 Game::Game()
 {
-    int healthPoints = 10;
+    int healthPoints = 20;
     vector<Item> backpack;
     backpack.reserve(5);
 
@@ -55,36 +55,29 @@ Game::Game()
     Space *space10 = createNewSpaceType();
     Space *space11 = createNewSpaceType();
 
+    // sets the currentSpace to the first space created.
     currentSpace = startingSpace;
 
+    // these series of functions "link" all of the nodes together to form a 'grid-like' pattern
     spaceLinker(currentSpace, space1, right);
     spaceLinker(currentSpace, space4, down);
-
     spaceLinker(space1, space2, right);
     spaceLinker(space1, space5, down);
-
     spaceLinker(space2, space3, right);
     spaceLinker(space2, space6, down);
-
     spaceLinker(space3, space7, down);
-
     spaceLinker(space4, space5, right);
     spaceLinker(space4, space8, down);
-
     spaceLinker(space5, space9, down);
     spaceLinker(space5, space6, right);
-
     spaceLinker(space6, space10, down);
     spaceLinker(space6, space7, right);
-
     spaceLinker(space7, space11, down);
-
     spaceLinker(space8, space9, right);
-
     spaceLinker(space9, space10, right);
-
     spaceLinker(space10, space11, right);
 
+   // steps start at 0
     steps = 0;
 }
 
@@ -203,8 +196,8 @@ void Game::gameMenu()
 }
 
 /******************************************************
-* prints out welcome message, game context, rules, and
- * objective.
+* Runs main game program and continues to
+ * invoke game rounds until steps reaches 20.
 ******************************************************/
 void Game::startGame()
 {
@@ -212,32 +205,11 @@ void Game::startGame()
 //    cout << "Number of current spaces is: " << numSpaces << endl;
 //    cout << "Starting space type is: " << currentSpace->getName() << endl;
 
-    cout << "_____" << endl;
-    cout << " \\ K \\__      ____" << endl;
-    cout << "__\\   \\_______\\___\\____________" << endl;
-    cout << "< /_/   .....................  `-." << "   ~ SURVIVING COCONUT ISLAND ~    " << endl;
-    cout << "`-----------,----,--------------'" << endl;
-    cout << "          _/____/" << endl;
-    cout << endl;
-
-
-    cout << "You have just survived a plane crash, and have awoken in a forest amongst\n"
-            "tall trees, wild plants, mysterious hatches and tons of coconuts. You no longer have any of your\n"
-            "belongings, except the clothes on your back. You are not sure if others survived,\n"
-            "but you see no sign of other human life around you.\n\n"
-            "Your objective: find a way to get off of this island and get to safety.\n\n"
-            "You have 10 nights on ths island to find the fabeled and elusive Coconut Phone.\n"
-            "Then, and only then, are you able to escape the Coconut Island. \n"
-            "Will you survive Coconut Island ... ?\n\n";
-
-    cout << "Starting health points are: " << this->getHealthPoints() << endl;
-    cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
-
-
+    displayWelcome();
     printMap();
 
 
-    while (steps < 20)
+    while (steps < 14)
     {
         gameRound();
     }
@@ -251,7 +223,60 @@ void Game::startGame()
 }
 
 /******************************************************
-*
+* prints out welcome message, game context, rules, and
+* objective.
+******************************************************/
+void Game::displayWelcome()
+{
+    cout << "_____" << endl;
+    cout << " \\ K \\__      ____" << endl;
+    cout << "__\\   \\_______\\___\\____________" << endl;
+    cout << "< /_/   .....................  `-." << "   ~ SURVIVING COCONUT ISLAND ~    " << endl;
+    cout << "`-----------,----,--------------'" << endl;
+    cout << "          _/____/" << endl;
+    cout << endl;
+
+    cout << "T H E  S E T T I N G " << endl;
+    cout << "----------------------\n" << endl;
+    cout << "You have just survived a plane crash, and have awoken in a forest amongst\n"
+            "tall trees, wild plants, mysterious hatches and TONS of coconuts. You no longer have any of your\n"
+            "belongings, except the clothes on your back. You are not sure if others survived,\n"
+            "but you see no sign of other human life around you.\n\n";
+
+
+    cout << "T H E  R U L E S " << endl;
+    cout << "----------------------\n" << endl;
+    cout << "You are only able to move UP, DOWN, LEFT, or RIGHT -- so choose your moves carefully...\n"
+            "Along the way, you may encounter DANGER SPACES -- where you will need to battle ferral animals, \n"
+            "or weather treacherous storms...\n"
+            "Or you may happen upon MYSTERY SPACES -- where you can test your luck and tempt fate...\n"
+            "Lastly, you will stumble upon ITEM SPACES -- where you will be gifted various items that may\n "
+            "help you in your journey. Be aware, you have a knapsack but can only hold FIVE items.\n"
+            "Select your items consciously...\n\n";
+
+
+    cout << "T H E  O B J E C T I V E " << endl;
+    cout << "----------------------\n" << endl;
+    cout << "Your objective: find a way to get off of this island and get to safety.\n\n"
+            "You have 14 nights on ths island to find the fabled and elusive ~Coconut Phone~.\n"
+            "Then, and only then, are you able to escape the Coconut Island. \n"
+            "Will you survive Coconut Island ... ?\n\n";
+
+    cout << "Starting health points are: " << this->getHealthPoints() << endl;
+    cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
+
+}
+
+/******************************************************
+* first checks if the player is still alive - meaning
+ * their health points are above 0. If isStillAlive
+ * returns false, prints a message indicating the game is
+ * over and the program terminates.
+ * Otherwise, prints rounds and prompts user for next
+ * move. Checks if next space is an item space and if so,
+ * allows the user to add item to their backpack. Otherwise,
+ * runs the event space and updates Health Points after
+ * the result of the event.
 ******************************************************/
 void Game::gameRound()
 {
@@ -268,6 +293,7 @@ void Game::gameRound()
     getNextMove();
 //    cout << "Next space is: " << currentSpace->getName() << endl;
 
+    // if the next space is an item space, allows user to add item to backpack.
     if (currentSpace->getName() == "Item Space")
     {
         switch (currentSpace->runEvent())
@@ -300,7 +326,9 @@ void Game::gameRound()
 }
 
 /******************************************************
-*
+* checks if the player's health points are below or
+ * equal to 0. If so, returns false, indicating the
+ * player is not alive and the game should end.
 ******************************************************/
 bool Game::isStillAlive()
 {
@@ -314,7 +342,10 @@ bool Game::isStillAlive()
 }
 
 /******************************************************
-*
+* takes in an integer representing an item 'type' and
+ * will create a new item of said type and return it
+ * back to the function, so that it can be added
+ * to the user's backpack.
 ******************************************************/
 Item* Game::createNewItem(int itemType)
 {
@@ -342,7 +373,10 @@ Item* Game::createNewItem(int itemType)
 }
 
 /******************************************************
-*
+* prompts user on where to move next. Once a selection
+ * is made, checks if the desired space is valid (meaning
+ * it is NOT pointing to nullptr). If the space is valid,
+ * invokes the move() function.
 ******************************************************/
 void Game::getNextMove()
 {
@@ -385,6 +419,14 @@ void Game::getNextMove()
     }
 }
 
+/******************************************************
+* based on a given integer input representing a direction,
+ * (up, down, left, right), checks if the next space is
+ * valid and if so, returns true, indicating the player
+ * is able to move. If not, the function returns false,
+ * indicating the player must choose another direction
+ * to move.
+******************************************************/
 bool Game::canMove(int direction)
 {
     if (direction == 1)
@@ -445,7 +487,6 @@ void Game::printMap()
 
 }
 
-
 /******************************************************
 * takes in an enum representing a direction, and depending
  * on the direction, grabs the current space's
@@ -498,7 +539,8 @@ int Game::getHealthPoints()
 }
 
 /******************************************************
-*
+* sets player's heatlh points. Takes in an integer
+ * and subtracts from health points.
 ******************************************************/
 void Game::setHealthPoints(int hp)
 {

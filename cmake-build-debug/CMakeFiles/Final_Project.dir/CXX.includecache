@@ -76,6 +76,26 @@ vector
 string
 -
 
+/Users/katie/Dropbox/CS162/Final_Project/ItemSpace.cpp
+ItemSpace.hpp
+/Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
+Item.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+Berries.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
+CoconutPhone.hpp
+/Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp
+Knife.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
+Wood.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
+Game.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Game.hpp
+string
+-
+iostream
+-
+
 /Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
 string
 -
@@ -105,4 +125,14 @@ Item.hpp
 /Users/katie/Dropbox/CS162/Final_Project/inputValid.hpp
 string
 -
+
+/Users/katie/Dropbox/CS162/Final_Project/main.cpp
+iostream
+-
+string
+-
+Game.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Game.hpp
+Space.hpp
+/Users/katie/Dropbox/CS162/Final_Project/Space.hpp
 

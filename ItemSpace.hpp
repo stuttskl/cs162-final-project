@@ -9,14 +9,11 @@
 class ItemSpace : public Space {
 private:
     std::string name;
-    Item* newItem = nullptr;
 public:
     ItemSpace();
     ~ItemSpace();
     std::string getName();
     int runEvent();
-//    Item* createNewItem(int);
-
 };
 
 

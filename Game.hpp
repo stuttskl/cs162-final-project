@@ -21,12 +21,14 @@ private:
     int steps = 0; // run until steps = 100??
     vector<Item> backpack;
     int numSpaces = 1;
-    int healthPoints = 10;
+    int healthPoints = 20;
 
 public:
     Game();
     void startGame();
     Space* createNewSpaceType();
+
+    void displayWelcome();
 
     void gameMenu();
 
