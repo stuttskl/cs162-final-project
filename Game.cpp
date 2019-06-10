@@ -120,7 +120,7 @@ void Game::spaceLinker(Space *s1, Space *s2, Direction d)
 ******************************************************/
 Space* Game::createNewSpaceType()
 {
-    int newSpaceType = getRandomNum(1, 10);
+    int newSpaceType = getRandomNum(1, 9);
 
     if (newSpaceType == 1 || newSpaceType == 2 || newSpaceType == 3)
     {
@@ -140,11 +140,6 @@ Space* Game::createNewSpaceType()
         numSpaces++;
 //        cout << "New Mystery space created" << endl;
         return new MysterySpace;
-    } else {
-        new Space;
-        numSpaces++;
-//        cout << "New space created" << endl;
-        return new Space;
     }
 }
 
@@ -201,25 +196,13 @@ void Game::gameMenu()
 ******************************************************/
 void Game::startGame()
 {
-
-//    cout << "Number of current spaces is: " << numSpaces << endl;
-//    cout << "Starting space type is: " << currentSpace->getName() << endl;
-
     displayWelcome();
     printMap();
-
 
     while (steps < 14)
     {
         gameRound();
     }
-
-//    cout << "Current health points are: " << getHealthPoints() << endl;
-//    setHealthPoints(currentSpace->runEvent());
-//    cout << "Current health points are: " << getHealthPoints() << endl;
-
-//    cout << "Backpack size is: " << backpack.size() << endl;
-
 }
 
 /******************************************************
@@ -250,7 +233,7 @@ void Game::displayWelcome()
             "Along the way, you may encounter DANGER SPACES -- where you will need to battle ferral animals, \n"
             "or weather treacherous storms...\n"
             "Or you may happen upon MYSTERY SPACES -- where you can test your luck and tempt fate...\n"
-            "Lastly, you will stumble upon ITEM SPACES -- where you will be gifted various items that may\n "
+            "Lastly, you will stumble upon ITEM SPACES -- where you will be gifted various items that may\n"
             "help you in your journey. Be aware, you have a knapsack but can only hold FIVE items.\n"
             "Select your items consciously...\n\n";
 
@@ -258,8 +241,8 @@ void Game::displayWelcome()
     cout << "T H E  O B J E C T I V E " << endl;
     cout << "----------------------\n" << endl;
     cout << "Your objective: find a way to get off of this island and get to safety.\n\n"
-            "You have 14 nights on ths island to find the fabled and elusive ~Coconut Phone~.\n"
-            "Then, and only then, are you able to escape the Coconut Island. \n"
+            "You have 14 nights on ths island to find the fabled and elusive ~***Coconut Phone***~\n"
+            "Then, and only then, are you able to escape the Coconut Island.\n"
             "Will you survive Coconut Island ... ?\n\n";
 
     cout << "Starting health points are: " << this->getHealthPoints() << endl;
@@ -381,7 +364,24 @@ Item* Game::createNewItem(int itemType)
 void Game::getNextMove()
 {
     cout << "Where would you like to move next?" << endl;
-    cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
+    if (currentSpace->getUp())
+    {
+        cout << "1. UP" << endl;
+    }
+    if (currentSpace->getDown())
+    {
+        cout << "2. DOWN" << endl;
+    }
+    if (currentSpace->getLeft())
+    {
+        cout << "3. LEFT" << endl;
+    }
+    if (currentSpace->getRight())
+    {
+        cout << "4. RIGHT" << endl;
+    }
+
+//    cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
     int nextMove = returnInt();
     while (nextMove <= 0 || nextMove > 4)
     {
