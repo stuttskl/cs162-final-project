@@ -25,6 +25,7 @@ private:
 
 public:
     Game();
+    ~Game();
     void startGame();
     Space* createNewSpaceType();
 

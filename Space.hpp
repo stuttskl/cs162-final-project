@@ -12,16 +12,13 @@
 class Space {
 protected:
     std::string name = "";
-//    std::string description = "";
     Space *up = nullptr;
     Space *down = nullptr;
     Space *left = nullptr;
     Space *right = nullptr;
 public:
     Space();
-//    Space(std::string); // default constructor
     virtual ~Space(); // virtual destructor
-//    virtual void displayDescription();
     virtual int runEvent();
     Space* getUp();
     Space* getDown();
@@ -34,7 +31,7 @@ public:
 
     virtual int getRand(int, int);
     virtual int rollWeightedDie();
-    virtual int generateCoconutPhone();
+    virtual int generateNewItem();
 
 
 

@@ -29,7 +29,10 @@ ItemSpace::ItemSpace()
 /******************************************************
 * Destructor for ItemSpace.
 ******************************************************/
-ItemSpace::~ItemSpace() {}
+ItemSpace::~ItemSpace()
+{
+    cout << "Item Space deleted." << endl;
+}
 
 /******************************************************
 * Returns name.
@@ -50,7 +53,7 @@ int ItemSpace::runEvent()
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
     int whichItem;
-    whichItem = generateCoconutPhone();
+    whichItem = generateNewItem();
     cout << "which item is: " << whichItem << endl;
 //    createNewItem(1);
 

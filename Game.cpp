@@ -81,6 +81,11 @@ Game::Game()
     steps = 0;
 }
 
+Game::~Game()
+{
+    cout << "Game deleted." << endl;
+}
+
 /******************************************************
 * Used to "link" two Space nodes together. Takes in
  * 2 pointers to space nodes and an enum representing the
@@ -203,6 +208,8 @@ void Game::startGame()
     {
         gameRound();
     }
+
+    cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
 }
 
 /******************************************************
@@ -230,6 +237,7 @@ void Game::displayWelcome()
     cout << "T H E  R U L E S " << endl;
     cout << "----------------------\n" << endl;
     cout << "You are only able to move UP, DOWN, LEFT, or RIGHT -- so choose your moves carefully...\n"
+            "Depending on the space, you may be only to select from a few moves ...\n"
             "Along the way, you may encounter DANGER SPACES -- where you will need to battle ferral animals, \n"
             "or weather treacherous storms...\n"
             "Or you may happen upon MYSTERY SPACES -- where you can test your luck and tempt fate...\n"
@@ -266,12 +274,12 @@ void Game::gameRound()
 
     if (!isStillAlive())
     {
-        cout << "Game over!" << endl;
+        cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
         exit(0);
     }
 
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "\t \t    ROUND " << steps+1 << endl;
+    cout << "\t \t    NIGHT  " << steps+1 << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     getNextMove();
 //    cout << "Next space is: " << currentSpace->getName() << endl;
@@ -297,15 +305,14 @@ void Game::gameRound()
     } else {
 //        this->setHealthPoints(currentSpace->runEvent());
         int hpChange = currentSpace->runEvent();
-        cout << "hpChange is: " << hpChange << endl;
+//        cout << "hpChange is: " << hpChange << endl;
         if (!(hpChange <= -4 || hpChange > 10))
         {
             setHealthPoints(hpChange);
-            cout << "Updated HP are: " << this->getHealthPoints() << endl;
+//            cout << "Updated HP are: " << this->getHealthPoints() << endl;
         }
     }
     gameMenu();
-
 }
 
 /******************************************************
@@ -385,8 +392,8 @@ void Game::getNextMove()
     int nextMove = returnInt();
     while (nextMove <= 0 || nextMove > 4)
     {
-        cout << "Please enter an integer representing your choice." << endl;
-        cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
+        cout << "Error! Please enter an integer representing your choice." << endl;
+//        cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
         nextMove = returnInt();
     }
 
@@ -434,7 +441,8 @@ bool Game::canMove(int direction)
         if (currentSpace->getUp()) {
             return true;
         } else {
-            cout << "no." << endl;
+            cout << "Sorry, not a valid move. Please select another direction.\n" << endl;
+            getNextMove();
             return false;
         }
     } else if (direction == 2)
@@ -443,8 +451,8 @@ bool Game::canMove(int direction)
         {
             return true;
         } else {
-            cout << "no." << endl;
-
+            cout << "Sorry, not a valid move. Please select another direction.\n" << endl;
+            getNextMove();
             return false;
         }
     } else if (direction == 3)
@@ -453,8 +461,8 @@ bool Game::canMove(int direction)
         {
             return true;
         } else {
-            cout << "no." << endl;
-
+            cout << "Sorry, not a valid move. Please select another direction.\n" << endl;
+            getNextMove();
             return false;
         }
     } else if (direction == 4)
@@ -463,8 +471,8 @@ bool Game::canMove(int direction)
         {
             return true;
         } else {
-            cout << "no." << endl;
-
+            cout << "Sorry, not a valid move. Please select another direction.\n" << endl;
+            getNextMove();
             return false;
         }
     }
@@ -497,22 +505,17 @@ void Game::move(Direction d)
     {
         case up:
             currentSpace = currentSpace->getUp();
-//            cout << "Moving up!" << endl;
             break;
         case down:
             currentSpace = currentSpace->getDown();
-//            cout << "Moving down!" << endl;
             break;
         case left:
             currentSpace = currentSpace->getLeft();
-//            cout << "Moving left!" << endl;
             break;
         case right:
             currentSpace = currentSpace->getRight();
-//            cout << "Moving right!" << endl;
             break;
     }
-
     steps++;
 }
 
@@ -544,8 +547,8 @@ int Game::getHealthPoints()
 ******************************************************/
 void Game::setHealthPoints(int hp)
 {
-    cout << "passed in figure is: " << hp << endl;
-    cout << "current health points are: " << this->healthPoints << endl;
+//    cout << "passed in figure is: " << hp << endl;
+//    cout << "current health points are: " << this->healthPoints << endl;
     this->healthPoints -= hp;
 }
 
@@ -630,7 +633,7 @@ void Game::addToBackpack(Item *itemIn)
         }
     } else {
         cout << "Sorry! Your backpack is at full capacity (5 items).\n "
-                "Would you like to remove the first item in your backpack to free up space? \n1. Yes \n 2. No" << endl;
+                "Would you like to remove the first item in your backpack to free up space? \n1. Yes \n2. No" << endl;
 
         int choice = returnInt();
         while (choice <= 0 || choice > 2)

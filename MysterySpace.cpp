@@ -25,7 +25,10 @@ MysterySpace::MysterySpace()
 /******************************************************
 * Destructor for MysterySpace.
 ******************************************************/
-MysterySpace::~MysterySpace() {}
+MysterySpace::~MysterySpace()
+{
+    cout << "MysterySpace deleted." << endl;
+}
 
 /******************************************************
 * Returns name of space type.

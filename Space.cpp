@@ -37,9 +37,7 @@ Space::~Space()
 *
 ******************************************************/
 int Space::runEvent()
-{
-//    cout << "You have landed on a plain ol' space. Nothing cool happens here." << endl;
-}
+{}
 
 /******************************************************
 *
@@ -153,7 +151,7 @@ int Space::rollWeightedDie()
 /******************************************************
 *
 ******************************************************/
-int Space::generateCoconutPhone()
+int Space::generateNewItem()
 {
     // copied from https://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
     std::random_device seed;
@@ -164,15 +162,15 @@ int Space::generateCoconutPhone()
     double biasedRoll = floorf(val(gen) * 10) / 10;
     cout << "Biased roll is: " << biasedRoll << endl;
 
-    if (biasedRoll <= .3)
+    if (biasedRoll <= .30)
     {
         return 1;
     }
-    if (biasedRoll <= .6)
+    if (biasedRoll <= .60)
     {
         return 2;
     }
-    if (biasedRoll <= .9)
+    if (biasedRoll <= .90)
     {
         return 3;
     }
