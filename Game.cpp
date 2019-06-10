@@ -82,7 +82,10 @@ Game::Game()
 
 Game::~Game()
 {
-    cout << "Game deleted." << endl;
+}
+
+void Game::deleteSpaces()
+{
     currentSpace = nullptr;
     delete currentSpace;
     space1 = nullptr;
@@ -109,7 +112,6 @@ Game::~Game()
     delete space11;
     startingSpace = nullptr;
     delete startingSpace;
-
 }
 
 /******************************************************
@@ -235,6 +237,7 @@ int Game::startGame()
     if (!isStillAlive())
     {
         cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
+        deleteSpaces();
 //        exit(0);
         return 0;
     }
@@ -244,6 +247,7 @@ int Game::startGame()
         gameRound();
     }
     cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
+    deleteSpaces();
     return 0;
 
 
@@ -323,6 +327,7 @@ void Game::gameRound()
         if (choice == 1)
         {
             cout << "YOU WON THE GAME!" << endl;
+//            deleteSpaces();
         } else {
             cout << "Okay...keep playing..." << endl;
             hasCoconutPhone = false;

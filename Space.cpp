@@ -27,7 +27,8 @@ Space::Space()
 }
 
 /******************************************************
-*
+* Space destructor. Sets up, down, left, right to
+ * nullptr and deletes pointers.
 ******************************************************/
 Space::~Space()
 {

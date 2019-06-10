@@ -39,6 +39,8 @@ private:
 public:
     Game();
     ~Game();
+
+    void deleteSpaces();
     int startGame();
     Space* createNewSpaceType();
 
