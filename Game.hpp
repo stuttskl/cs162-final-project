@@ -18,15 +18,28 @@ enum Direction {up, down, left, right};
 class Game {
 private:
     Space *currentSpace = nullptr;
-    int steps = 0; // run until steps = 100??
+    Space *startingSpace = nullptr;
+    Space *space1 = nullptr;
+    Space *space2 = nullptr;
+    Space *space3 = nullptr;
+    Space *space4 = nullptr;
+    Space *space5 = nullptr;
+    Space *space6 = nullptr;
+    Space *space7 = nullptr;
+    Space *space8 = nullptr;
+    Space *space9 = nullptr;
+    Space *space10 = nullptr;
+    Space *space11 = nullptr;
+    int steps = 0;
     vector<Item> backpack;
     int numSpaces = 1;
-    int healthPoints = 20;
+    int healthPoints = 15;
+    bool hasCoconutPhone = false;
 
 public:
     Game();
     ~Game();
-    void startGame();
+    int startGame();
     Space* createNewSpaceType();
 
     void displayWelcome();

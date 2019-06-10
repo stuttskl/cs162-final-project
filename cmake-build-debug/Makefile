@@ -150,6 +150,33 @@ Berries.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Berries.cpp.s
 .PHONY : Berries.cpp.s
 
+Coconut.o: Coconut.cpp.o
+
+.PHONY : Coconut.o
+
+# target to build an object file
+Coconut.cpp.o:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Coconut.cpp.o
+.PHONY : Coconut.cpp.o
+
+Coconut.i: Coconut.cpp.i
+
+.PHONY : Coconut.i
+
+# target to preprocess a source file
+Coconut.cpp.i:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Coconut.cpp.i
+.PHONY : Coconut.cpp.i
+
+Coconut.s: Coconut.cpp.s
+
+.PHONY : Coconut.s
+
+# target to generate assembly for a file
+Coconut.cpp.s:
+	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Coconut.cpp.s
+.PHONY : Coconut.cpp.s
+
 CoconutPhone.o: CoconutPhone.cpp.o
 
 .PHONY : CoconutPhone.o
@@ -284,33 +311,6 @@ ItemSpace.s: ItemSpace.cpp.s
 ItemSpace.cpp.s:
 	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/ItemSpace.cpp.s
 .PHONY : ItemSpace.cpp.s
-
-Knife.o: Knife.cpp.o
-
-.PHONY : Knife.o
-
-# target to build an object file
-Knife.cpp.o:
-	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Knife.cpp.o
-.PHONY : Knife.cpp.o
-
-Knife.i: Knife.cpp.i
-
-.PHONY : Knife.i
-
-# target to preprocess a source file
-Knife.cpp.i:
-	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Knife.cpp.i
-.PHONY : Knife.cpp.i
-
-Knife.s: Knife.cpp.s
-
-.PHONY : Knife.s
-
-# target to generate assembly for a file
-Knife.cpp.s:
-	$(MAKE) -f CMakeFiles/Final_Project.dir/build.make CMakeFiles/Final_Project.dir/Knife.cpp.s
-.PHONY : Knife.cpp.s
 
 MysterySpace.o: MysterySpace.cpp.o
 
@@ -459,6 +459,9 @@ help:
 	@echo "... Berries.o"
 	@echo "... Berries.i"
 	@echo "... Berries.s"
+	@echo "... Coconut.o"
+	@echo "... Coconut.i"
+	@echo "... Coconut.s"
 	@echo "... CoconutPhone.o"
 	@echo "... CoconutPhone.i"
 	@echo "... CoconutPhone.s"
@@ -474,9 +477,6 @@ help:
 	@echo "... ItemSpace.o"
 	@echo "... ItemSpace.i"
 	@echo "... ItemSpace.s"
-	@echo "... Knife.o"
-	@echo "... Knife.i"
-	@echo "... Knife.s"
 	@echo "... MysterySpace.o"
 	@echo "... MysterySpace.i"
 	@echo "... MysterySpace.s"

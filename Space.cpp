@@ -14,7 +14,8 @@ using std::endl;
 using std::string;
 
 /******************************************************
-*
+* Space constructor. Assigns name, and sets all four
+ * pointers to nullptr.
 ******************************************************/
 Space::Space()
 {
@@ -31,16 +32,26 @@ Space::Space()
 Space::~Space()
 {
 // be sure to set up, down, left, right to null and delete
+    up = nullptr;
+    down = nullptr;
+    left = nullptr;
+    right = nullptr;
+
+    delete up;
+    delete down;
+    delete left;
+    delete right;
 }
 
 /******************************************************
-*
+* overridden function of base class. Will run main event
+ * for each space derived class.
 ******************************************************/
 int Space::runEvent()
 {}
 
 /******************************************************
-*
+* returns the name of the space
 ******************************************************/
 string Space::getName()
 {
@@ -48,7 +59,7 @@ string Space::getName()
 }
 
 /******************************************************
-*
+* returns the space that is "above" the current space
 ******************************************************/
 Space* Space::getUp()
 {
@@ -56,7 +67,7 @@ Space* Space::getUp()
 }
 
 /******************************************************
-*
+* returns the space that is "below" the current space
 ******************************************************/
 Space* Space::getDown()
 {
@@ -64,7 +75,7 @@ Space* Space::getDown()
 }
 
 /******************************************************
-*
+* returns the space that is to the "left" of the current space
 ******************************************************/
 Space* Space::getLeft()
 {
@@ -72,7 +83,7 @@ Space* Space::getLeft()
 }
 
 /******************************************************
-*
+* returns the space that is to the "right" of the current space
 ******************************************************/
 Space* Space::getRight()
 {
@@ -80,7 +91,8 @@ Space* Space::getRight()
 }
 
 /******************************************************
-*
+* assigns a passed in pointer to a space object to the
+ * "upper" link
 ******************************************************/
 void Space::setUp(Space* s)
 {
@@ -88,7 +100,8 @@ void Space::setUp(Space* s)
 }
 
 /******************************************************
-*
+* assigns a passed in pointer to a space object to the
+ * "lower" link
 ******************************************************/
 void Space::setDown(Space* s)
 {
@@ -96,7 +109,8 @@ void Space::setDown(Space* s)
 }
 
 /******************************************************
-*
+* assigns a passed in pointer to a space object to the
+ * "left" link
 ******************************************************/
 void Space::setLeft(Space* s)
 {
@@ -104,7 +118,8 @@ void Space::setLeft(Space* s)
 }
 
 /******************************************************
-*
+* assigns a passed in pointer to a space object to the
+ * "right" link
 ******************************************************/
 void Space::setRight(Space* s)
 {
@@ -112,7 +127,8 @@ void Space::setRight(Space* s)
 }
 
 /******************************************************
-*
+* takes in two int and returns a random number
+ * between min, max.
 ******************************************************/
 int Space::getRand(int min, int max)
 {
@@ -125,7 +141,9 @@ int Space::getRand(int min, int max)
 }
 
 /******************************************************
-*
+* returns a real num between 0 and 1. The die is biased,
+ * so if the roll is greater than .7, a good event will
+ * happen, otherwise a bad event will happen.
 ******************************************************/
 int Space::rollWeightedDie()
 {
@@ -149,7 +167,11 @@ int Space::rollWeightedDie()
 
 
 /******************************************************
-*
+* returns a random real number bewteen 0 and 1. Based on
+ * the output of the roll, will return an int, indicating
+ * different types of items to be created. The coconut phone
+ * (winning item) will be the most difficult item to get,
+ * at a 15% chance of getting this item.
 ******************************************************/
 int Space::generateNewItem()
 {
@@ -162,20 +184,16 @@ int Space::generateNewItem()
     double biasedRoll = floorf(val(gen) * 10) / 10;
     cout << "Biased roll is: " << biasedRoll << endl;
 
-    if (biasedRoll <= .30)
+    if (biasedRoll <= .425)
     {
         return 1;
     }
-    if (biasedRoll <= .60)
+    if (biasedRoll <= .85)
     {
         return 2;
     }
-    if (biasedRoll <= .90)
+    if (biasedRoll >= .85)
     {
         return 3;
-    }
-    if (biasedRoll >= .91)
-    {
-        return 4;
     }
 }

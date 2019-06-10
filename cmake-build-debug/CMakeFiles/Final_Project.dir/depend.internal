@@ -5,6 +5,10 @@ CMakeFiles/Final_Project.dir/Berries.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/Berries.cpp
  /Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
+CMakeFiles/Final_Project.dir/Coconut.cpp.o
+ /Users/katie/Dropbox/CS162/Final_Project/Coconut.cpp
+ /Users/katie/Dropbox/CS162/Final_Project/Coconut.hpp
+ /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.cpp
  /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp
@@ -16,13 +20,13 @@ CMakeFiles/Final_Project.dir/DangerSpace.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/inputValid.hpp
 CMakeFiles/Final_Project.dir/Game.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
+ /Users/katie/Dropbox/CS162/Final_Project/Coconut.hpp
  /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp
  /Users/katie/Dropbox/CS162/Final_Project/DangerSpace.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Game.cpp
  /Users/katie/Dropbox/CS162/Final_Project/Game.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
  /Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
- /Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
  /Users/katie/Dropbox/CS162/Final_Project/MysterySpace.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
@@ -32,18 +36,14 @@ CMakeFiles/Final_Project.dir/Item.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
 CMakeFiles/Final_Project.dir/ItemSpace.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/Berries.hpp
+ /Users/katie/Dropbox/CS162/Final_Project/Coconut.hpp
  /Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Game.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
  /Users/katie/Dropbox/CS162/Final_Project/ItemSpace.cpp
  /Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp
- /Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Space.hpp
  /Users/katie/Dropbox/CS162/Final_Project/Wood.hpp
-CMakeFiles/Final_Project.dir/Knife.cpp.o
- /Users/katie/Dropbox/CS162/Final_Project/Item.hpp
- /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp
- /Users/katie/Dropbox/CS162/Final_Project/Knife.hpp
 CMakeFiles/Final_Project.dir/MysterySpace.cpp.o
  /Users/katie/Dropbox/CS162/Final_Project/MysterySpace.cpp
  /Users/katie/Dropbox/CS162/Final_Project/MysterySpace.hpp

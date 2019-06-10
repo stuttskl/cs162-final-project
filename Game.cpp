@@ -20,7 +20,7 @@
 #include "Item.hpp"
 #include "Berries.hpp"
 #include "Wood.hpp"
-#include "Knife.hpp"
+#include "Coconut.hpp"
 #include "CoconutPhone.hpp"
 
 using std::cout;
@@ -30,30 +30,29 @@ using std::string;
 
 /******************************************************
 * Constructor for the Game class. Creates a new instance
- * of the Game, sets the health points to 20, and creates
+ * of the Game, sets the health points to 15, and creates
  * a "backpack" using an STL vector and reserves 5 slots.
  * Creates 12 pointers to Space nodes, and all but the
  * starting space are created randomly.
 ******************************************************/
 Game::Game()
 {
-    int healthPoints = 20;
     vector<Item> backpack;
     backpack.reserve(5);
 
     // 12 spaces total
-    Space *startingSpace = new Space;
-    Space *space1 = createNewSpaceType();
-    Space *space2 = createNewSpaceType();
-    Space *space3 = createNewSpaceType();
-    Space *space4 = createNewSpaceType();
-    Space *space5 = createNewSpaceType();
-    Space *space6 = createNewSpaceType();
-    Space *space7 = createNewSpaceType();
-    Space *space8 = createNewSpaceType();
-    Space *space9 = createNewSpaceType();
-    Space *space10 = createNewSpaceType();
-    Space *space11 = createNewSpaceType();
+    startingSpace = new Space;
+    space1 = createNewSpaceType();
+    space2 = createNewSpaceType();
+    space3 = createNewSpaceType();
+    space4 = createNewSpaceType();
+    space5 = createNewSpaceType();
+    space6 = createNewSpaceType();
+    space7 = createNewSpaceType();
+    space8 = createNewSpaceType();
+    space9 = createNewSpaceType();
+    space10 = createNewSpaceType();
+    space11 = createNewSpaceType();
 
     // sets the currentSpace to the first space created.
     currentSpace = startingSpace;
@@ -84,6 +83,33 @@ Game::Game()
 Game::~Game()
 {
     cout << "Game deleted." << endl;
+    currentSpace = nullptr;
+    delete currentSpace;
+    space1 = nullptr;
+    delete space1;
+    space2 = nullptr;
+    delete space2;
+    space3 = nullptr;
+    delete space3;
+    space4 = nullptr;
+    delete space4;
+    space5 = nullptr;
+    delete space5;
+    space6 = nullptr;
+    delete space6;
+    space7 = nullptr;
+    delete space7;
+    space8 = nullptr;
+    delete space8;
+    space9 = nullptr;
+    delete space9;
+    space10 = nullptr;
+    delete space10;
+    space11 = nullptr;
+    delete space11;
+    startingSpace = nullptr;
+    delete startingSpace;
+
 }
 
 /******************************************************
@@ -146,6 +172,8 @@ Space* Game::createNewSpaceType()
 //        cout << "New Mystery space created" << endl;
         return new MysterySpace;
     }
+
+    return nullptr;
 }
 
 /******************************************************
@@ -199,17 +227,27 @@ void Game::gameMenu()
 * Runs main game program and continues to
  * invoke game rounds until steps reaches 20.
 ******************************************************/
-void Game::startGame()
+int Game::startGame()
 {
     displayWelcome();
-    printMap();
+//    printMap();
+
+    if (!isStillAlive())
+    {
+        cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
+//        exit(0);
+        return 0;
+    }
 
     while (steps < 14)
     {
         gameRound();
     }
-
     cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
+    return 0;
+
+
+
 }
 
 /******************************************************
@@ -271,18 +309,29 @@ void Game::displayWelcome()
 ******************************************************/
 void Game::gameRound()
 {
-
-    if (!isStillAlive())
+    if (hasCoconutPhone) // if player has the coconut phone
     {
-        cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
-        exit(0);
+        cout << "You are in possession of the mysterious Coconut Phone.\n"
+                "You can use this phone to call for help and escape the island.\n"
+                "Do you wish to use this item and end your time on Coconut Island?" << endl;
+        cout << "1. Yes \n2. No" << endl;
+        int choice = returnInt();
+        while (choice <= 0 || choice > 2)
+        {
+            choice = returnInt();
+        }
+        if (choice == 1)
+        {
+            cout << "YOU WON THE GAME!" << endl;
+        } else {
+            cout << "Okay...keep playing..." << endl;
+            hasCoconutPhone = false;
+        }
     }
-
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "\t \t    NIGHT  " << steps+1 << endl;
+    cout << "  NIGHT  " << steps+1 << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     getNextMove();
-//    cout << "Next space is: " << currentSpace->getName() << endl;
 
     // if the next space is an item space, allows user to add item to backpack.
     if (currentSpace->getName() == "Item Space")
@@ -297,9 +346,6 @@ void Game::gameRound()
                 break;
             case 3:
                 addToBackpack(createNewItem(3));
-                break;
-            case 4:
-                addToBackpack(createNewItem(4));
                 break;
         }
     } else {
@@ -348,16 +394,13 @@ Item* Game::createNewItem(int itemType)
             newItem = new Wood;
             return newItem;
         case 2:
-            cout << "You got a new Knife item!" << endl;
-            newItem = new Knife;
+            cout << "You got a new Coconut item!" << endl;
+            newItem = new Coconut;
             return newItem;
         case 3:
-            cout << "You found some Berries!" << endl;
-            newItem = new Berries;
-            return newItem;
-        case 4:
             cout << "You found the Coconut Phone!!!!" << endl;
             newItem = new CoconutPhone;
+            hasCoconutPhone = true;
             return newItem;
     }
 }

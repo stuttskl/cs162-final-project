@@ -18,8 +18,7 @@ using std::string;
 CoconutPhone::CoconutPhone()
 {
     name = "Coconut Phone";
-    description = "YOU FOUND IT! Incredible! You may now use this item at any"
-                  "time to escape the island and call for help!";
+    description = "YOU FOUND IT! Incredible!";
 }
 
 

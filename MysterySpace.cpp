@@ -48,7 +48,7 @@ string MysterySpace::getName()
 int MysterySpace::runEvent()
 {
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "\t \t  MYSTERY SPACE" << endl;
+    cout << " MYSTERY SPACE" << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << endl;
 
@@ -120,7 +120,6 @@ int MysterySpace::runEvent()
         {
             cout << "AMAZING! You have beat the odds and have been spared from experiencing a very bad event. "
                     "Nothing else to see here." << endl;
-            return 0;
         }
         if (weightedRollResult == 2)
         {
@@ -129,5 +128,7 @@ int MysterySpace::runEvent()
             return 8;
         }
     }
+
+    return 0;
 }
 

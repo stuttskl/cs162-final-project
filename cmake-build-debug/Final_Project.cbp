@@ -86,6 +86,12 @@
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Berries.hpp">
 			<Option target="Final_Project"/>
 		</Unit>
+		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Coconut.cpp">
+			<Option target="Final_Project"/>
+		</Unit>
+		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Coconut.hpp">
+			<Option target="Final_Project"/>
+		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/CoconutPhone.cpp">
 			<Option target="Final_Project"/>
 		</Unit>
@@ -114,12 +120,6 @@
 			<Option target="Final_Project"/>
 		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/ItemSpace.hpp">
-			<Option target="Final_Project"/>
-		</Unit>
-		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Knife.cpp">
-			<Option target="Final_Project"/>
-		</Unit>
-		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/Knife.hpp">
 			<Option target="Final_Project"/>
 		</Unit>
 		<Unit filename="/Users/katie/Dropbox/CS162/Final_Project/MysterySpace.cpp">

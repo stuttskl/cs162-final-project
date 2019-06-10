@@ -10,10 +10,10 @@
 
 #include "Item.hpp"
 
-class Knife : public Item {
+class Coconut : public Item {
 public:
-    Knife();
-    ~Knife();
+    Coconut();
+    ~Coconut();
 };
 
 

@@ -21,10 +21,8 @@ using std::string;
 int main() {
 
     Game g1;
-    g1.startGame();
 
-
-
+    while (g1.startGame());
 
     return 0;
 }

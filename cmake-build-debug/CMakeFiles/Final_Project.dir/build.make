@@ -174,18 +174,18 @@ CMakeFiles/Final_Project.dir/Wood.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Wood.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Wood.cpp -o CMakeFiles/Final_Project.dir/Wood.cpp.s
 
-CMakeFiles/Final_Project.dir/Knife.cpp.o: CMakeFiles/Final_Project.dir/flags.make
-CMakeFiles/Final_Project.dir/Knife.cpp.o: ../Knife.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Final_Project.dir/Knife.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/Knife.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp
+CMakeFiles/Final_Project.dir/Coconut.cpp.o: CMakeFiles/Final_Project.dir/flags.make
+CMakeFiles/Final_Project.dir/Coconut.cpp.o: ../Coconut.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Final_Project.dir/Coconut.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project.dir/Coconut.cpp.o -c /Users/katie/Dropbox/CS162/Final_Project/Coconut.cpp
 
-CMakeFiles/Final_Project.dir/Knife.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project.dir/Knife.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp > CMakeFiles/Final_Project.dir/Knife.cpp.i
+CMakeFiles/Final_Project.dir/Coconut.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project.dir/Coconut.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/katie/Dropbox/CS162/Final_Project/Coconut.cpp > CMakeFiles/Final_Project.dir/Coconut.cpp.i
 
-CMakeFiles/Final_Project.dir/Knife.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Knife.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Knife.cpp -o CMakeFiles/Final_Project.dir/Knife.cpp.s
+CMakeFiles/Final_Project.dir/Coconut.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project.dir/Coconut.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/katie/Dropbox/CS162/Final_Project/Coconut.cpp -o CMakeFiles/Final_Project.dir/Coconut.cpp.s
 
 CMakeFiles/Final_Project.dir/inputValid.cpp.o: CMakeFiles/Final_Project.dir/flags.make
 CMakeFiles/Final_Project.dir/inputValid.cpp.o: ../inputValid.cpp
@@ -224,7 +224,7 @@ Final_Project_OBJECTS = \
 "CMakeFiles/Final_Project.dir/Item.cpp.o" \
 "CMakeFiles/Final_Project.dir/Berries.cpp.o" \
 "CMakeFiles/Final_Project.dir/Wood.cpp.o" \
-"CMakeFiles/Final_Project.dir/Knife.cpp.o" \
+"CMakeFiles/Final_Project.dir/Coconut.cpp.o" \
 "CMakeFiles/Final_Project.dir/inputValid.cpp.o" \
 "CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o"
 
@@ -240,7 +240,7 @@ Final_Project: CMakeFiles/Final_Project.dir/ItemSpace.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Item.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Berries.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/Wood.cpp.o
-Final_Project: CMakeFiles/Final_Project.dir/Knife.cpp.o
+Final_Project: CMakeFiles/Final_Project.dir/Coconut.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/inputValid.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/CoconutPhone.cpp.o
 Final_Project: CMakeFiles/Final_Project.dir/build.make

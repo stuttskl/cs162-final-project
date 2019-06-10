@@ -41,7 +41,7 @@ string DangerSpace::getName()
 int DangerSpace::runEvent()
 {
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "\t \t  DANGER SPACE" << endl;
+    cout << "DANGER SPACE" << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     int whichBadEvent = getRand(1, 3);
     switch (whichBadEvent)
@@ -53,6 +53,8 @@ int DangerSpace::runEvent()
         case 3:
             return heavyRain();
     }
+
+    return 0;
 }
 
 /******************************************************
@@ -122,8 +124,8 @@ int DangerSpace::heavyRain()
     if (stayOrGo == 2)
     {
         cout << "Smart move! You found cover right away. Health points unaffected." << endl;
-        return 0;
     }
+    return 0;
 }
 
 /******************************************************
@@ -173,6 +175,6 @@ int DangerSpace::openTheHatch()
     {
         cout << "You chose the safer path. Boring, but probably ultimately for the better. You keep walking by and "
                 "go about your day." << endl;
-        return 0;
     }
+    return 0;
 }

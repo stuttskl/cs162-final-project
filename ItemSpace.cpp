@@ -8,7 +8,7 @@
 #include "Item.hpp"
 #include "Berries.hpp"
 #include "CoconutPhone.hpp"
-#include "Knife.hpp"
+#include "Coconut.hpp"
 #include "Wood.hpp"
 #include "Game.hpp"
 #include <string>
@@ -48,9 +48,9 @@ string ItemSpace::getName()
 ******************************************************/
 int ItemSpace::runEvent()
 {
-    cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "\t \t  ITEM   SPACE" << endl;
-    cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
+    cout << "-~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
+    cout << " ITEM SPACE" << endl;
+    cout << "-~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
     int whichItem;
     whichItem = generateNewItem();
@@ -65,9 +65,9 @@ int ItemSpace::runEvent()
             return 2;
         case 3:
             return 3;
-        case 4:
-            return 4;
     }
+
+    return 0;
 
 //    cout << "Inside itemspace class" << endl;
 

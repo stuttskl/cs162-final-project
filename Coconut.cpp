@@ -10,18 +10,18 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
-#include "Knife.hpp"
+#include "Coconut.hpp"
 
 /******************************************************
 *
 ******************************************************/
-Knife::Knife()
+Coconut::Coconut()
 {
-    name = "Knife";
-    description = "Kind of dull, but still useful for cutting, stabbing, anything a knife is really good for.";
+    name = "Coconut";
+    description = "A regular coconut. Definitely not a phone.";
 }
 
 /******************************************************
 *
 ******************************************************/
-Knife::~Knife() {}
+Coconut::~Coconut() {}
