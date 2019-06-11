@@ -2,7 +2,9 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Danger Space header file. Contains constructor, destructor,
+ * getter functions for name and an overridden function, runEvent, that
+ * executes the Space's main user interaction.
 *********************************************************************/
 #ifndef FINAL_PROJECT_DANGERSPACE_HPP
 #define FINAL_PROJECT_DANGERSPACE_HPP

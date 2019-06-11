@@ -2,7 +2,8 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Header file for Berries item. Contains constructor,
+ * destructor, and getter function to retreive name.
 *********************************************************************/
 #ifndef FINAL_PROJECT_BERRIES_HPP
 #define FINAL_PROJECT_BERRIES_HPP
@@ -17,7 +18,6 @@ public:
     Berries();
     ~Berries();
     std::string getName();
-    std::string getDescription();
 };
 
 

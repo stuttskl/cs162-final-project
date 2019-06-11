@@ -2,7 +2,12 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Space header file. Contains field for name, and creates
+ * 4 pointers to Spaces and sets to nullptr. Contains constructor,
+ * destructor, a pure virtual function to run each Space's event,
+ * getters and setters for the 4 pointers.
+ * Contains additional Space functions to retreive random numbers
+ * that will impact events.
 *********************************************************************/
 #ifndef FINAL_PROJECT_SPACE_HPP
 #define FINAL_PROJECT_SPACE_HPP

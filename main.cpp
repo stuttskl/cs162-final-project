@@ -2,7 +2,8 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Main program file. Creates new instance of game,
+ * and invokes startGame() to run the main program.
 *********************************************************************/
 
 #include <iostream>

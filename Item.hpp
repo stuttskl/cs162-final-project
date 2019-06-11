@@ -2,7 +2,9 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Header file for an item. Contains field for name,
+ * description, constructor, destructor and a virtual overriden function
+ * to retreive the item's name.
 *********************************************************************/
 
 #include <string>
@@ -20,8 +22,6 @@ public:
     Item();
     virtual ~Item();
     virtual std::string getName();
-    virtual std::string getDescription();
-    virtual void addToPack(Item*);
 };
 
 

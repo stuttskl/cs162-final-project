@@ -2,7 +2,9 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Item Space source file. Contains constructor, destructor,
+ * getter functions for name and an overridden function, runEvent, that
+ * executes the Space's main user interaction.
 *********************************************************************/
 #include "ItemSpace.hpp"
 #include "Item.hpp"
@@ -29,10 +31,7 @@ ItemSpace::ItemSpace()
 /******************************************************
 * Destructor for ItemSpace.
 ******************************************************/
-ItemSpace::~ItemSpace()
-{
-    cout << "Item Space deleted." << endl;
-}
+ItemSpace::~ItemSpace() {}
 
 /******************************************************
 * Returns name.
@@ -44,7 +43,9 @@ string ItemSpace::getName()
 
 /******************************************************
 * runs event for the Item Space. The goal for the user
- * is to obtain the coconut phone.
+ * is to obtain the coconut phone. Returns a random
+ * integer, and this will determine which type of item
+ * is generated.
 ******************************************************/
 int ItemSpace::runEvent()
 {
@@ -52,22 +53,5 @@ int ItemSpace::runEvent()
     cout << " ITEM SPACE" << endl;
     cout << "-~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
-
-//    return 3;
-//    int whichItem;
     return generateNewItem();
-//    cout << "which item is: " << whichItem << endl;
-//    createNewItem(1);
-
-//    switch (whichItem)
-//    {
-//        case 1:
-//            return 1;
-//        case 2:
-//            return 2;
-//        case 3:
-//            return 3;
-//        default:
-//            return 0;
-//    }
 }

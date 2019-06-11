@@ -2,7 +2,9 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Mystery Space source file. Contains constructor, destructor,
+ * getter functions for name and an overridden function, runEvent, that
+ * executes the Space's main user interaction.
 *********************************************************************/
 #include "MysterySpace.hpp"
 #include "inputValid.hpp"
@@ -25,10 +27,7 @@ MysterySpace::MysterySpace()
 /******************************************************
 * Destructor for MysterySpace.
 ******************************************************/
-MysterySpace::~MysterySpace()
-{
-    cout << "MysterySpace deleted." << endl;
-}
+MysterySpace::~MysterySpace() {}
 
 /******************************************************
 * Returns name of space type.

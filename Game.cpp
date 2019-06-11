@@ -2,7 +2,12 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Game source file, contains constructor, destructor,
+ * and main game functions that allow each game "round" to run.
+ * The creation and linking of game spaces, and functions
+ * allowing the user to move around the board are run in this source
+ * file. Creates, and includes functions to add and display contents
+ * of the user's backpack.
 *********************************************************************/
 
 #include <iostream>
@@ -79,9 +84,10 @@ Game::Game()
 
 Game::~Game()
 {
-for(auto it = backpack.begin(); it != backpack.end(); it++){
-	delete *it;
-}
+    for (auto it = backpack.begin(); it != backpack.end(); it++)
+    {
+	    delete *it;
+    }
 }
 
 
@@ -145,17 +151,14 @@ Space* Game::createNewSpaceType()
     if (newSpaceType == 1 || newSpaceType == 2 || newSpaceType == 3)
     {
         numSpaces++;
-//        cout << "New Item space created" << endl;
         return new ItemSpace;
     } else if (newSpaceType == 4 || newSpaceType == 5 || newSpaceType == 6)
     {
         numSpaces++;
-//        cout << "New Danger space created" << endl;
         return new DangerSpace;
     } else if (newSpaceType == 7 || newSpaceType == 8 || newSpaceType == 9)
     {
         numSpaces++;
-//        cout << "New Mystery space created" << endl;
         return new MysterySpace;
     }
     return nullptr;
@@ -210,20 +213,18 @@ void Game::gameMenu()
 
 /******************************************************
 * Runs main game program and continues to
- * invoke game rounds until steps reaches 20.
+ * invoke game rounds until steps reaches 10 total.
 ******************************************************/
 void Game::startGame()
 {
     displayWelcome();
 //    printMap();
 
-    while (steps < 4 && !gameOver)
+    while (steps <= 10 && !gameOver)
     {
         gameRound();
     }
-    // if hasCoconutphone is false...
-    cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
-//    gameOver();
+    cout << "GAME OVER. YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
     deleteSpaces();
 }
 
@@ -308,29 +309,28 @@ void Game::gameRound()
                 break;
         }
     } else {
-//        this->setHealthPoints(currentSpace->runEvent());
         int hpChange = currentSpace->runEvent();
-//        cout << "hpChange is: " << hpChange << endl;
         if (!(hpChange <= -4 || hpChange > 10))
         {
             setHealthPoints(hpChange);
-//            cout << "Updated HP are: " << this->getHealthPoints() << endl;
         }
     }
 
     if (hasCoconutPhone) // if player has the coconut phone
     {
         cout << "You are in possession of the mysterious Coconut Phone.\n"
-                "You call blah blah and escape!\n";
+                "You can now call in and escape from Coconut Island!!!\n";
 
-        cout << "YOU WON THE GAME!" << endl;
+        cout << "~*~* YOU WON THE GAME! *~*~" << endl;
         gameOver = true;
         return;
     }
 
     isStillAlive();
+
     if (!gameOver)
     {
+//        cout << "game menu will be printed." << endl;
         gameMenu();
     }
 }
@@ -363,10 +363,13 @@ Item* Game::createNewItem(int itemType)
     {
         case 1:
             cout << "You got a new Wood item!" << endl;
+            cout << "The island is full of wood, and you've just found some." << endl;
             newItem = new Wood;
 			break;
         case 2:
             cout << "You got a new Coconut item!" << endl;
+            cout << "Looks like the elusive Coconut Phone, smells like the elusive Coconut Phone,\n "
+                    "but alas, is not. Keep foraging!" << endl;
             newItem = new Coconut;
 			break;
         case 3:
@@ -404,12 +407,10 @@ void Game::getNextMove()
         cout << "4. RIGHT" << endl;
     }
 
-//    cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
     int nextMove = getIntInput();
     while (nextMove <= 0 || nextMove > 4)
     {
         cout << "Error! Please enter an integer representing your choice." << endl;
-//        cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
         nextMove = getIntInput();
     }
 
@@ -495,23 +496,6 @@ bool Game::canMove(int direction)
 	return false;
 }
 
-void Game::printMap()
-{
-    cout << "- - - - - - - - - - - - - - - - " << endl;
-    cout << "|                              |\n";
-    cout << "|   #      *      *       *    |\n";
-    cout << "|                              |\n";
-    cout << "|   *      *      *       *    |\n";
-    cout << "|                              |\n";
-    cout << "|   *      *      *       *    |\n";
-    cout << "|                              |\n";
-    cout << "|   *      *      *       *    |\n";
-    cout << "|                              |\n";
-    cout << "- - - - - - - - - - - - - - - - " << endl;
-
-
-}
-
 /******************************************************
 * takes in an enum representing a direction, and depending
  * on the direction, grabs the current space's
@@ -564,8 +548,6 @@ int Game::getHealthPoints()
 ******************************************************/
 void Game::setHealthPoints(int hp)
 {
-//    cout << "passed in figure is: " << hp << endl;
-//    cout << "current health points are: " << this->healthPoints << endl;
     healthPoints -= hp;
 }
 
@@ -621,7 +603,10 @@ void Game::displayBackpack()
 
 /******************************************************
 * Prompts the user if they'd like to add a new item
- * to their backpack.
+ * to their backpack. If their backpack has 5 items,
+ * forces them to remove the first item or forgo the
+ * new item. Displays contacts of pack if they add
+ * a new item.
 ******************************************************/
 void Game::addToBackpack(Item *itemIn)
 {

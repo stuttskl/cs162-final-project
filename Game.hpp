@@ -2,7 +2,12 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Game header file. Contains all of the game's function
+ * headers. Private member data includes all 12 spaces, a step/night
+ * count, a backpack represented as an STL vector that holds
+ * pointers to items, and two bool flags
+ * that indicate whether the user has the coconut phone (to end game)
+ * or if their health points go below 0 (to end the game).
 *********************************************************************/
 #include "Space.hpp"
 #include "Item.hpp"
@@ -46,32 +51,20 @@ public:
     Space* createNewSpaceType();
 
     void displayWelcome();
-
     void gameMenu();
-
     void gameRound();
-
     void getNextMove();
     void spaceLinker(Space*, Space*, Direction);
-
     bool canMove(int);
-
-    void printMap();
     int getHealthPoints();
     void setHealthPoints(int);
-
     void isStillAlive();
-
     int getRandomNum(int, int);
     void move(Direction);
-
     void displayCurrentLocation();
-
     void displayBackpack();
     void addToBackpack(Item*);
-
     Item* createNewItem(int);
-
 };
 
 

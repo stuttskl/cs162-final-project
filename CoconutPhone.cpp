@@ -2,7 +2,8 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Source file for Coconut Phone item. Contains constructor,
+ * destructor, and getter function to retreive name.
 *********************************************************************/
 #include <iostream>
 #include <string>
@@ -13,7 +14,7 @@ using std::string;
 #include "CoconutPhone.hpp"
 
 /******************************************************
-*
+* Constructor for Coconut Phone. Sets name and description.
 ******************************************************/
 CoconutPhone::CoconutPhone()
 {
@@ -21,24 +22,15 @@ CoconutPhone::CoconutPhone()
     description = "YOU FOUND IT! Incredible!";
 }
 
-
 /******************************************************
-*
+* Destructor for Coconut Phones.
 ******************************************************/
 CoconutPhone::~CoconutPhone() {}
 
 /******************************************************
-*
+* Returns item name.
 ******************************************************/
 string CoconutPhone::getName()
 {
     return name;
-}
-
-/******************************************************
-*
-******************************************************/
-string CoconutPhone::getDescription()
-{
-    return description;
 }

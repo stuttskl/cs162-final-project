@@ -2,7 +2,9 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Danger Space source file. Contains constructor, destructor,
+ * getter functions for name and an overridden function, runEvent, that
+ * executes the Space's main user interaction.
 *********************************************************************/
 #include "DangerSpace.hpp"
 #include "inputValid.hpp"
@@ -15,7 +17,7 @@ using std::endl;
 using std::cin;
 
 /******************************************************
-*
+* Constructor for Danger Space
 ******************************************************/
 DangerSpace::DangerSpace()
 {
@@ -23,7 +25,7 @@ DangerSpace::DangerSpace()
 }
 
 /******************************************************
-*
+* Destructor for Danger Space
 ******************************************************/
 DangerSpace::~DangerSpace() {}
 
@@ -36,7 +38,8 @@ string DangerSpace::getName()
 }
 
 /******************************************************
-*
+* runs event for the Danger Space. Will randomly generate
+ * an int, which will decide which bad event happens.
 ******************************************************/
 int DangerSpace::runEvent()
 {
@@ -58,7 +61,9 @@ int DangerSpace::runEvent()
 }
 
 /******************************************************
-*
+* Random squirrell attack, generates a random int
+ * which represents the damage taken from the attack.
+ * prints result to player.
 ******************************************************/
 int DangerSpace::squirrellAttack()
 {
@@ -88,7 +93,10 @@ int DangerSpace::squirrellAttack()
 }
 
 /******************************************************
-*
+* heavy rain event, allows the user to decide whether
+ * they want to stay in the storm (and risk losing HP)
+ * or go and not have their HP affected. Prints result
+ * to user.
 ******************************************************/
 int DangerSpace::heavyRain()
 {
@@ -130,7 +138,10 @@ int DangerSpace::heavyRain()
 }
 
 /******************************************************
-*
+* runs event for opening the hatch. Prompts user to
+ * decide whether or not to go down the hatch. If user
+ * opts to explore, they lose 4 HP. Otherwise, their
+ * HP is unaffected.
 ******************************************************/
 int DangerSpace::openTheHatch()
 {

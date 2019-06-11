@@ -2,7 +2,8 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Source file for Wood item. Contains constructor,
+ * destructor, and getter function to retreive name.
 *********************************************************************/
 #include <iostream>
 #include <string>
@@ -13,7 +14,7 @@ using std::string;
 #include "Wood.hpp"
 
 /******************************************************
-*
+* Constructor for Berries. Sets name and description.
 ******************************************************/
 Wood::Wood()
 {
@@ -22,6 +23,14 @@ Wood::Wood()
 }
 
 /******************************************************
-*
+* Destructor for Berries.
 ******************************************************/
 Wood::~Wood() {}
+
+/******************************************************
+* Returns item name
+******************************************************/
+string Wood::getName()
+{
+    return name;
+}

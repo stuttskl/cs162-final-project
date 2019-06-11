@@ -2,7 +2,12 @@
 ** Program name: Final Project
 ** Author: Katie Stutts
 ** Date:June 2nd, 2019
-** Description:
+** Description: Space source file. Contains field for name, and creates
+ * 4 pointers to Spaces and sets to nullptr. Contains constructor,
+ * destructor, a pure virtual function to run each Space's event,
+ * getters and setters for the 4 pointers.
+ * Contains additional Space functions to retreive random numbers
+ * that will impact events.
 *********************************************************************/
 #include <iostream>
 #include <random>
@@ -143,7 +148,7 @@ int Space::rollWeightedDie()
 
     // floors the result of the weighted die roll so that it is rounded to the tenths place
     double biasedRoll = floorf(val(gen) * 10) / 10;
-    cout << "Biased roll is: " << biasedRoll << endl;
+//    cout << "Biased roll is: " << biasedRoll << endl;
     // if the weighted die roll is greater than 0.7
     if (biasedRoll >= 0.7) // 70% chance a good thing will happen
     {
@@ -171,7 +176,7 @@ int Space::generateNewItem()
 
     // floors the result of the weighted die roll so that it is rounded to the tenths place
     double biasedRoll = floorf(val(gen) * 10) / 10;
-    cout << "Biased roll is: " << biasedRoll << endl;
+//    cout << "Biased roll is: " << biasedRoll << endl;
 
     if (biasedRoll <= .425)
     {
