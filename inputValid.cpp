@@ -100,7 +100,7 @@ bool isInt(string input)
         return false;
     }
 
-    for (int i = 0; i < input.size(); i++)
+    for (unsigned int i = 0; i < input.size(); i++)
     {
         if (!(isdigit(input[i])))
         {

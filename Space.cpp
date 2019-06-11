@@ -40,13 +40,6 @@ Space::~Space()
 }
 
 /******************************************************
-* overridden function of base class. Will run main event
- * for each space derived class.
-******************************************************/
-int Space::runEvent()
-{}
-
-/******************************************************
 * returns the name of the space
 ******************************************************/
 string Space::getName()
@@ -192,4 +185,5 @@ int Space::generateNewItem()
     {
         return 3;
     }
+	return 0;
 }

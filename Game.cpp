@@ -37,11 +37,8 @@ using std::string;
 ******************************************************/
 Game::Game()
 {
-    vector<Item> backpack;
-    backpack.reserve(5);
-
     // 12 spaces total
-    startingSpace = new Space;
+    startingSpace = createNewSpaceType();
     space1 = createNewSpaceType();
     space2 = createNewSpaceType();
     space3 = createNewSpaceType();
@@ -82,35 +79,25 @@ Game::Game()
 
 Game::~Game()
 {
+for(auto it = backpack.begin(); it != backpack.end(); it++){
+	delete *it;
 }
+}
+
 
 void Game::deleteSpaces()
 {
-//    currentSpace = nullptr;
-    delete currentSpace;
-//    space1 = nullptr;
     delete space1;
-//    space2 = nullptr;
     delete space2;
-//    space3 = nullptr;
     delete space3;
-//    space4 = nullptr;
     delete space4;
-//    space5 = nullptr;
     delete space5;
-//    space6 = nullptr;
     delete space6;
-//    space7 = nullptr;
     delete space7;
-//    space8 = nullptr;
     delete space8;
-//    space9 = nullptr;
     delete space9;
-//    space10 = nullptr;
     delete space10;
-//    space11 = nullptr;
     delete space11;
-//    startingSpace = nullptr;
     delete startingSpace;
 }
 
@@ -157,24 +144,20 @@ Space* Game::createNewSpaceType()
 
     if (newSpaceType == 1 || newSpaceType == 2 || newSpaceType == 3)
     {
-        new ItemSpace;
         numSpaces++;
 //        cout << "New Item space created" << endl;
         return new ItemSpace;
     } else if (newSpaceType == 4 || newSpaceType == 5 || newSpaceType == 6)
     {
-        new DangerSpace;
         numSpaces++;
 //        cout << "New Danger space created" << endl;
         return new DangerSpace;
     } else if (newSpaceType == 7 || newSpaceType == 8 || newSpaceType == 9)
     {
-        new MysterySpace;
         numSpaces++;
 //        cout << "New Mystery space created" << endl;
         return new MysterySpace;
     }
-
     return nullptr;
 }
 
@@ -234,7 +217,7 @@ void Game::startGame()
     displayWelcome();
 //    printMap();
 
-    while (steps < 11 && !gameOver)
+    while (steps < 4 && !gameOver)
     {
         gameRound();
     }
@@ -374,24 +357,25 @@ void Game::isStillAlive()
 ******************************************************/
 Item* Game::createNewItem(int itemType)
 {
-    Item *newItem = nullptr;
 
+	Item *newItem = nullptr;
     switch (itemType)
     {
         case 1:
             cout << "You got a new Wood item!" << endl;
             newItem = new Wood;
-            return newItem;
+			break;
         case 2:
             cout << "You got a new Coconut item!" << endl;
             newItem = new Coconut;
-            return newItem;
+			break;
         case 3:
             cout << "You found the Coconut Phone!!!!" << endl;
-            newItem = new CoconutPhone;
             hasCoconutPhone = true;
-            return newItem;
+            newItem = new CoconutPhone;
+			break;
     }
+	return newItem;
 }
 
 /******************************************************
@@ -508,6 +492,7 @@ bool Game::canMove(int direction)
             return false;
         }
     }
+	return false;
 }
 
 void Game::printMap()
@@ -627,9 +612,9 @@ void Game::displayBackpack()
     // empty check done before
     cout << "The contents of your backpack are: " << endl;
 
-    for (vector<Item>::iterator i = backpack.begin(); i != backpack.end(); ++i)
+    for (auto i = backpack.begin(); i != backpack.end(); ++i)
     {
-        cout << i->getName() << ' ';
+        cout << (*i)->getName() << ' ';
     }
     cout << endl;
 }
@@ -655,7 +640,7 @@ void Game::addToBackpack(Item *itemIn)
 
         if (addItem == 1)
         {
-            backpack.push_back(*itemIn);
+            backpack.push_back(itemIn);
             displayBackpack();
             cout << endl;
         }

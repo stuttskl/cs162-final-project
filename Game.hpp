@@ -29,7 +29,7 @@ private:
     Space *space10 = nullptr;
     Space *space11 = nullptr;
     int steps = 0;
-    vector<Item> backpack;
+    vector<Item*> backpack;
     int numSpaces = 1;
     int healthPoints = 15;
     bool hasCoconutPhone = false;

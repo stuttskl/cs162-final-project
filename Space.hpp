@@ -19,7 +19,7 @@ protected:
 public:
     Space();
     virtual ~Space(); // virtual destructor
-    virtual int runEvent();
+    virtual int runEvent() = 0;
     Space* getUp();
     Space* getDown();
     Space* getLeft();
