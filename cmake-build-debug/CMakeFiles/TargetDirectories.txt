@@ -1,3 +1,0 @@
-/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/katie/Dropbox/CS162/Final_Project/cmake-build-debug/CMakeFiles/Final_Project.dir
