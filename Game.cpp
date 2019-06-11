@@ -195,12 +195,12 @@ void Game::gameMenu()
     cout << "---------------------------" << endl;
     cout << endl;
 
-    int choice = returnInt();
+    int choice = getIntInput();
 
     while (choice <= 0 || choice > 4)
     {
         cout << "Please enter an integer representing your choice." << endl;
-        choice = returnInt();
+        choice = getIntInput();
     }
     if (choice == 1)
     {
@@ -208,7 +208,7 @@ void Game::gameMenu()
     }
     if (choice == 2)
     {
-        cout << "Your current Health Points are " << this->getHealthPoints() << endl;
+        cout << "Your current Health Points are " << getHealthPoints() << endl;
     }
     if (choice == 3)
     {
@@ -229,29 +229,19 @@ void Game::gameMenu()
 * Runs main game program and continues to
  * invoke game rounds until steps reaches 20.
 ******************************************************/
-int Game::startGame()
+void Game::startGame()
 {
     displayWelcome();
 //    printMap();
 
-    if (!isStillAlive())
-    {
-        cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
-        deleteSpaces();
-//        exit(0);
-        return 0;
-    }
-
-    while (steps < 14)
+    while (steps < 5 && !gameOver)
     {
         gameRound();
     }
+
     cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
+//    gameOver();
     deleteSpaces();
-    return 0;
-
-
-
 }
 
 /******************************************************
@@ -295,7 +285,7 @@ void Game::displayWelcome()
             "Then, and only then, are you able to escape the Coconut Island.\n"
             "Will you survive Coconut Island ... ?\n\n";
 
-    cout << "Starting health points are: " << this->getHealthPoints() << endl;
+    cout << "Starting health points are: " << getHealthPoints() << endl;
     cout << ".-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~" << endl;
 
 }
@@ -316,22 +306,11 @@ void Game::gameRound()
     if (hasCoconutPhone) // if player has the coconut phone
     {
         cout << "You are in possession of the mysterious Coconut Phone.\n"
-                "You can use this phone to call for help and escape the island.\n"
-                "Do you wish to use this item and end your time on Coconut Island?" << endl;
-        cout << "1. Yes \n2. No" << endl;
-        int choice = returnInt();
-        while (choice <= 0 || choice > 2)
-        {
-            choice = returnInt();
-        }
-        if (choice == 1)
-        {
+                "You call blah blah and escape!\n";
+
             cout << "YOU WON THE GAME!" << endl;
-//            deleteSpaces();
-        } else {
-            cout << "Okay...keep playing..." << endl;
-            hasCoconutPhone = false;
-        }
+            gameOver = true;
+            return;
     }
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     cout << "  NIGHT  " << steps+1 << endl;
@@ -363,7 +342,12 @@ void Game::gameRound()
 //            cout << "Updated HP are: " << this->getHealthPoints() << endl;
         }
     }
-    gameMenu();
+
+    isStillAlive();
+    if (!gameOver)
+    {
+        gameMenu();
+    }
 }
 
 /******************************************************
@@ -371,14 +355,12 @@ void Game::gameRound()
  * equal to 0. If so, returns false, indicating the
  * player is not alive and the game should end.
 ******************************************************/
-bool Game::isStillAlive()
+void Game::isStillAlive()
 {
-    if (this->getHealthPoints() <= 0)
+    if (getHealthPoints() <= 0)
     {
-        cout << "Your current health points are: " << this->getHealthPoints() << endl;
-        return false;
-    } else {
-        return true;
+        cout << "Your current health points are: " << getHealthPoints() << endl;
+        gameOver = true;
     }
 }
 
@@ -437,12 +419,12 @@ void Game::getNextMove()
     }
 
 //    cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
-    int nextMove = returnInt();
+    int nextMove = getIntInput();
     while (nextMove <= 0 || nextMove > 4)
     {
         cout << "Error! Please enter an integer representing your choice." << endl;
 //        cout << " 1. Up \n 2. Down \n 3. Left \n 4. Right" << endl;
-        nextMove = returnInt();
+        nextMove = getIntInput();
     }
 
     switch (nextMove)
@@ -597,7 +579,7 @@ void Game::setHealthPoints(int hp)
 {
 //    cout << "passed in figure is: " << hp << endl;
 //    cout << "current health points are: " << this->healthPoints << endl;
-    this->healthPoints -= hp;
+    healthPoints -= hp;
 }
 
 /******************************************************
@@ -661,12 +643,12 @@ void Game::addToBackpack(Item *itemIn)
     {
         cout << "Would you like to add this item to your backpack?" << endl;
         cout << "1. Yes \n2. No" << endl;
-        int addItem = returnInt();
+        int addItem = getIntInput();
         while (addItem <= 0 || addItem > 2)
         {
             cout << "Please enter an integer representing your selection." << endl;
             cout << "1. Yes \n2. No" << endl;
-            addItem = returnInt();
+            addItem = getIntInput();
         }
 
         if (addItem == 1)
@@ -683,12 +665,12 @@ void Game::addToBackpack(Item *itemIn)
         cout << "Sorry! Your backpack is at full capacity (5 items).\n "
                 "Would you like to remove the first item in your backpack to free up space? \n1. Yes \n2. No" << endl;
 
-        int choice = returnInt();
+        int choice = getIntInput();
         while (choice <= 0 || choice > 2)
         {
             cout << "Please enter an integer representing your selection." << endl;
             cout << "1. Yes \n2. No" << endl;
-            choice = returnInt();
+            choice = getIntInput();
         }
         if (choice == 1)
         {

@@ -12,7 +12,7 @@
 
 #include <string>
 
-int returnInt();
+int getIntInput();
 bool isInt (std::string input);
 bool isInRange(int num, int min, int max);
 std::string returnString();

@@ -22,7 +22,7 @@ int main() {
 
     Game g1;
 
-    while (g1.startGame());
+    g1.startGame();
 
     return 0;
 }

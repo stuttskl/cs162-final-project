@@ -13,8 +13,6 @@ using std::vector;
 #ifndef FINAL_PROJECT_GAME_HPP
 #define FINAL_PROJECT_GAME_HPP
 
-enum Direction {up, down, left, right};
-
 class Game {
 private:
     Space *currentSpace = nullptr;
@@ -35,13 +33,16 @@ private:
     int numSpaces = 1;
     int healthPoints = 15;
     bool hasCoconutPhone = false;
+    bool gameOver = false;
 
 public:
+    enum Direction {up, down, left, right};
+
     Game();
     ~Game();
 
     void deleteSpaces();
-    int startGame();
+    void startGame();
     Space* createNewSpaceType();
 
     void displayWelcome();
@@ -59,7 +60,7 @@ public:
     int getHealthPoints();
     void setHealthPoints(int);
 
-    bool isStillAlive();
+    void isStillAlive();
 
     int getRandomNum(int, int);
     void move(Direction);

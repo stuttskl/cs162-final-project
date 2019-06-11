@@ -82,7 +82,8 @@ int DangerSpace::squirrellAttack()
     int attackResult = getRand(1, 6);
     cout << "~*~*~*~*~*~ rolling ~*~*~*~*~*~" << endl;
     cout << endl;
-    cout << "The squirrel put up a good fight (and so did you). Ultimately, you lost " << attackResult << " health points." << endl;
+    cout << "The squirrel put up a good fight (and so did you).\n "
+            "Ultimately, you lost " << attackResult << " health points." << endl;
     return attackResult;
 }
 
@@ -109,11 +110,11 @@ int DangerSpace::heavyRain()
             "find cover. Do you go find cover, or weather the storm?"<< endl;
     cout << "1. Stay \n2. Go." << endl;
 
-    int stayOrGo = returnInt();
+    int stayOrGo = getIntInput();
     while (stayOrGo <= 0 || stayOrGo > 2)
     {
         cout << "Please enter an integer representing your choice. 1 - Yes. 2 - No." << endl;
-        stayOrGo = returnInt();
+        stayOrGo = getIntInput();
     }
     if (stayOrGo == 1)
     {
@@ -148,11 +149,11 @@ int DangerSpace::openTheHatch()
     cout << "which is looking more tempting by the minute." << endl;
     cout << "Do you wish to open the hatch and explore???" << endl;
     cout << "1. Yes \n2. No." << endl;
-    int openHatch = returnInt();
+    int openHatch = getIntInput();
     while (openHatch <= 0 || openHatch > 2)
     {
         cout << "Please enter an integer representing your choice. 1 - Yes. 2 - No." << endl;
-        openHatch = returnInt();
+        openHatch = getIntInput();
     }
     if (openHatch == 1)
     {

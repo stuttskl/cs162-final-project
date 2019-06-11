@@ -28,7 +28,7 @@ returnInt() takes in a string as input, and utilizies a
  the input is a valid integer, and is then converted from
  a string to integer, using atoi().
  ******************************************************/
-int returnInt()
+int getIntInput()
 {
     string input;
     int num = 0;

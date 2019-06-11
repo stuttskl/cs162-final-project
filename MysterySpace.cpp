@@ -74,13 +74,13 @@ int MysterySpace::runEvent()
     cout << "1. Roll the balanced die." << endl;
     cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
 
-    int whichDie = returnInt();
+    int whichDie = getIntInput();
     while (whichDie <= 0 || whichDie > 2)
     {
         cout << "Please enter an integer representing your choice." << endl;
         cout << "1. Roll the balanced die." << endl;
         cout << "2. Roll the weighted die. Bigger risk, potentially bigger reward." << endl;
-        whichDie = returnInt();
+        whichDie = getIntInput();
     }
     if (whichDie == 1)
     {
@@ -92,20 +92,21 @@ int MysterySpace::runEvent()
         switch (goodOrBad)
         {
             case 1:
-                cout << "Suddenly a heavy downpour and brutal winds wash over you, and you hardly have any time to find "
+                cout << "Suddenly a heavy downpour and brutal winds wash over you, \n"
+                        "and you hardly have any time to find "
                         "cover. As a result, you get a little sick. Health decreases by 2." << endl;
                 return 2;
             case 2:
-                cout << "Out of nowhere, you are attacked by an angry, rabid squirrel. You have no time to think, and "
+                cout << "Out of nowhere, you are attacked by an angry, rabid squirrel. You have no time to think, and \n"
                         "are unfortunately injured. Health decreases by 4." << endl;
                 return 4;
             case 3:
-                cout << "You’ve just stumbled upon a small dead animal. You feel sad that the animal did not survive, "
+                cout << "You’ve just stumbled upon a small dead animal. You feel sad that the animal did not survive, \n"
                         "but grateful for the nutrition it provides. Health increases by 3." << endl;
                 return -3;
             case 4:
-                cout << "Despite the overbearing struggle for survival, you realize that you are on a beautiful island, "
-                        "and the weather is remarkably beautiful today. You take just a moment, to close your eyes,"
+                cout << "Despite the overbearing struggle for survival, you realize that you are on a beautiful island, \n"
+                        "and the weather is remarkably beautiful today. You take just a moment, to close your eyes, \n"
                         "breathe deeply and feel gratitude that you are alive. Health increases by 2." << endl;
                 return -2;
         }
