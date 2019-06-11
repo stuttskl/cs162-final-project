@@ -77,7 +77,7 @@ Game::Game()
     spaceLinker(space10, space11, right);
 
    // steps start at 0
-    steps = 0;
+    steps = 1;
 }
 
 Game::~Game()
@@ -86,31 +86,31 @@ Game::~Game()
 
 void Game::deleteSpaces()
 {
-    currentSpace = nullptr;
+//    currentSpace = nullptr;
     delete currentSpace;
-    space1 = nullptr;
+//    space1 = nullptr;
     delete space1;
-    space2 = nullptr;
+//    space2 = nullptr;
     delete space2;
-    space3 = nullptr;
+//    space3 = nullptr;
     delete space3;
-    space4 = nullptr;
+//    space4 = nullptr;
     delete space4;
-    space5 = nullptr;
+//    space5 = nullptr;
     delete space5;
-    space6 = nullptr;
+//    space6 = nullptr;
     delete space6;
-    space7 = nullptr;
+//    space7 = nullptr;
     delete space7;
-    space8 = nullptr;
+//    space8 = nullptr;
     delete space8;
-    space9 = nullptr;
+//    space9 = nullptr;
     delete space9;
-    space10 = nullptr;
+//    space10 = nullptr;
     delete space10;
-    space11 = nullptr;
+//    space11 = nullptr;
     delete space11;
-    startingSpace = nullptr;
+//    startingSpace = nullptr;
     delete startingSpace;
 }
 
@@ -234,11 +234,11 @@ void Game::startGame()
     displayWelcome();
 //    printMap();
 
-    while (steps < 5 && !gameOver)
+    while (steps < 11 && !gameOver)
     {
         gameRound();
     }
-
+    // if hasCoconutphone is false...
     cout << "YOU DID NOT SURVIVE COCONUT ISLAND." << endl;
 //    gameOver();
     deleteSpaces();
@@ -281,7 +281,7 @@ void Game::displayWelcome()
     cout << "T H E  O B J E C T I V E " << endl;
     cout << "----------------------\n" << endl;
     cout << "Your objective: find a way to get off of this island and get to safety.\n\n"
-            "You have 14 nights on ths island to find the fabled and elusive ~***Coconut Phone***~\n"
+            "You have 10 nights on ths island to find the fabled and elusive ~***Coconut Phone***~\n"
             "Then, and only then, are you able to escape the Coconut Island.\n"
             "Will you survive Coconut Island ... ?\n\n";
 
@@ -303,17 +303,9 @@ void Game::displayWelcome()
 ******************************************************/
 void Game::gameRound()
 {
-    if (hasCoconutPhone) // if player has the coconut phone
-    {
-        cout << "You are in possession of the mysterious Coconut Phone.\n"
-                "You call blah blah and escape!\n";
 
-            cout << "YOU WON THE GAME!" << endl;
-            gameOver = true;
-            return;
-    }
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
-    cout << "  NIGHT  " << steps+1 << endl;
+    cout << "  NIGHT  " << steps << endl;
     cout << " -~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
     getNextMove();
 
@@ -341,6 +333,16 @@ void Game::gameRound()
             setHealthPoints(hpChange);
 //            cout << "Updated HP are: " << this->getHealthPoints() << endl;
         }
+    }
+
+    if (hasCoconutPhone) // if player has the coconut phone
+    {
+        cout << "You are in possession of the mysterious Coconut Phone.\n"
+                "You call blah blah and escape!\n";
+
+        cout << "YOU WON THE GAME!" << endl;
+        gameOver = true;
+        return;
     }
 
     isStillAlive();

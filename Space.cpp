@@ -37,11 +37,6 @@ Space::~Space()
     down = nullptr;
     left = nullptr;
     right = nullptr;
-
-    delete up;
-    delete down;
-    delete left;
-    delete right;
 }
 
 /******************************************************

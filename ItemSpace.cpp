@@ -52,6 +52,8 @@ int ItemSpace::runEvent()
     cout << " ITEM SPACE" << endl;
     cout << "-~*~--~*~--~*~--~*~--~*~--~*~-" << endl;
 
+
+//    return 3;
 //    int whichItem;
     return generateNewItem();
 //    cout << "which item is: " << whichItem << endl;
